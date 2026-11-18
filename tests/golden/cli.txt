@@ -1,0 +1,1189 @@
+== no arguments
+$ abdecker 
+exit: 2
+stdout:
+  abdecker 0.1.0-dev - e-invoices (XRechnung, ZUGFeRD, Factur-X)
+  
+  Usage: abdecker <command> [arguments]
+  
+  Reading:
+    info          show format, profile and key data of an invoice
+    check         check an invoice against EN 16931 and XRechnung
+    html          render an invoice as an HTML page
+    json          an invoice as JSON for further processing
+    attachments   list or save the files that come with an invoice
+    extract       extract the invoice XML from a PDF
+  
+  Writing:
+    create        create an invoice from the own JSON format
+    embed         embed an invoice XML into a PDF (ZUGFeRD, Factur-X)
+    attach        add files to an invoice XML
+    strip         remove the invoice XML from a PDF
+  
+  Other:
+    serve         run the REST/JSON server
+    help          show help for a command
+    version       show the version
+  
+  Run "abdecker help <command>" for more about a command.
+== help
+$ abdecker help
+exit: 0
+stdout:
+  abdecker 0.1.0-dev - e-invoices (XRechnung, ZUGFeRD, Factur-X)
+  
+  Usage: abdecker <command> [arguments]
+  
+  Reading:
+    info          show format, profile and key data of an invoice
+    check         check an invoice against EN 16931 and XRechnung
+    html          render an invoice as an HTML page
+    json          an invoice as JSON for further processing
+    attachments   list or save the files that come with an invoice
+    extract       extract the invoice XML from a PDF
+  
+  Writing:
+    create        create an invoice from the own JSON format
+    embed         embed an invoice XML into a PDF (ZUGFeRD, Factur-X)
+    attach        add files to an invoice XML
+    strip         remove the invoice XML from a PDF
+  
+  Other:
+    serve         run the REST/JSON server
+    help          show help for a command
+    version       show the version
+  
+  Run "abdecker help <command>" for more about a command.
+== --help
+$ abdecker --help
+exit: 0
+stdout:
+  abdecker 0.1.0-dev - e-invoices (XRechnung, ZUGFeRD, Factur-X)
+  
+  Usage: abdecker <command> [arguments]
+  
+  Reading:
+    info          show format, profile and key data of an invoice
+    check         check an invoice against EN 16931 and XRechnung
+    html          render an invoice as an HTML page
+    json          an invoice as JSON for further processing
+    attachments   list or save the files that come with an invoice
+    extract       extract the invoice XML from a PDF
+  
+  Writing:
+    create        create an invoice from the own JSON format
+    embed         embed an invoice XML into a PDF (ZUGFeRD, Factur-X)
+    attach        add files to an invoice XML
+    strip         remove the invoice XML from a PDF
+  
+  Other:
+    serve         run the REST/JSON server
+    help          show help for a command
+    version       show the version
+  
+  Run "abdecker help <command>" for more about a command.
+== help create
+$ abdecker help create
+exit: 0
+stdout:
+  <text 42 lines, 2011 bytes, sha256 3d733c2bd3e86936>
+== help serve
+$ abdecker help serve
+exit: 0
+stdout:
+  Usage: abdecker serve [options]
+  
+  Runs the functions of abdecker as a REST/JSON server, e.g. for programs in
+  other languages. POST the file (or the JSON for /create) as request body;
+  /embed and /attach take multipart/form-data. The interface is described at
+  /openapi.json, interactively at /docs. Ctrl+C stops the server.
+  
+    POST /info /check /html /json /attachments /extract /strip /create
+    POST /embed /attach
+    GET  /version /openapi.json /docs
+  
+  Options:
+    --host <address>        address to listen on, default 127.0.0.1
+    --port <n>              port, default 8080
+    --max-size <MB>         largest request, default 50
+    --workers <n>           parallel requests, default: number of CPU cores
+    --queue <n>             waiting requests, default 4 x workers
+    --timeout <s>           deadline per request from accept, default 30
+    --quiet                 no line per request on standard output
+  
+  Exit codes:
+    2  the server cannot start (e.g. the port is in use), or usage error
+  
+  Examples:
+    abdecker serve --port 8080
+    curl --data-binary @invoice.pdf http://127.0.0.1:8080/check
+== create -h
+$ abdecker create -h
+exit: 0
+stdout:
+  <text 42 lines, 2011 bytes, sha256 3d733c2bd3e86936>
+== help unknown command
+$ abdecker help frobnicate
+exit: 2
+stderr:
+  Unknown command "frobnicate". Run "abdecker help" for the list of commands.
+== help two commands
+$ abdecker help info check
+exit: 2
+stderr:
+  Usage: abdecker help [<command>]
+  Run "abdecker help help" for details.
+== unknown command -h
+$ abdecker frobnicate -h
+exit: 2
+stderr:
+  Unknown command "frobnicate". Run "abdecker help" for the list of commands.
+== version
+$ abdecker version
+exit: 0
+stdout:
+  abdecker 0.1.0-dev by Ingo Jache
+  https://github.com/ijache/abdecker
+  https://abdecker.jache.de
+== unknown command
+$ abdecker frobnicate
+exit: 2
+stderr:
+  Unknown command "frobnicate". Run "abdecker help" for the list of commands.
+== unknown option
+$ abdecker info testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf --frob
+exit: 2
+stderr:
+  Error: unknown option --frob
+  Usage: abdecker info <input.pdf|input.xml> [--json]
+  Run "abdecker help info" for details.
+== -o without file
+$ abdecker extract testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf -o
+exit: 2
+stderr:
+  Error: file name missing after -o
+  Usage: abdecker extract <input.pdf> [-o <output.xml>] [-f]
+  Run "abdecker help extract" for details.
+== --lang without value
+$ abdecker html testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf --lang
+exit: 2
+stderr:
+  Error: language missing after --lang (de or en)
+  Usage: abdecker html <input.pdf|input.xml> [-o <output.html>] [options]
+  Run "abdecker help html" for details.
+== --lang invalid
+$ abdecker html testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf --lang fr
+exit: 2
+stderr:
+  Error: --lang must be de or en
+  Usage: abdecker html <input.pdf|input.xml> [-o <output.html>] [options]
+  Run "abdecker help html" for details.
+== --fail-on without value
+$ abdecker check testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml --fail-on
+exit: 2
+stderr:
+  Error: severity missing after --fail-on (error or warning)
+  Usage: abdecker check <input.pdf|input.xml> [options]
+  Run "abdecker help check" for details.
+== --fail-on invalid
+$ abdecker check testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml --fail-on info
+exit: 2
+stderr:
+  Error: --fail-on must be error or warning
+  Usage: abdecker check <input.pdf|input.xml> [options]
+  Run "abdecker help check" for details.
+== info PDF
+$ abdecker info testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf
+exit: 0
+stdout:
+  File:            testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf
+  Container:       PDF 1.4, PDF/A-3b
+  Invoice file:    factur-x.xml
+  Syntax:          UN/CEFACT CII
+  Profile:         EN 16931
+  Guideline ID:    urn:cen.eu:en16931:2017
+  Invoice number:  471102
+  Issue date:      2018-03-05
+  Type:            380 (Invoice)
+  Seller:          Lieferant GmbH
+  Buyer:           Kunden AG Mitte
+  Grand total:     529.87 EUR
+  Amount due:      529.87 EUR
+  Attachments in the PDF:
+    factur-x.xml  text/xml  Alternative
+  Result:          OK
+== info UBL --json
+$ abdecker info testdata/external/corpus/corpus-master/XML-Rechnung/UBL/EN16931_Gutschrift.ubl.xml --json
+exit: 0
+stdout:
+  {
+    "file": "testdata/external/corpus/corpus-master/XML-Rechnung/UBL/EN16931_Gutschrift.ubl.xml",
+    "result": "ok",
+    "container": "xml",
+    "syntax": "ubl-invoice",
+    "profile": "peppol",
+    "guidelineId": "urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0",
+    "xrechnungVersion": "",
+    "pdf": {
+      "version": "",
+      "pdfaPart": "",
+      "pdfaConformance": "",
+      "xmpDocumentType": "",
+      "xmpDocumentFileName": "",
+      "xmpVersion": "",
+      "xmpConformanceLevel": "",
+      "invoiceFile": ""
+    },
+    "invoice": {
+      "number": "471102",
+      "issueDate": "2018-03-05",
+      "typeCode": "389",
+      "currency": "EUR",
+      "seller": "Lieferant GmbH",
+      "buyer": "Kunden AG Mitte",
+      "grandTotal": "529.87",
+      "duePayable": "529.87"
+    },
+    "attachments": [],
+    "messages": []
+  }
+== info PDF --json
+$ abdecker info testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf --json
+exit: 0
+stdout:
+  {
+    "file": "testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf",
+    "result": "ok",
+    "container": "pdf",
+    "syntax": "cii",
+    "profile": "en16931",
+    "guidelineId": "urn:cen.eu:en16931:2017",
+    "xrechnungVersion": "",
+    "pdf": {
+      "version": "1.4",
+      "pdfaPart": "3",
+      "pdfaConformance": "B",
+      "xmpDocumentType": "INVOICE",
+      "xmpDocumentFileName": "factur-x.xml",
+      "xmpVersion": "1.0",
+      "xmpConformanceLevel": "EN 16931",
+      "invoiceFile": "factur-x.xml"
+    },
+    "invoice": {
+      "number": "471102",
+      "issueDate": "2018-03-05",
+      "typeCode": "380",
+      "currency": "EUR",
+      "seller": "Lieferant GmbH",
+      "buyer": "Kunden AG Mitte",
+      "grandTotal": "529.87",
+      "duePayable": "529.87"
+    },
+    "attachments": [
+      {"name": "factur-x.xml", "mimeType": "text/xml", "relationship": "Alternative", "size": -1, "inAF": true}
+    ],
+    "messages": []
+  }
+== info stdin
+$ abdecker info - < testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml
+exit: 0
+stdout:
+  File:            -
+  Container:       XML
+  Syntax:          UN/CEFACT CII
+  Profile:         XRECHNUNG 3.0
+  Guideline ID:    urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0
+  Invoice number:  471102
+  Issue date:      2024-11-15
+  Type:            380 (Invoice)
+  Seller:          Lieferant GmbH
+  Buyer:           Kunden AG Mitte
+  Grand total:     529.87 EUR
+  Amount due:      529.87 EUR
+  Result:          OK
+== info no invoice
+$ abdecker info testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf
+exit: 1
+stdout:
+  File:            testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf
+  Container:       PDF 1.4
+  Messages:
+    [Info] PDF-NO-INVOICE: The PDF contains no embedded e-invoice
+  Result:          No e-invoice found
+== info no invoice --json
+$ abdecker info testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf --json
+exit: 1
+stdout:
+  {
+    "file": "testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf",
+    "result": "no-invoice",
+    "container": "pdf",
+    "syntax": "",
+    "profile": "",
+    "guidelineId": "",
+    "xrechnungVersion": "",
+    "pdf": {
+      "version": "1.4",
+      "pdfaPart": "",
+      "pdfaConformance": "",
+      "xmpDocumentType": "",
+      "xmpDocumentFileName": "",
+      "xmpVersion": "",
+      "xmpConformanceLevel": "",
+      "invoiceFile": ""
+    },
+    "invoice": {
+      "number": "",
+      "issueDate": "",
+      "typeCode": "",
+      "currency": "",
+      "seller": "",
+      "buyer": "",
+      "grandTotal": "",
+      "duePayable": ""
+    },
+    "attachments": [],
+    "messages": [
+      {"severity": "info", "code": "PDF-NO-INVOICE", "origin": "file", "text": "The PDF contains no embedded e-invoice"}
+    ]
+  }
+== info unknown XML
+$ abdecker info testdata/external/corpus/corpus-master/fatturaPA/eigor/valid/A10-Licenses.xml
+exit: 1
+stdout:
+  File:            testdata/external/corpus/corpus-master/fatturaPA/eigor/valid/A10-Licenses.xml
+  Container:       XML
+  Messages:
+    [Error] XML-UNKNOWN: Unknown XML format (root element "FatturaElettronica", namespace "http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2")
+  Result:          Unknown format
+== info broken XML
+$ abdecker info testdata/external/corpus/corpus-master/fatturaPA/eigor/valid/con-ritenuta-acconto-e-cassa-previdenziale.xml
+exit: 1
+stdout:
+  File:            testdata/external/corpus/corpus-master/fatturaPA/eigor/valid/con-ritenuta-acconto-e-cassa-previdenziale.xml
+  Container:       XML
+  Messages:
+    [Error] XML-SYNTAX: Broken XML: Unexpected end of file, <p:FatturaElettronica> is not closed (line 102)
+  Result:          Broken XML
+== info neither PDF nor XML
+$ abdecker info testdata/external/corpus/corpus-master/LICENSE
+exit: 1
+stdout:
+  File:            testdata/external/corpus/corpus-master/LICENSE
+  Messages:
+    [Error] FORMAT: The file is neither PDF nor XML
+  Result:          Unknown format
+== info missing file
+$ abdecker info tests/does-not-exist.pdf
+exit: 2
+stderr:
+  Error: "tests/does-not-exist.pdf" cannot be read: <os message>
+== info without input
+$ abdecker info
+exit: 2
+stderr:
+  Usage: abdecker info <input.pdf|input.xml> [--json]
+  Run "abdecker help info" for details.
+== info two inputs
+$ abdecker info testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml
+exit: 2
+stderr:
+  Usage: abdecker info <input.pdf|input.xml> [--json]
+  Run "abdecker help info" for details.
+== extract to stdout
+$ abdecker extract testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf
+exit: 0
+stdout:
+  <text 244 lines, 13153 bytes, sha256 ca379db6cd6d25b5>
+== extract -o
+$ abdecker extract testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf -o $OUT/extract.xml
+exit: 0
+stdout:
+  "factur-x.xml" saved as $OUT/extract.xml
+file $OUT/extract.xml:
+  <text 244 lines, 13153 bytes, sha256 ca379db6cd6d25b5>
+== extract -o existing
+$ abdecker extract testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf -o $OUT/exists.xml
+exit: 2
+stderr:
+  Error: "$OUT/exists.xml" already exists (use -f to overwrite)
+== extract -o existing -f
+$ abdecker extract testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf -o $OUT/exists.xml -f
+exit: 0
+stdout:
+  "factur-x.xml" saved as $OUT/exists.xml
+file $OUT/exists.xml:
+  <text 244 lines, 13153 bytes, sha256 ca379db6cd6d25b5>
+== extract -o -
+$ abdecker extract testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf -o -
+exit: 0
+stdout:
+  <text 244 lines, 13153 bytes, sha256 ca379db6cd6d25b5>
+== extract stdin
+$ abdecker extract - < testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf
+exit: 0
+stdout:
+  <text 244 lines, 13153 bytes, sha256 ca379db6cd6d25b5>
+== extract no invoice
+$ abdecker extract testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf
+exit: 1
+stderr:
+    [Info] PDF-NO-INVOICE: The PDF contains no embedded e-invoice
+  No e-invoice found
+== extract from XML
+$ abdecker extract testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml
+exit: 2
+stderr:
+    [Error] EXTRACT-XML: The input is already XML, there is nothing to extract
+  Not supported
+== extract missing file
+$ abdecker extract tests/does-not-exist.pdf
+exit: 2
+stderr:
+  Error: "tests/does-not-exist.pdf" cannot be read: <os message>
+== check valid XRechnung
+$ abdecker check testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml
+exit: 0
+stdout:
+  File:            testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml
+  Profile:         XRECHNUNG 3.0 (UN/CEFACT CII)
+  Invoice:         471102
+  Rules:           EN 16931, XRechnung 3.0
+  
+  Result: checked, OK
+== check PDF
+$ abdecker check testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf
+exit: 0
+stdout:
+  File:            testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf
+  Profile:         EN 16931 (UN/CEFACT CII)
+  Invoice:         471102
+  Rules:           EN 16931
+  
+  Result: checked, OK
+== check errors
+$ abdecker check testdata/external/corpus/corpus-master/other/eicar.cii.xml
+exit: 1
+stdout:
+  File:            testdata/external/corpus/corpus-master/other/eicar.cii.xml
+  Profile:         XRECHNUNG 3.0 (UN/CEFACT CII)
+  Invoice:         123
+  Rules:           EN 16931, XRechnung 3.0
+  
+  Messages:
+    [Error] BR-09: Seller country code (BT-40) is missing.
+    [Error] BR-11: Buyer country code (BT-55) is missing.
+    [Error] BR-CL-24: MIME code of the attached document (BT-125) is not allowed. [application/octet-stream]
+  
+  Result: 3 error(s), 0 warning(s)
+== check errors --json
+$ abdecker check testdata/external/corpus/corpus-master/other/eicar.cii.xml --json
+exit: 1
+stdout:
+  {
+    "file": "testdata/external/corpus/corpus-master/other/eicar.cii.xml",
+    "result": "ok",
+    "syntax": "cii",
+    "profile": "xrechnung",
+    "xrechnungVersion": "3.0",
+    "errors": 3,
+    "warnings": 0,
+    "ruleSets": ["EN 16931", "XRechnung 3.0"],
+    "notChecked": [],
+    "messages": [
+      {"severity": "error", "code": "BR-09", "origin": "official", "text": "Seller country code (BT-40) is missing."},
+      {"severity": "error", "code": "BR-11", "origin": "official", "text": "Buyer country code (BT-55) is missing."},
+      {"severity": "error", "code": "BR-CL-24", "origin": "official", "text": "MIME code of the attached document (BT-125) is not allowed. [application/octet-stream]"}
+    ]
+  }
+== check -v
+$ abdecker check testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml -v
+exit: 0
+stdout:
+  <text 45 lines, 3073 bytes, sha256 66d3d9693cabdbaa>
+== check errors --verbose
+$ abdecker check testdata/external/corpus/corpus-master/other/eicar.cii.xml --verbose
+exit: 1
+stdout:
+  <text 51 lines, 3306 bytes, sha256 1a55f38e07ed81c2>
+== check errors --json -v
+$ abdecker check testdata/external/corpus/corpus-master/other/eicar.cii.xml --json -v
+exit: 1
+stdout:
+  <text 274 lines, 18318 bytes, sha256 acdcdf8c6a948637>
+== check EN 16931 -v (R120 as extra check)
+$ abdecker check testdata/external/corpus/corpus-master/XML-Rechnung/CII/EN16931_1_Teilrechnung.cii.xml -v
+exit: 0
+stdout:
+  <text 42 lines, 2689 bytes, sha256 7e4f983cf2ccfe97>
+== help check
+$ abdecker help check
+exit: 0
+stdout:
+  Usage: abdecker check <input.pdf|input.xml> [options]
+  
+  Checks an e-invoice against the rules of EN 16931 and, for XRechnung, the
+  XRechnung and Peppol rules. Rule IDs are the official ones (BR-..., BR-DE-...);
+  "(extra check)" marks checks beyond the official rules. A plausibility check,
+  not a replacement for the official validators.
+  
+  With -v, the report lists every rule of the applied rule sets: passed,
+  failed, or not applied (the invoice does not contain what the rule is about,
+  or it cannot be decided; see the list of what was not checked).
+  
+  "-" as input reads from standard input.
+  
+  Options:
+    --json                  machine-readable output
+    -v, --verbose           list every rule by status (--json: the field "rules")
+    --fail-on <level>       error (default): exit code 1 on errors;
+                            warning: also on warnings
+  
+  Exit codes:
+    0  no errors (with --fail-on warning: no warnings either)
+    1  errors found (with --fail-on warning: also warnings),
+       or no (readable) e-invoice
+    2  failure: file, usage, encrypted PDF, internal error
+  
+  Examples:
+    abdecker check invoice.xml --fail-on warning
+    abdecker check invoice.pdf -v
+== check extra-check warning
+$ abdecker check testdata/external/corpus/corpus-master/XML-Rechnung/CII/EN16931_1_Teilrechnung.cii.xml
+exit: 0
+stdout:
+  File:            testdata/external/corpus/corpus-master/XML-Rechnung/CII/EN16931_1_Teilrechnung.cii.xml
+  Profile:         EN 16931 (UN/CEFACT CII)
+  Invoice:         471102
+  Rules:           EN 16931
+  
+  Messages:
+    [Warning] PEPPOL-EN16931-R120 (extra check): Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 4: 55.46, expected 55.40]
+  
+  Result: no errors, 1 warning(s)
+== check warning --fail-on warning
+$ abdecker check testdata/external/corpus/corpus-master/XML-Rechnung/CII/EN16931_1_Teilrechnung.cii.xml --fail-on warning
+exit: 1
+stdout:
+  File:            testdata/external/corpus/corpus-master/XML-Rechnung/CII/EN16931_1_Teilrechnung.cii.xml
+  Profile:         EN 16931 (UN/CEFACT CII)
+  Invoice:         471102
+  Rules:           EN 16931
+  
+  Messages:
+    [Warning] PEPPOL-EN16931-R120 (extra check): Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 4: 55.46, expected 55.40]
+  
+  Result: no errors, 1 warning(s)
+  Failed: warnings count as failure (--fail-on warning).
+== check warning --fail-on warning --json
+$ abdecker check testdata/external/corpus/corpus-master/XML-Rechnung/CII/EN16931_1_Teilrechnung.cii.xml --fail-on warning --json
+exit: 1
+stdout:
+  {
+    "file": "testdata/external/corpus/corpus-master/XML-Rechnung/CII/EN16931_1_Teilrechnung.cii.xml",
+    "result": "ok",
+    "syntax": "cii",
+    "profile": "en16931",
+    "xrechnungVersion": "",
+    "errors": 0,
+    "warnings": 1,
+    "ruleSets": ["EN 16931"],
+    "notChecked": [],
+    "messages": [
+      {"severity": "warning", "code": "PEPPOL-EN16931-R120", "origin": "extra", "text": "Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 4: 55.46, expected 55.40]"}
+    ]
+  }
+== check warning --fail-on error
+$ abdecker check testdata/external/corpus/corpus-master/XML-Rechnung/CII/EN16931_1_Teilrechnung.cii.xml --fail-on error
+exit: 0
+stdout:
+  File:            testdata/external/corpus/corpus-master/XML-Rechnung/CII/EN16931_1_Teilrechnung.cii.xml
+  Profile:         EN 16931 (UN/CEFACT CII)
+  Invoice:         471102
+  Rules:           EN 16931
+  
+  Messages:
+    [Warning] PEPPOL-EN16931-R120 (extra check): Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 4: 55.46, expected 55.40]
+  
+  Result: no errors, 1 warning(s)
+== check valid --fail-on warning
+$ abdecker check testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml --fail-on warning
+exit: 0
+stdout:
+  File:            testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml
+  Profile:         XRECHNUNG 3.0 (UN/CEFACT CII)
+  Invoice:         471102
+  Rules:           EN 16931, XRechnung 3.0
+  
+  Result: checked, OK
+== check stdin
+$ abdecker check - < testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml
+exit: 0
+stdout:
+  File:            -
+  Profile:         XRECHNUNG 3.0 (UN/CEFACT CII)
+  Invoice:         471102
+  Rules:           EN 16931, XRechnung 3.0
+  
+  Result: checked, OK
+== check no invoice
+$ abdecker check testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf
+exit: 1
+stdout:
+  File:            testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf
+  
+  Messages:
+    [Info] PDF-NO-INVOICE: The PDF contains no embedded e-invoice
+  
+  Result:          No e-invoice found
+== check no invoice --json
+$ abdecker check testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf --json
+exit: 1
+stdout:
+  {
+    "file": "testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf",
+    "result": "no-invoice",
+    "syntax": "",
+    "profile": "",
+    "xrechnungVersion": "",
+    "errors": 0,
+    "warnings": 0,
+    "ruleSets": [],
+    "notChecked": [],
+    "messages": [
+      {"severity": "info", "code": "PDF-NO-INVOICE", "origin": "file", "text": "The PDF contains no embedded e-invoice"}
+    ]
+  }
+== check missing file
+$ abdecker check tests/does-not-exist.pdf
+exit: 2
+stderr:
+  Error: "tests/does-not-exist.pdf" cannot be read: <os message>
+== embed to stdout
+$ abdecker embed testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf testdata/external/corpus/corpus-master/XML-Rechnung/CII/EN16931_Einfach.cii.xml
+exit: 0
+stdout:
+  <PDF 42472 bytes, %PDF-1.4>
+stderr:
+    [Warning] EMBED-NO-PDFA: The PDF is not PDF/A. ZUGFeRD/Factur-X require PDF/A-3; the result contains the invoice and its metadata but is formally not a valid ZUGFeRD PDF.
+== embed -o
+$ abdecker embed testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf testdata/external/corpus/corpus-master/XML-Rechnung/CII/EN16931_Einfach.cii.xml -o $OUT/embed.pdf
+exit: 0
+stdout:
+  Saved as $OUT/embed.pdf
+stderr:
+    [Warning] EMBED-NO-PDFA: The PDF is not PDF/A. ZUGFeRD/Factur-X require PDF/A-3; the result contains the invoice and its metadata but is formally not a valid ZUGFeRD PDF.
+file $OUT/embed.pdf:
+  <PDF 42472 bytes, %PDF-1.4>
+== embed -o existing
+$ abdecker embed testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf testdata/external/corpus/corpus-master/XML-Rechnung/CII/EN16931_Einfach.cii.xml -o $OUT/exists.pdf
+exit: 2
+stderr:
+  Error: "$OUT/exists.pdf" already exists (use -f to overwrite)
+== embed XML from stdin
+$ abdecker embed testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf - -o $OUT/embed-stdin.pdf < testdata/external/corpus/corpus-master/XML-Rechnung/CII/EN16931_Einfach.cii.xml
+exit: 0
+stdout:
+  Saved as $OUT/embed-stdin.pdf
+stderr:
+    [Warning] EMBED-NO-PDFA: The PDF is not PDF/A. ZUGFeRD/Factur-X require PDF/A-3; the result contains the invoice and its metadata but is formally not a valid ZUGFeRD PDF.
+file $OUT/embed-stdin.pdf:
+  <PDF 42472 bytes, %PDF-1.4>
+== embed both stdin
+$ abdecker embed - - < testdata/external/corpus/corpus-master/XML-Rechnung/CII/EN16931_Einfach.cii.xml
+exit: 2
+stderr:
+  Error: only one of the two inputs can be standard input
+== embed UBL (Peppol)
+$ abdecker embed testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf testdata/external/corpus/corpus-master/XML-Rechnung/UBL/EN16931_Gutschrift.ubl.xml -o $OUT/embed-ubl.pdf
+exit: 0
+stdout:
+  Saved as $OUT/embed-ubl.pdf
+stderr:
+    [Info] EMBED-PEPPOL: Peppol BIS is no ZUGFeRD/Factur-X profile; embedded as EN 16931 (specification identifier BT-24 "urn:cen.eu:en16931:2017" instead of "urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0"), which every Peppol BIS invoice also meets
+    [Info] EMBED-UBL: UBL converted to CII (the same content according to EN 16931); the PDF contains the CII
+    [Warning] EMBED-NO-PDFA: The PDF is not PDF/A. ZUGFeRD/Factur-X require PDF/A-3; the result contains the invoice and its metadata but is formally not a valid ZUGFeRD PDF.
+file $OUT/embed-ubl.pdf:
+  <PDF 40212 bytes, %PDF-1.4>
+== embed UBL (XRechnung)
+$ abdecker embed testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf testdata/external/corpus/corpus-master/XML-Rechnung/UBL/XRECHNUNG_Einfach.ubl.xml -o $OUT/embed-ubl-xr.pdf
+exit: 0
+stdout:
+  Saved as $OUT/embed-ubl-xr.pdf
+stderr:
+    [Info] EMBED-UBL: UBL converted to CII (the same content according to EN 16931); the PDF contains the CII
+    [Warning] EMBED-NO-PDFA: The PDF is not PDF/A. ZUGFeRD/Factur-X require PDF/A-3; the result contains the invoice and its metadata but is formally not a valid ZUGFeRD PDF.
+file $OUT/embed-ubl-xr.pdf:
+  <PDF 40628 bytes, %PDF-1.4>
+== embed UBL with content outside EN 16931
+$ abdecker embed testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf testdata/external/kosit/instances/extension/05.01a-INVOICE_ubl.xml -o $OUT/embed-ubl-lost.pdf
+exit: 0
+stdout:
+  Saved as $OUT/embed-ubl-lost.pdf
+stderr:
+    [Warning] EMBED-UBL-LOST: Content of the UBL outside EN 16931 has no place in CII and is left out: PrepaidPayment/ID, PrepaidPayment/InstructionID, PrepaidPayment/PaidAmount
+    [Info] EMBED-UBL: UBL converted to CII (the same content according to EN 16931); the PDF contains the CII
+    [Warning] EMBED-NO-PDFA: The PDF is not PDF/A. ZUGFeRD/Factur-X require PDF/A-3; the result contains the invoice and its metadata but is formally not a valid ZUGFeRD PDF.
+file $OUT/embed-ubl-lost.pdf:
+  <PDF 40502 bytes, %PDF-1.4>
+== embed into ZUGFeRD PDF
+$ abdecker embed testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf testdata/external/corpus/corpus-master/XML-Rechnung/CII/EN16931_Einfach.cii.xml -o $OUT/embed-twice.pdf
+exit: 1
+stderr:
+    [Error] EMBED-EXISTS: The PDF already contains an e-invoice (factur-x.xml)
+  Not supported
+== embed one input
+$ abdecker embed testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf
+exit: 2
+stderr:
+  Usage: abdecker embed <input.pdf> <invoice.xml> [-o <output.pdf>] [-f]
+  Run "abdecker help embed" for details.
+== strip to stdout
+$ abdecker strip testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf
+exit: 0
+stdout:
+  <PDF 153566 bytes, %PDF-1.4>
+== strip -o
+$ abdecker strip testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf -o $OUT/strip.pdf
+exit: 0
+stdout:
+  "factur-x.xml" removed, saved as $OUT/strip.pdf
+file $OUT/strip.pdf:
+  <PDF 153566 bytes, %PDF-1.4>
+== strip no invoice
+$ abdecker strip testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf -o $OUT/strip-plain.pdf
+exit: 1
+stderr:
+    [Info] PDF-NO-INVOICE: The PDF contains no embedded e-invoice
+  No e-invoice found
+== strip stdin
+$ abdecker strip - -o $OUT/strip-stdin.pdf < testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf
+exit: 0
+stdout:
+  "factur-x.xml" removed, saved as $OUT/strip-stdin.pdf
+file $OUT/strip-stdin.pdf:
+  <PDF 153566 bytes, %PDF-1.4>
+== strip XML
+$ abdecker strip testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml
+exit: 1
+stderr:
+    [Error] STRIP-NOT-PDF: The input is XML, not a PDF: there is nothing to remove
+  Not supported
+== attach to stdout
+$ abdecker attach testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf
+exit: 0
+stdout:
+  <text 282 lines, 60701 bytes, sha256 6f0707f70a27e6f1>
+== attach -o
+$ abdecker attach testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf -o $OUT/attach.xml
+exit: 0
+stdout:
+  1 file(s) attached, saved as $OUT/attach.xml
+file $OUT/attach.xml:
+  <text 282 lines, 60701 bytes, sha256 6f0707f70a27e6f1>
+== attach invoice from stdin
+$ abdecker attach - testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf -o $OUT/attach-stdin.xml < testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml
+exit: 0
+stdout:
+  1 file(s) attached, saved as $OUT/attach-stdin.xml
+file $OUT/attach-stdin.xml:
+  <text 282 lines, 60701 bytes, sha256 6f0707f70a27e6f1>
+== attach file from stdin
+$ abdecker attach testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml - < testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf
+exit: 2
+stderr:
+  Error: only the invoice XML can be read from standard input
+== attach unsupported type
+$ abdecker attach testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml testdata/external/corpus/corpus-master/LICENSE
+exit: 1
+stderr:
+    [Error] ATTACH-TYPE: "LICENSE": this file type is not allowed in e-invoices (allowed: pdf, png, jpg, jpeg, csv, xlsx, ods)
+  Not supported
+== attach to PDF
+$ abdecker attach testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf
+exit: 1
+stderr:
+    [Error] ATTACH-PDF: Files can only be attached to an invoice XML, not to a PDF (for a ZUGFeRD PDF: extract, attach, strip, embed)
+  Not supported
+== attach without file
+$ abdecker attach testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml
+exit: 2
+stderr:
+  Usage: abdecker attach <invoice.xml> <file>... [-o <output.xml>] [-f]
+  Run "abdecker help attach" for details.
+== attachments PDF
+$ abdecker attachments testdata/external/corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Betriebskostenabrechnung.pdf
+exit: 0
+stdout:
+  File:            testdata/external/corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Betriebskostenabrechnung.pdf
+  Attachments:     3
+    1 [pdf] AWV_13_Betriebskosten.pdf  application/pdf  249 KB  Unspecified  "Betriebskosten"
+    2 [pdf] zugferd-invoice.xml  text/xml  9540 bytes  (the invoice XML)  Alternative  "ZUGFeRD Rechnung"
+    3 [invoice] Betriebskostenabrechnung.pdf  application/pdf  (no content)  "Betriebskostenabrechnung"
+== attachments XML with BG-24
+$ abdecker attachments testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Elektron.cii.xml
+exit: 0
+stdout:
+  File:            testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Elektron.cii.xml
+  Attachments:     2
+    1 [invoice] Aufmass.png  image/png  121 KB  "Aufmass.png"
+    2 [invoice] ElektronRapport.pdf  application/pdf  823 KB  "ElektronRapport"
+== attachments --json
+$ abdecker attachments testdata/external/corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Betriebskostenabrechnung.pdf --json
+exit: 0
+stdout:
+  {
+    "file": "testdata/external/corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Betriebskostenabrechnung.pdf",
+    "result": "ok",
+    "attachments": [
+      {"source": "pdf", "name": "AWV_13_Betriebskosten.pdf", "description": "Betriebskosten", "mimeType": "application/pdf", "relationship": "Unspecified", "id": "", "uri": "", "invoice": false, "size": 254551},
+      {"source": "pdf", "name": "zugferd-invoice.xml", "description": "ZUGFeRD Rechnung", "mimeType": "text/xml", "relationship": "Alternative", "id": "", "uri": "", "invoice": true, "size": 9540},
+      {"source": "invoice", "name": "Betriebskostenabrechnung.pdf", "description": "Betriebskostenabrechnung", "mimeType": "application/pdf", "relationship": "", "id": "Abrechnung 2010", "uri": "", "invoice": false, "size": 0}
+    ],
+    "messages": []
+  }
+== attachments PDF without invoice
+$ abdecker attachments testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf
+exit: 0
+stdout:
+  File:            testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf
+  Attachments:     0
+== attachments unknown XML
+$ abdecker attachments testdata/external/corpus/corpus-master/fatturaPA/eigor/valid/A10-Licenses.xml
+exit: 1
+stdout:
+  File:            testdata/external/corpus/corpus-master/fatturaPA/eigor/valid/A10-Licenses.xml
+  Messages:
+    [Error] XML-UNKNOWN: Unknown XML format (root element "FatturaElettronica", namespace "http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2")
+  Result:          Unknown format
+== attachments -o
+$ abdecker attachments testdata/external/corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Betriebskostenabrechnung.pdf -o $OUT
+exit: 0
+stdout:
+  Saved $OUT/AWV_13_Betriebskosten.pdf  249 KB
+  Saved $OUT/zugferd-invoice.xml  9540 bytes
+stderr:
+  Not saved: "Betriebskostenabrechnung.pdf" has no content
+file $OUT/AWV_13_Betriebskosten.pdf:
+  <PDF 254551 bytes, %PDF-1.3>
+file $OUT/zugferd-invoice.xml:
+  <text 176 lines, 9365 bytes, sha256 21184f5eebb2eddd>
+== attachments -o existing
+$ abdecker attachments testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Elektron.cii.xml -o $OUT
+exit: 2
+stderr:
+  Error: "$OUT/Aufmass.png" already exists (use -f to overwrite)
+== attachments -o existing -f
+$ abdecker attachments testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Elektron.cii.xml -o $OUT -f
+exit: 0
+stdout:
+  Saved $OUT/Aufmass.png  121 KB
+  Saved $OUT/ElektronRapport.pdf  823 KB
+file $OUT/Aufmass.png:
+  <binary 123625 bytes, sha256 318d306847750009>
+file $OUT/ElektronRapport.pdf:
+  <PDF 843023 bytes, %PDF-1.7>
+== attachments -o -
+$ abdecker attachments testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Elektron.cii.xml -o -
+exit: 2
+stderr:
+  Error: -o needs a folder for the attachments
+== attachments stdin
+$ abdecker attachments - < testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Elektron.cii.xml
+exit: 0
+stdout:
+  File:            -
+  Attachments:     2
+    1 [invoice] Aufmass.png  image/png  121 KB  "Aufmass.png"
+    2 [invoice] ElektronRapport.pdf  application/pdf  823 KB  "ElektronRapport"
+== attachments without input
+$ abdecker attachments
+exit: 2
+stderr:
+  Usage: abdecker attachments <input.pdf|input.xml> [-o <folder|file>] [options]
+  Run "abdecker help attachments" for details.
+== attachments --index -o file
+$ abdecker attachments testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Elektron.cii.xml --index 2 -o $OUT/two.pdf
+exit: 0
+stdout:
+  Saved $OUT/two.pdf  823 KB
+file $OUT/two.pdf:
+  <PDF 843023 bytes, %PDF-1.7>
+== attachments --index PDF
+$ abdecker attachments testdata/external/corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Betriebskostenabrechnung.pdf --index 1 -o $OUT/one.bin
+exit: 0
+stdout:
+  Saved $OUT/one.bin  249 KB
+file $OUT/one.bin:
+  <PDF 254551 bytes, %PDF-1.3>
+== attachments --index no content
+$ abdecker attachments testdata/external/corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Betriebskostenabrechnung.pdf --index 3 -o $OUT/three.pdf
+exit: 1
+stderr:
+  Error: attachment 3 has no content
+== attachments --index to stdout
+$ abdecker attachments testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Elektron.cii.xml --index 1
+exit: 0
+stdout:
+  <binary 123625 bytes, sha256 318d306847750009>
+== attachments --index -o -
+$ abdecker attachments testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Elektron.cii.xml --index 1 -o -
+exit: 0
+stdout:
+  <binary 123625 bytes, sha256 318d306847750009>
+== attachments --index -o existing
+$ abdecker attachments testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Elektron.cii.xml --index 1 -o $OUT/a.png
+exit: 2
+stderr:
+  Error: "$OUT/a.png" already exists (use -f to overwrite)
+== attachments --index -o existing -f
+$ abdecker attachments testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Elektron.cii.xml --index 1 -o $OUT/a.png -f
+exit: 0
+stdout:
+  Saved $OUT/a.png  121 KB
+file $OUT/a.png:
+  <binary 123625 bytes, sha256 318d306847750009>
+== attachments --index too high
+$ abdecker attachments testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Elektron.cii.xml --index 9
+exit: 1
+stderr:
+  Error: there is no attachment 9 (attachments: 2)
+== attachments --index 0
+$ abdecker attachments testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Elektron.cii.xml --index 0
+exit: 2
+stderr:
+  Error: --index needs a number from 1 to 9999
+  Usage: abdecker attachments <input.pdf|input.xml> [-o <folder|file>] [options]
+  Run "abdecker help attachments" for details.
+== attachments --index --json
+$ abdecker attachments testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Elektron.cii.xml --index 1 --json
+exit: 2
+stderr:
+  Error: --index cannot be combined with --json
+== attachments --index no invoice
+$ abdecker attachments testdata/external/corpus/corpus-master/fatturaPA/eigor/valid/A10-Licenses.xml --index 1
+exit: 1
+stderr:
+    [Error] XML-UNKNOWN: Unknown XML format (root element "FatturaElettronica", namespace "http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2")
+  Unknown format
+== html to stdout
+$ abdecker html testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf
+exit: 0
+stdout:
+  <text 10 lines, 6120 bytes, sha256 5d17c9c87d89cb9f>
+== html -o
+$ abdecker html testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf -o $OUT/page.html
+exit: 0
+stdout:
+  Saved as $OUT/page.html
+file $OUT/page.html:
+  <text 10 lines, 6120 bytes, sha256 5d17c9c87d89cb9f>
+== html --lang en --no-check
+$ abdecker html testdata/external/corpus/corpus-master/XML-Rechnung/CII/EN16931_1_Teilrechnung.cii.xml --lang en --no-check -o $OUT/page-en.html
+exit: 0
+stdout:
+  Saved as $OUT/page-en.html
+file $OUT/page-en.html:
+  <text 11 lines, 7201 bytes, sha256 f40efd509105c889>
+== html with check findings
+$ abdecker html testdata/external/corpus/corpus-master/XML-Rechnung/CII/EN16931_1_Teilrechnung.cii.xml -o $OUT/page-teil.html
+exit: 0
+stdout:
+  Saved as $OUT/page-teil.html
+file $OUT/page-teil.html:
+  <text 11 lines, 7703 bytes, sha256 3f301084515e60c5>
+== html stdin
+$ abdecker html - < testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml
+exit: 0
+stdout:
+  <text 10 lines, 11894 bytes, sha256 7a79bf7247a531f5>
+== html --payment
+$ abdecker html testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml --payment -o $OUT/pay.html
+exit: 0
+stdout:
+  Saved as $OUT/pay.html
+file $OUT/pay.html:
+  <text 10 lines, 8658 bytes, sha256 43ab2e184c253883>
+== html --payment --lang en --no-check
+$ abdecker html testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml --payment --lang en --no-check
+exit: 0
+stdout:
+  <text 10 lines, 8587 bytes, sha256 d7aa63f02ac8ca06>
+== html no invoice
+$ abdecker html testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf
+exit: 1
+stderr:
+    [Info] PDF-NO-INVOICE: The PDF contains no embedded e-invoice
+  No e-invoice found
+== json to stdout
+$ abdecker json testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml
+exit: 0
+stdout:
+  <text 96 lines, 2503 bytes, sha256 c038ba7845cb2205>
+== json with attachments
+$ abdecker json testdata/external/corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Elektron.cii.xml
+exit: 0
+stdout:
+  <text 103 lines, 2864 bytes, sha256 ebcfbc25b772142b>
+== json -o
+$ abdecker json testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf -o $OUT/invoice.json
+exit: 0
+stdout:
+  Saved as $OUT/invoice.json
+file $OUT/invoice.json:
+  <text 78 lines, 2002 bytes, sha256 c77094232adad21c>
+== json -o existing
+$ abdecker json testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf -o $OUT/exists.json
+exit: 2
+stderr:
+  Error: "$OUT/exists.json" already exists (use -f to overwrite)
+== json stdin
+$ abdecker json - < testdata/external/corpus/corpus-master/XML-Rechnung/UBL/EN16931_Gutschrift.ubl.xml
+exit: 0
+stdout:
+  <text 79 lines, 1916 bytes, sha256 f30acf0e5a35086d>
+== json no invoice
+$ abdecker json testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf
+exit: 1
+stdout:
+  {
+    "file": "testdata/external/corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf",
+    "result": "no-invoice",
+    "syntax": "",
+    "profile": "",
+    "xrechnungVersion": "",
+    "invoice": {},
+    "messages": [
+      {"severity": "info", "code": "PDF-NO-INVOICE", "origin": "file", "text": "The PDF contains no embedded e-invoice"}
+    ]
+  }
+== json without input
+$ abdecker json
+exit: 2
+stderr:
+  Usage: abdecker json <input.pdf|input.xml> [-o <output.json>] [-f]
+  Run "abdecker help json" for details.
+== create to stdout
+$ abdecker create templates/xrechnung.json
+exit: 0
+stdout:
+  <text 155 lines, 7455 bytes, sha256 2207da2554ad593b>
+== create -o
+$ abdecker create templates/cash-discount.json -o $OUT/create.xml
+exit: 0
+stdout:
+  Saved as $OUT/create.xml
+file $OUT/create.xml:
+  <text 158 lines, 7562 bytes, sha256 47edd2804812813a>
+== create -o existing
+$ abdecker create templates/cash-discount.json -o $OUT/exists.xml
+exit: 2
+stderr:
+  Error: "$OUT/exists.xml" already exists (use -f to overwrite)
+== create --var today
+$ abdecker create templates/minimal.json --var today=2026-11-14 -o $OUT/minimal.xml
+exit: 0
+stdout:
+  Saved as $OUT/minimal.xml
+file $OUT/minimal.xml:
+  <text 147 lines, 6934 bytes, sha256 a40b1dbad0244187>
+== create stdin
+$ abdecker create - -o $OUT/create-stdin.xml < templates/reverse-charge.json
+exit: 0
+stdout:
+  Saved as $OUT/create-stdin.xml
+file $OUT/create-stdin.xml:
+  <text 160 lines, 7694 bytes, sha256 ac639a26f5235d6b>
+== create --vars and --var
+$ abdecker create tests/create/placeholders.json --vars tests/create/vars.json --var nr=2026-1000 --var today=2026-11-14 -o $OUT/vars.xml
+exit: 0
+stdout:
+  Saved as $OUT/vars.xml
+file $OUT/vars.xml:
+  <text 110 lines, 5234 bytes, sha256 012617d588bdcc04>
+== create missing variable
+$ abdecker create tests/create/placeholders.json --var today=2026-11-14
+exit: 1
+stderr:
+    [Error] JSON-PLACEHOLDER: line 2, column 13: number: unknown placeholder {{nr}}
+    [Error] JSON-PLACEHOLDER: line 4, column 21: orderReference: unknown placeholder {{po}}
+    [Error] JSON-PLACEHOLDER: line 14, column 39: lines[1].quantity: unknown placeholder {{hours}}
+  Invalid invoice data
+== create --var without =
+$ abdecker create templates/minimal.json --var today
+exit: 2
+stderr:
+  Error: --var needs name=value
+  Usage: abdecker create <invoice.json> [-o <output.xml>] [options]
+  Run "abdecker help create" for details.
+== create --vars not JSON
+$ abdecker create templates/minimal.json --vars testdata/external/corpus/corpus-master/LICENSE
+exit: 1
+stderr:
+    [Error] JSON-SYNTAX: Broken JSON: line 1, column 34: unexpected character
+  testdata/external/corpus/corpus-master/LICENSE: Invalid invoice data
+== create format errors
+$ abdecker create tests/create/format-errors.json -o $OUT/format.xml
+exit: 1
+stderr:
+    [Error] JSON-FIELD: line 3, column 3: isueDate: unknown field
+    [Error] JSON-PLACEHOLDER: line 5, column 11: note: unknown placeholder {{unknown}}
+    [Error] JSON-VALUE: line 9, column 39: lines[1].quantity: "1,5" is not a number (digits with "." as decimal point)
+    [Error] JSON-MISSING: line 9, column 5: lines[1].vat: required
+    [Error] JSON-VALUE: line 4, column 14: dueDate: "2026-13-01" is not a date (YYYY-MM-DD)
+  Invalid invoice data
+== create check errors
+$ abdecker create tests/create/check-errors.json -o $OUT/check.xml
+exit: 1
+stdout:
+  Saved as $OUT/check.xml
+stderr:
+    [Error] BR-02: Invoice number (BT-1) is missing.
+  Check: 1 error(s), 0 warning(s)
+file $OUT/check.xml:
+  <text 100 lines, 4783 bytes, sha256 12e9caafb76d9b68>
+== create attachment file
+$ abdecker create tests/create/with-file.json -o $OUT/with-file.xml
+exit: 0
+stdout:
+  Saved as $OUT/with-file.xml
+file $OUT/with-file.xml:
+  <text 107 lines, 50829 bytes, sha256 64d080142c458a26>
+== create without input
+$ abdecker create
+exit: 2
+stderr:
+  Usage: abdecker create <invoice.json> [-o <output.xml>] [options]
+  Run "abdecker help create" for details.
+== serve with input
+$ abdecker serve testdata/external/corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf
+exit: 2
+stderr:
+  Usage: abdecker serve [options]
+  Run "abdecker help serve" for details.
+== serve --port 0
+$ abdecker serve --port 0
+exit: 2
+stderr:
+  Error: --port needs a number from 1 to 65535
+  Usage: abdecker serve [options]
+  Run "abdecker help serve" for details.
+== serve --port not a number
+$ abdecker serve --port x
+exit: 2
+stderr:
+  Error: --port needs a number from 1 to 65535
+  Usage: abdecker serve [options]
+  Run "abdecker help serve" for details.
+== serve --workers without value
+$ abdecker serve --workers
+exit: 2
+stderr:
+  Error: number missing after --workers
+  Usage: abdecker serve [options]
+  Run "abdecker help serve" for details.
+== serve --host invalid
+$ abdecker serve --host example.org --port 1
+exit: 2
+stderr:
+  Error: invalid address "example.org" (IPv4 expected, e.g. 127.0.0.1 or 0.0.0.0)

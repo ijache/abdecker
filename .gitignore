@@ -1,0 +1,33 @@
+# Delphi build output
+*.dcu
+*.exe
+*.map
+*.rsm
+*.drc
+*.identcache
+*.local
+*.stat
+*.dsk
+__history/
+__recovery/
+bin/
+dcu/
+Win32/
+Win64/
+
+# FPC build output
+*.o
+*.ppu
+*.a
+lib/
+
+# third-party test data (fetched by tools/fetch-testdata.sh)
+testdata/external/
+# official rule sets (reference, fetched by tools/fetch-testdata.sh)
+testdata/rules/
+
+# test run output
+tests/golden/*.actual.txt
+
+# python
+__pycache__/

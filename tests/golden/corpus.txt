@@ -1,0 +1,326 @@
+corpus/corpus-master/fatturaPA/eigor/valid/A10-Licenses.xml	UnknownFormat	XML	-	-			XML-UNKNOWN
+corpus/corpus-master/fatturaPA/eigor/valid/A10-Licenses-CreditNote.xml	UnknownFormat	XML	-	-			XML-UNKNOWN
+corpus/corpus-master/fatturaPA/eigor/valid/A4-Subscription.xml	UnknownFormat	XML	-	-			XML-UNKNOWN
+corpus/corpus-master/fatturaPA/eigor/valid/con-bollo.xml	UnknownFormat	XML	-	-			XML-UNKNOWN
+corpus/corpus-master/fatturaPA/eigor/valid/con-ritenuta-acconto-e-cassa-previdenziale.xml	BrokenXML	XML	-	-			XML-SYNTAX
+corpus/corpus-master/fatturaPA/eigor/valid/fattpa-creditnote.to-ublcn-working-example.xml	UnknownFormat	XML	-	-			XML-UNKNOWN
+corpus/corpus-master/fatturaPA/eigor/valid/fatt-pa-plain-vanilla.xml	UnknownFormat	XML	-	-			XML-UNKNOWN
+corpus/corpus-master/fatturaPA/eigor/valid/IT01234567890_FPA01.xml	UnknownFormat	XML	-	-			XML-UNKNOWN
+corpus/corpus-master/fatturaPA/eigor/valid/IT01234567890_FPA02.xml	UnknownFormat	XML	-	-			XML-UNKNOWN
+corpus/corpus-master/fatturaPA/official/valid/IT01234567890_FPA01.xml	UnknownFormat	XML	-	-			XML-UNKNOWN
+corpus/corpus-master/fatturaPA/official/valid/IT01234567890_FPA02.xml	UnknownFormat	XML	-	-			XML-UNKNOWN
+corpus/corpus-master/fatturaPA/official/valid/IT01234567890_FPA03.xml	UnknownFormat	XML	-	-			XML-UNKNOWN
+corpus/corpus-master/fatturaPA/official/valid/IT01234567890_FPR01.xml	UnknownFormat	XML	-	-			XML-UNKNOWN
+corpus/corpus-master/fatturaPA/official/valid/IT01234567890_FPR02.xml	UnknownFormat	XML	-	-			XML-UNKNOWN
+corpus/corpus-master/fatturaPA/official/valid/IT01234567890_FPR03.xml	UnknownFormat	XML	-	-			XML-UNKNOWN
+corpus/corpus-master/other/eicar.cii.xml	OK	XML	CII	XRECHNUNG	3.0		
+corpus/corpus-master/other/eicar.ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+corpus/corpus-master/PEPPOL/Valid/Qvalia/Large_Invoice_sample1.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/PEPPOL/Valid/Qvalia/Large_Invoice_sample2.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/unstructured/RE-E-974-Hetzner_2016-01-19_R0005532486.pdf	NoInvoice	PDF	-	-			PDF-NO-INVOICE
+corpus/corpus-master/XML-Rechnung/CII/EN16931_1_Teilrechnung.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_2_Teilrechnung.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_AbweichenderZahlungsempf.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_Betriebskostenabrechnung.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_Einfach.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_Einfach_DueDate.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_Einfach_negativePaymentDue.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_Elektron.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_ElektronischeAdresse.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_Gutschrift.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_Haftpflichtversicherung_Versicherungssteuer.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_Innergemeinschaftliche_Lieferungen.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_Kraftfahrversicherung_Bruttopreise.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_Miete.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_OEPNV.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_Physiotherapeut.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_Rabatte.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_Rechnungskorrektur.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_RechnungsUebertragung.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_Reisekostenabrechnung.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_Sachversicherung_berechneter_Steuersatz.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/EN16931_SEPA_Prenotification.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/not_validating_full_invoice_based_onTest_EeISI_300_CENfullmodel.cii.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Betriebskostenabrechnung.cii.xml	OK	XML	CII	XRECHNUNG	3.0		
+corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml	OK	XML	CII	XRECHNUNG	3.0		
+corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Elektron.cii.xml	OK	XML	CII	XRECHNUNG	3.0		
+corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Reisekostenabrechnung.cii.xml	OK	XML	CII	XRECHNUNG	3.0		
+corpus/corpus-master/XML-Rechnung/FX/EN16931_1_Teilrechnung.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_2_Teilrechnung.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_AbweichenderZahlungsempf.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_Betriebskostenabrechnung.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach_DueDate.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach_negativePaymentDue.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_Elektron.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_ElektronischeAdresse.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_Gutschrift.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_Haftpflichtversicherung_Versicherungssteuer.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_Innergemeinschaftliche_Lieferungen.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_Kraftfahrversicherung_Bruttopreise.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_Miete.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_OEPNV.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_Physiotherapeut.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_Rabatte.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_Rechnungskorrektur.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_RechnungsUebertragung.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_Reisekostenabrechnung.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_Sachversicherung_berechneter_Steuersatz.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/EN16931_SEPA_Prenotification.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/XML-Rechnung/FX/XRECHNUNG_Betriebskostenabrechnung.pdf	OK	PDF	CII	XRECHNUNG	2.1	xrechnung.xml	
+corpus/corpus-master/XML-Rechnung/FX/XRECHNUNG_Einfach.pdf	OK	PDF	CII	XRECHNUNG	2.1	xrechnung.xml	
+corpus/corpus-master/XML-Rechnung/FX/XRECHNUNG_Elektron.pdf	OK	PDF	CII	XRECHNUNG	2.1	xrechnung.xml	
+corpus/corpus-master/XML-Rechnung/FX/XRECHNUNG_Reisekostenabrechnung.pdf	OK	PDF	CII	XRECHNUNG	2.1	xrechnung.xml	
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_1_Teilrechnung.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_2_Teilrechnung.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_AbweichenderZahlungsempf.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_Betriebskostenabrechnung.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_Einfach.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_Einfach_DueDate.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_Einfach_negativePaymentDue.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_Elektron.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_ElektronischeAdresse.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_Gutschrift.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_Haftpflichtversicherung_Versicherungssteuer.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_Innergemeinschaftliche_Lieferungen.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_Kraftfahrversicherung_Bruttopreise.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_Miete.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_OEPNV.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_Physiotherapeut.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_Rabatte.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_Rechnungskorrektur.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_RechnungsUebertragung.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_Reisekostenabrechnung.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_Sachversicherung_berechneter_Steuersatz.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/EN16931_SEPA_Prenotification.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/not_validating_full_invoice_based_onTest_EeISI_300_CENfullmodel.ubl.xml	OK	XML	UBL-Invoice	PEPPOL			
+corpus/corpus-master/XML-Rechnung/UBL/ubl-tc434-creditnote1.xml	OK	XML	UBL-CreditNote	EN16931			
+corpus/corpus-master/XML-Rechnung/UBL/XRECHNUNG_Betriebskostenabrechnung.ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+corpus/corpus-master/XML-Rechnung/UBL/XRECHNUNG_Einfach.ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+corpus/corpus-master/XML-Rechnung/UBL/XRECHNUNG_Elektron.ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+corpus/corpus-master/XML-Rechnung/UBL/XRECHNUNG_Reisekostenabrechnung.ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+corpus/corpus-master/ZUGFeRDv1/correct/4s4u/additional-data-sample-1.pdf	OK	PDF	ZUGFeRD1	EXTENDED		ZUGFeRD-invoice.xml	
+corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_BASIC_Einfach.pdf	OK	PDF	ZUGFeRD1	BASIC		ZUGFeRD-invoice.xml	
+corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_BASIC_Rechnungskorrektur.pdf	OK	PDF	ZUGFeRD1	BASIC		ZUGFeRD-invoice.xml	
+corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_Einfach.pdf	OK	PDF	ZUGFeRD1	COMFORT		ZUGFeRD-invoice.xml	
+corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_Haftpflichtversicherung_Versicherungssteuer.pdf	OK	PDF	ZUGFeRD1	COMFORT		ZUGFeRD-invoice.xml	
+corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_Kraftfahrversicherung_Bruttopreise.pdf	OK	PDF	ZUGFeRD1	COMFORT		ZUGFeRD-invoice.xml	
+corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_Rabatte.pdf	OK	PDF	ZUGFeRD1	COMFORT		ZUGFeRD-invoice.xml	
+corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_Rechnungskorrektur.pdf	OK	PDF	ZUGFeRD1	COMFORT		ZUGFeRD-invoice.xml	
+corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_Sachversicherung_berechneter_Steuersatz.pdf	OK	PDF	ZUGFeRD1	COMFORT		ZUGFeRD-invoice.xml	
+corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_SEPA_Prenotification.pdf	OK	PDF	ZUGFeRD1	COMFORT		ZUGFeRD-invoice.xml	
+corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_EXTENDED_Kostenrechnung.pdf	OK	PDF	ZUGFeRD1	EXTENDED		ZUGFeRD-invoice.xml	
+corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_EXTENDED_Rechnungskorrektur.pdf	OK	PDF	ZUGFeRD1	EXTENDED		ZUGFeRD-invoice.xml	
+corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_EXTENDED_Warenrechnung.pdf	OK	PDF	ZUGFeRD1	EXTENDED		ZUGFeRD-invoice.xml	
+corpus/corpus-master/ZUGFeRDv1/correct/Konik/acme_invoice-42_ZUGFeRD.pdf	OK	PDF	ZUGFeRD1	BASIC		ZUGFeRD-invoice.xml	
+corpus/corpus-master/ZUGFeRDv1/correct/Mustangproject/MustangGnuaccountingBeispielRE-20140519_499.pdf	UnknownFormat	PDF	-	-		ZUGFeRD-invoice.xml	XML-UNKNOWN
+corpus/corpus-master/ZUGFeRDv1/correct/Mustangproject/MustangGnuaccountingBeispielRE-20140522_501.pdf	UnknownFormat	PDF	-	-		ZUGFeRD-invoice.xml	XML-UNKNOWN
+corpus/corpus-master/ZUGFeRDv1/correct/Mustangproject/MustangGnuaccountingBeispielRE-20140703_502.pdf	OK	PDF	ZUGFeRD1	COMFORT		ZUGFeRD-invoice.xml	ZF-XMP
+corpus/corpus-master/ZUGFeRDv1/correct/Mustangproject/MustangGnuaccountingBeispielRE-20150613_503.pdf	OK	PDF	ZUGFeRD1	COMFORT		ZUGFeRD-invoice.xml	
+corpus/corpus-master/ZUGFeRDv1/correct/Mustangproject/MustangGnuaccountingBeispielRE-20151008_504.pdf	OK	PDF	ZUGFeRD1	COMFORT		ZUGFeRD-invoice.xml	
+corpus/corpus-master/ZUGFeRDv1/correct/Mustangproject/MustangGnuaccountingBeispielRE-20151008_504new.pdf	OK	PDF	ZUGFeRD1	EXTENDED		ZUGFeRD-invoice.xml	
+corpus/corpus-master/ZUGFeRDv1/correct/Mustangproject/MustangGnuaccountingBeispielRE-20170509_505.pdf	OK	PDF	ZUGFeRD1	EXTENDED		ZUGFeRD-invoice.xml	ZF-XMP
+corpus/corpus-master/ZUGFeRDv1/fail/Mustangproject/fail1.pdf	OK	PDF	ZUGFeRD1	-		ZUGFeRD-invoice.xml	PROFILE-UNKNOWN
+corpus/corpus-master/ZUGFeRDv1/fail/Mustangproject/fail2.pdf	OK	PDF	ZUGFeRD1	COMFORT		ZUGFeRD-invoice.xml	
+corpus/corpus-master/ZUGFeRDv1/fail/Mustangproject/fail3.pdf	OK	PDF	ZUGFeRD1	EXTENDED		ZUGFeRD-invoice.xml	ZF-XMP
+corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Avoir_FR_type381_BASIC.pdf	OK	PDF	CII	BASIC		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Facture_DOM_BASICWL.pdf	OK	PDF	CII	BASICWL		factur-x.xml	ZF-NOT-EINVOICE
+corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Facture_DOM_MINIMUM.pdf	OK	PDF	CII	MINIMUM		factur-x.xml	ZF-NOT-EINVOICE
+corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Facture_FR_BASICWL.pdf	OK	PDF	CII	BASICWL		factur-x.xml	ZF-NOT-EINVOICE
+corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Facture_FR_MINIMUM.pdf	OK	PDF	CII	MINIMUM		factur-x.xml	ZF-NOT-EINVOICE
+corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Facture_UE_BASICWL.pdf	OK	PDF	CII	BASICWL		factur-x.xml	ZF-NOT-EINVOICE
+corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Facture_UE_MINIMUM.pdf	OK	PDF	CII	MINIMUM		factur-x.xml	ZF-NOT-EINVOICE
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/BASIC/zugferd_2p0_BASIC_Einfach.pdf	OK	PDF	CII	BASIC		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/BASIC/zugferd_2p0_BASIC_Rechnungskorrektur.pdf	OK	PDF	CII	BASIC		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/BASIC/zugferd_2p0_BASIC_Taxifahrt.pdf	OK	PDF	CII	BASIC		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_1_Teilrechnung.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_2_Teilrechnung.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_AbweichenderZahlungsempf.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Betriebskostenabrechnung.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Einfach.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Elektron.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_ElektronischeAdresse.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Gutschrift.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Haftpflichtversicherung_Versicherungssteuer.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Innergemeinschaftliche_Lieferungen.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Kraftfahrversicherung_Bruttopreise.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Miete.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_OEPNV.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Physiotherapeut.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Rabatte.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Rechnungskorrektur.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_RechnungsUebertragung.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Reisekostenabrechnung.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Sachversicherung_berechneter_Steuersatz.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_SEPA_Prenotification.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EXTENDED/zugferd_2p0_EXTENDED_Fremdwaehrung.pdf	OK	PDF	CII	EXTENDED		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EXTENDED/zugferd_2p0_EXTENDED_InnergemeinschLieferungMehrereBestellungen.pdf	OK	PDF	CII	EXTENDED		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EXTENDED/zugferd_2p0_EXTENDED_Kostenrechnung.pdf	OK	PDF	CII	EXTENDED		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EXTENDED/zugferd_2p0_EXTENDED_Rechnungskorrektur.pdf	OK	PDF	CII	EXTENDED		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EXTENDED/zugferd_2p0_EXTENDED_Warenrechnung.pdf	OK	PDF	CII	EXTENDED		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/intarsys/MINIMUM/zugferd_2p0_MINIMUM.pdf	OK	PDF	CII	MINIMUM		zugferd-invoice.xml	ZF-NOT-EINVOICE
+corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/hate1.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/MustangGnuaccountingBeispielRE-20190610_507.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/MustangGnuaccountingBeispielRE-20201121_508.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/MustangGnuaccountingBeispielRE-20201121_508_withBOM.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-XR.xml	OK	XML	CII	XRECHNUNG	1.2		
+corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-XR-Edge.xml	OK	XML	CII	XRECHNUNG	1.2		
+corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushAllowances.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushChargesAllowances.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushCorrection.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushCreditNote.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushEdge.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushItemChargesAllowances.xml	OK	XML	CII	EXTENDED			
+corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushRelativeChargesAllowances.xml	OK	XML	CII	EXTENDED			
+corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushReverseCharge.xml	OK	XML	CII	EXTENDED			
+corpus/corpus-master/ZUGFeRDv2/correct/PHP_@gpFacturX/sample_inofficial_20190125_atgp_factur-x_v_1_0.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/BASIC WL/zugferd_2p1_BASIC-WL_Buchungshilfe.pdf	OK	PDF	CII	BASICWL		factur-x.xml	ZF-NOT-EINVOICE
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/BASIC WL/zugferd_2p1_BASIC-WL_Einfach.pdf	OK	PDF	CII	BASICWL		factur-x.xml	ZF-NOT-EINVOICE
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/BASIC/zugferd_2p1_BASIC_Einfach.pdf	OK	PDF	CII	BASIC		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/BASIC/zugferd_2p1_BASIC_Rechnungskorrektur.pdf	OK	PDF	CII	BASIC		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/BASIC/zugferd_2p1_BASIC_Taxifahrt.pdf	OK	PDF	CII	BASIC		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_1_Teilrechnung.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_2_Teilrechnung.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_AbweichenderZahlungsempf.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Betriebskostenabrechnung.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Betriebskostenabrechnung_XRechnung_embedded.pdf	OK	PDF	CII	XRECHNUNG	1.2	factur-x.xml	ZF-XMP-PROFILE
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Einfach.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Einfach_DueDate.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Einfach_negativePaymentDue.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Elektron.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Elektron_embedded.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Elektron_XRechnung.pdf	OK	PDF	CII	XRECHNUNG	1.2	factur-x.xml	ZF-XMP-PROFILE
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_ElektronischeAdresse.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Gutschrift.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Haftpflichtversicherung_Versicherungssteuer.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Innergemeinschaftliche_Lieferungen.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Kraftfahrversicherung_Bruttopreise.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Miete.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_OEPNV.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Physiotherapeut.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Rabatte.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Rechnungskorrektur.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_RechnungsUebertragung.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Reisekostenabrechnung.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Reisekostenabrechnung_XRechnung_embedded.pdf	OK	PDF	CII	XRECHNUNG	1.2	factur-x.xml	ZF-XMP-PROFILE
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Sachversicherung_berechneter_Steuersatz.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_SEPA_Prenotification.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EXTENDED/zugferd_2p1_EXTENDED_Fremdwaehrung.pdf	OK	PDF	CII	EXTENDED		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EXTENDED/zugferd_2p1_EXTENDED_InnergemeinschLieferungMehrereBestellungen.pdf	OK	PDF	CII	EXTENDED		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EXTENDED/zugferd_2p1_EXTENDED_Kostenrechnung.pdf	OK	PDF	CII	EXTENDED		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EXTENDED/zugferd_2p1_EXTENDED_Rechnungskorrektur.pdf	OK	PDF	CII	EXTENDED		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EXTENDED/zugferd_2p1_EXTENDED_Warenrechnung.pdf	OK	PDF	CII	EXTENDED		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/MINIMUM/zugferd_2p1_MINIMUM_Buchungshilfe.pdf	OK	PDF	CII	MINIMUM		factur-x.xml	ZF-NOT-EINVOICE
+corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/MINIMUM/zugferd_2p1_MINIMUM_Rechnung.pdf	OK	PDF	CII	MINIMUM		factur-x.xml	ZF-NOT-EINVOICE
+corpus/corpus-master/ZUGFeRDv2/correct/xml/ZUGFeRD-invoice_rabatte_3_abschlag_duepayableamount.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/ZUGFeRDv2/correct/xml/ZUGFeRD-invoice_rabatte_4_abschlag_taxbasistotalamount.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Avoir_FR_type380_BASIC.pdf	OK	PDF	CII	BASIC		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Avoir_FR_type380_EN16931.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Avoir_FR_type380_MINIMUM.pdf	OK	PDF	CII	MINIMUM		factur-x.xml	ZF-NOT-EINVOICE
+corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Avoir_FR_type381_BASICWL.pdf	OK	PDF	CII	BASICWL		factur-x.xml	ZF-NOT-EINVOICE
+corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Avoir_FR_type381_EN16931.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Avoir_FR_type381_MINIMUM.pdf	OK	PDF	CII	MINIMUM		factur-x.xml	ZF-NOT-EINVOICE
+corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Facture_DOM_BASIC.pdf	OK	PDF	CII	BASIC		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Facture_DOM_EN16931.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Facture_FR_BASIC.pdf	OK	PDF	CII	BASIC		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Facture_FR_EN16931.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Facture_UE_BASIC.pdf	OK	PDF	CII	BASIC		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Facture_UE_EN16931.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/fail/FX-With-UBL-REC50304330.pdf	OK	PDF	UBL-Invoice	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/fail/Mustangproject/factur-x-invalid-xml-encoding-attribute.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/fail/Mustangproject/MustangGnuaccountingBeispielRE-20171118_506.pdf	OK	PDF	CII	EXTENDED		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/fail/Mustangproject/MustangGnuaccountingBeispielRE-20190610_507a.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/fail/Mustangproject/MustangGnuaccountingBeispielRE-20190610_507b.pdf	OK	PDF	CII	EN16931		zugferd-invoice.xml	
+corpus/corpus-master/ZUGFeRDv2/fail/Mustangproject/noNetPriceValidation.xml	OK	XML	CII	EN16931			
+corpus/corpus-master/ZUGFeRDv2/fail/Mustangproject/wrongFilename.pdf	OK	PDF	CII	EN16931		factur-y.xml	ZF-FILENAME
+corpus/corpus-master/ZUGFeRDv2/fail/MustangRE-20171118_506_ZUGFeRD1and2.pdf	OK	PDF	CII	EXTENDED		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/fail/python-factur-x/python-factur-x.pdf	OK	PDF	CII	BASIC		factur-x.xml	ZF-AF
+corpus/corpus-master/ZUGFeRDv2/fail/XRechnung 722825203.XML	OK	XML	CII	XRECHNUNG	3.0		
+corpus/corpus-master/ZUGFeRDv2/fail/ZUGFeRD_2.0_fully_compliant_complete.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+corpus/corpus-master/ZUGFeRDv2/fail/ZUGFeRD_2_fully_compliant_complete.pdf	OK	PDF	CII	EN16931		factur-x.xml	
+kosit/instances/extension/04.01a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/extension/04.02a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/extension/04.03a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/extension/04.04a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/extension/04.05a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/extension/05.01a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.01a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.01a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/01.02a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.02a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/01.03a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.03a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/01.04a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.04a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/01.05a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.05a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/01.06a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.06a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/01.07a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.07a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/01.08a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.08a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/01.09a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.09a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/01.10a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.10a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/01.11a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.11a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/01.12a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.12a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/01.13a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.13a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/01.14a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.14a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/01.15a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.15a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/01.17a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.17a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/01.18a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.18a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/01.19a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.19a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/01.20a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.20a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/01.21a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/01.21a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/02.01a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/02.01a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/02.02a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/02.02a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/02.03a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/02.03a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/02.04a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/02.04a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/02.05a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/02.05a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/02.06a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/02.06a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/03.01a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/03.01a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/03.02a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/03.02a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/03.03a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/03.03a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/03.04a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/03.04a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/03.05a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/03.05a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/03.06a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/03.06a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/standard/03.07a-INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/standard/03.07a-INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/technical-cases/cius/01.01_comprehensive_test_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/technical-cases/cius/01.01_comprehensive_test_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/technical-cases/cius/01.02_comprehensive_test_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/technical-cases/cius/01.02_comprehensive_test_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/technical-cases/cius/01.03_comprehensive_test_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/technical-cases/cius/01.03_comprehensive_test_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/technical-cases/cius/01.04_comprehensive_test_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/technical-cases/cius/01.04_comprehensive_test_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/technical-cases/cius/01.05_minimal_test_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/technical-cases/cius/01.05_minimal_test_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/technical-cases/cius/01.06_minimal_test_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/technical-cases/cius/01.06_minimal_test_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		
+kosit/instances/technical-cases/cvd/02.01a-cvd_INVOICE_ubl.xml	OK	XML	UBL-Invoice	XRECHNUNG	3.0		
+kosit/instances/technical-cases/cvd/02.01a-cvd_INVOICE_uncefact.xml	OK	XML	CII	XRECHNUNG	3.0		

@@ -1,0 +1,606 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "abdecker",
+    "description": "E-invoices (XRechnung, ZUGFeRD, Factur-X): read, check, convert. Started with `abdecker serve`.\n\nSuccess and failure are told by the HTTP status. Single files are sent as the raw request body (any content type), several files as `multipart/form-data`. JSON results are the same as `--json` on the command line. Binary results (PDF, XML, HTML) carry their messages in the header `X-Abdecker-Messages`.",
+    "version": "{{version}}"
+  },
+  "paths": {
+    "/version": {
+      "get": {
+        "summary": "Version of the server",
+        "operationId": "version",
+        "responses": {
+          "200": {
+            "description": "The version",
+            "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Version"}}}
+          }
+        }
+      }
+    },
+    "/info": {
+      "post": {
+        "summary": "Format, profile and key invoice data",
+        "description": "The same as `abdecker info --json`. Also answers 422 with the full JSON when the file is no (readable) e-invoice.",
+        "operationId": "info",
+        "requestBody": {"$ref": "#/components/requestBodies/InvoiceFile"},
+        "responses": {
+          "200": {"description": "E-invoice found", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/InfoResult"}}}},
+          "422": {"description": "No (readable) e-invoice", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/InfoResult"}}}},
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "408": {"$ref": "#/components/responses/Timeout"},
+          "411": {"$ref": "#/components/responses/LengthRequired"},
+          "413": {"$ref": "#/components/responses/TooLarge"},
+          "500": {"$ref": "#/components/responses/Internal"},
+          "503": {"$ref": "#/components/responses/Busy"}
+        }
+      }
+    },
+    "/check": {
+      "post": {
+        "summary": "Plausibility check (EN 16931, XRechnung)",
+        "description": "The same as `abdecker check --json` (with verbose=1: `check --json -v`). Answers 200 even with findings: the result is the report (see `errors` and `warnings`).",
+        "operationId": "check",
+        "parameters": [
+          {"name": "verbose", "in": "query", "description": "1 = also the status of every rule (field `rules`)", "schema": {"type": "string", "enum": ["0", "1"], "default": "0"}}
+        ],
+        "requestBody": {"$ref": "#/components/requestBodies/InvoiceFile"},
+        "responses": {
+          "200": {"description": "The report", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/CheckResult"}}}},
+          "422": {"description": "No (readable) e-invoice", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/CheckResult"}}}},
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "408": {"$ref": "#/components/responses/Timeout"},
+          "411": {"$ref": "#/components/responses/LengthRequired"},
+          "413": {"$ref": "#/components/responses/TooLarge"},
+          "500": {"$ref": "#/components/responses/Internal"},
+          "503": {"$ref": "#/components/responses/Busy"}
+        }
+      }
+    },
+    "/extract": {
+      "post": {
+        "summary": "The invoice XML embedded in a ZUGFeRD/Factur-X PDF",
+        "operationId": "extract",
+        "requestBody": {"$ref": "#/components/requestBodies/PdfFile"},
+        "responses": {
+          "200": {
+            "description": "The invoice XML, unchanged",
+            "headers": {
+              "Content-Disposition": {"description": "attachment; filename=\"<name of the embedded file>\"", "schema": {"type": "string"}},
+              "X-Abdecker-Messages": {"$ref": "#/components/headers/Messages"}
+            },
+            "content": {"application/xml": {"schema": {"type": "string", "format": "binary"}}}
+          },
+          "422": {"$ref": "#/components/responses/Rejected"},
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "408": {"$ref": "#/components/responses/Timeout"},
+          "411": {"$ref": "#/components/responses/LengthRequired"},
+          "413": {"$ref": "#/components/responses/TooLarge"},
+          "500": {"$ref": "#/components/responses/Internal"},
+          "503": {"$ref": "#/components/responses/Busy"}
+        }
+      }
+    },
+    "/html": {
+      "post": {
+        "summary": "The invoice as a standalone HTML page",
+        "operationId": "html",
+        "parameters": [
+          {"name": "lang", "in": "query", "description": "Language of the page", "schema": {"type": "string", "enum": ["de", "en"], "default": "de"}},
+          {"name": "check", "in": "query", "description": "1 = show the check results, 0 = without", "schema": {"type": "string", "enum": ["0", "1"], "default": "1"}},
+          {"name": "payment", "in": "query", "description": "1 = only what is to be paid (transfer form with GiroCode), 0 = the whole invoice", "schema": {"type": "string", "enum": ["0", "1"], "default": "0"}}
+        ],
+        "requestBody": {"$ref": "#/components/requestBodies/InvoiceFile"},
+        "responses": {
+          "200": {
+            "description": "The page (CSS inside, no JavaScript). Below the totals what is to be paid; for a credit transfer in EUR with a GiroCode (EPC QR code) as inline SVG",
+            "headers": {
+              "Content-Security-Policy": {"description": "Forbids scripts and loading from outside", "schema": {"type": "string"}},
+              "X-Abdecker-Messages": {"$ref": "#/components/headers/Messages"}
+            },
+            "content": {"text/html": {"schema": {"type": "string"}}}
+          },
+          "422": {"$ref": "#/components/responses/Rejected"},
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "408": {"$ref": "#/components/responses/Timeout"},
+          "411": {"$ref": "#/components/responses/LengthRequired"},
+          "413": {"$ref": "#/components/responses/TooLarge"},
+          "500": {"$ref": "#/components/responses/Internal"},
+          "503": {"$ref": "#/components/responses/Busy"}
+        }
+      }
+    },
+    "/json": {
+      "post": {
+        "summary": "The invoice as JSON for further processing",
+        "description": "The same as `abdecker json`: a reduced, flat view of the invoice (accounting import, scripts), not the whole model. Field names as in the own format of `/create` where the meaning is the same; not meant as input for `/create`. Empty fields are left out.",
+        "operationId": "json",
+        "requestBody": {"$ref": "#/components/requestBodies/InvoiceFile"},
+        "responses": {
+          "200": {"description": "The invoice", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/InvoiceResult"}}}},
+          "422": {"description": "No (readable) e-invoice", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/InvoiceResult"}}}},
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "408": {"$ref": "#/components/responses/Timeout"},
+          "411": {"$ref": "#/components/responses/LengthRequired"},
+          "413": {"$ref": "#/components/responses/TooLarge"},
+          "500": {"$ref": "#/components/responses/Internal"},
+          "503": {"$ref": "#/components/responses/Busy"}
+        }
+      }
+    },
+    "/attachments": {
+      "post": {
+        "summary": "The files that come with the invoice",
+        "description": "For a PDF its embedded files (the invoice XML marked) and the attachments (BG-24) of the invoice; for an XML its BG-24 attachments. A PDF without invoice is fine (200, its embedded files).",
+        "operationId": "attachments",
+        "parameters": [
+          {"name": "content", "in": "query", "description": "1 = include the content (base64)", "schema": {"type": "string", "enum": ["0", "1"], "default": "0"}}
+        ],
+        "requestBody": {"$ref": "#/components/requestBodies/InvoiceFile"},
+        "responses": {
+          "200": {"description": "The attachments", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/AttachmentsResult"}}}},
+          "422": {"description": "Not readable", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/AttachmentsResult"}}}},
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "408": {"$ref": "#/components/responses/Timeout"},
+          "411": {"$ref": "#/components/responses/LengthRequired"},
+          "413": {"$ref": "#/components/responses/TooLarge"},
+          "500": {"$ref": "#/components/responses/Internal"},
+          "503": {"$ref": "#/components/responses/Busy"}
+        }
+      }
+    },
+    "/strip": {
+      "post": {
+        "summary": "Remove the invoice XML from a ZUGFeRD/Factur-X PDF",
+        "operationId": "strip",
+        "requestBody": {"$ref": "#/components/requestBodies/PdfFile"},
+        "responses": {
+          "200": {
+            "description": "The PDF without the invoice",
+            "headers": {"X-Abdecker-Messages": {"$ref": "#/components/headers/Messages"}},
+            "content": {"application/pdf": {"schema": {"type": "string", "format": "binary"}}}
+          },
+          "422": {"$ref": "#/components/responses/Rejected"},
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "408": {"$ref": "#/components/responses/Timeout"},
+          "411": {"$ref": "#/components/responses/LengthRequired"},
+          "413": {"$ref": "#/components/responses/TooLarge"},
+          "500": {"$ref": "#/components/responses/Internal"},
+          "503": {"$ref": "#/components/responses/Busy"}
+        }
+      }
+    },
+    "/create": {
+      "post": {
+        "summary": "Create a CII invoice from the own JSON format",
+        "description": "The body is an invoice in the own JSON format (see the templates of abdecker). abdecker replaces the placeholders, fills in defaults and calculated values (line amounts, VAT breakdown, totals), writes CII and checks it. The XML comes even with check findings; they are in X-Abdecker-Messages. Errors of the format itself (unknown fields, wrong types, unknown placeholders ...) give 422 with line and column. Attachments only as \"name\" and \"content\" (base64), not as \"file\".",
+        "operationId": "create",
+        "parameters": [
+          {"name": "vars", "in": "query", "style": "form", "explode": true, "description": "Every query parameter is the value of a placeholder {{name}}, e.g. ?nr=2026-0815&today=2026-11-14 (today overrides the date of the server)", "schema": {"type": "object", "additionalProperties": {"type": "string"}}}
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {"application/json": {"schema": {"type": "object", "description": "Invoice in the own JSON format"}}}
+        },
+        "responses": {
+          "200": {
+            "description": "The invoice (UN/CEFACT CII)",
+            "headers": {"X-Abdecker-Messages": {"$ref": "#/components/headers/Messages"}},
+            "content": {"application/xml": {"schema": {"type": "string", "format": "binary"}}}
+          },
+          "422": {"$ref": "#/components/responses/Rejected"},
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "408": {"$ref": "#/components/responses/Timeout"},
+          "411": {"$ref": "#/components/responses/LengthRequired"},
+          "413": {"$ref": "#/components/responses/TooLarge"},
+          "500": {"$ref": "#/components/responses/Internal"},
+          "503": {"$ref": "#/components/responses/Busy"}
+        }
+      }
+    },
+    "/embed": {
+      "post": {
+        "summary": "Embed a CII invoice into a PDF (ZUGFeRD/Factur-X)",
+        "description": "UBL is converted to CII first (the same content according to EN 16931; info EMBED-UBL). Content outside EN 16931 is left out (warning EMBED-UBL-LOST), Peppol BIS is embedded as EN 16931 (info EMBED-PEPPOL).",
+        "operationId": "embed",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": ["pdf", "xml"],
+                "properties": {
+                  "pdf": {"type": "string", "format": "binary", "description": "The PDF"},
+                  "xml": {"type": "string", "format": "binary", "description": "The invoice (UN/CEFACT CII)"}
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The PDF with the invoice",
+            "headers": {"X-Abdecker-Messages": {"$ref": "#/components/headers/Messages"}},
+            "content": {"application/pdf": {"schema": {"type": "string", "format": "binary"}}}
+          },
+          "422": {"$ref": "#/components/responses/Rejected"},
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "408": {"$ref": "#/components/responses/Timeout"},
+          "411": {"$ref": "#/components/responses/LengthRequired"},
+          "413": {"$ref": "#/components/responses/TooLarge"},
+          "500": {"$ref": "#/components/responses/Internal"},
+          "503": {"$ref": "#/components/responses/Busy"}
+        }
+      }
+    },
+    "/attach": {
+      "post": {
+        "summary": "Add files to an invoice XML as attachments (BG-24)",
+        "description": "Allowed types (EN 16931): PDF, PNG, JPEG, CSV, XLSX, ODS. The type comes from the file name of each part.",
+        "operationId": "attach",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": ["xml", "file"],
+                "properties": {
+                  "xml": {"type": "string", "format": "binary", "description": "The invoice (CII or UBL)"},
+                  "file": {"type": "array", "items": {"type": "string", "format": "binary"}, "description": "One or more files, each with a file name"}
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The invoice XML with the attachments",
+            "headers": {"X-Abdecker-Messages": {"$ref": "#/components/headers/Messages"}},
+            "content": {"application/xml": {"schema": {"type": "string", "format": "binary"}}}
+          },
+          "422": {"$ref": "#/components/responses/Rejected"},
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "408": {"$ref": "#/components/responses/Timeout"},
+          "411": {"$ref": "#/components/responses/LengthRequired"},
+          "413": {"$ref": "#/components/responses/TooLarge"},
+          "500": {"$ref": "#/components/responses/Internal"},
+          "503": {"$ref": "#/components/responses/Busy"}
+        }
+      }
+    },
+    "/openapi.json": {
+      "get": {
+        "summary": "This description (OpenAPI 3.0)",
+        "operationId": "openapi",
+        "responses": {
+          "200": {"description": "The OpenAPI document", "content": {"application/json": {"schema": {"type": "object"}}}}
+        }
+      }
+    },
+    "/docs": {
+      "get": {
+        "summary": "This description as an interactive page (Swagger UI)",
+        "description": "The page loads Swagger UI from cdn.jsdelivr.net into the browser; the server itself loads nothing.",
+        "operationId": "docs",
+        "responses": {
+          "200": {"description": "HTML page", "content": {"text/html": {"schema": {"type": "string"}}}}
+        }
+      }
+    }
+  },
+  "components": {
+    "requestBodies": {
+      "InvoiceFile": {
+        "description": "The invoice: a PDF (ZUGFeRD/Factur-X) or an XML (CII, UBL, ZUGFeRD 1.0), as the raw body",
+        "required": true,
+        "content": {
+          "application/pdf": {"schema": {"type": "string", "format": "binary"}},
+          "application/xml": {"schema": {"type": "string", "format": "binary"}},
+          "application/octet-stream": {"schema": {"type": "string", "format": "binary"}}
+        }
+      },
+      "PdfFile": {
+        "description": "A PDF as the raw body",
+        "required": true,
+        "content": {
+          "application/pdf": {"schema": {"type": "string", "format": "binary"}},
+          "application/octet-stream": {"schema": {"type": "string", "format": "binary"}}
+        }
+      }
+    },
+    "headers": {
+      "Messages": {
+        "description": "Messages of a binary result: the JSON of an Error object on one line, non-ASCII as \\uXXXX, at most 4 KB (then shortened and marked with \"truncated\": true). Only present if there are messages.",
+        "schema": {"type": "string"}
+      }
+    },
+    "responses": {
+      "Rejected": {"description": "No (readable) e-invoice, or rejected (result code of the library)", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}},
+      "BadRequest": {"description": "Malformed request, missing multipart parts, invalid query value", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}},
+      "Timeout": {"description": "The request was not received within the deadline", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}},
+      "LengthRequired": {"description": "No Content-Length (chunked uploads are not supported)", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}},
+      "TooLarge": {"description": "Larger than --max-size", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}},
+      "Busy": {
+        "description": "Queue full, or the request waited longer than the deadline",
+        "headers": {"Retry-After": {"description": "Seconds", "schema": {"type": "integer"}}},
+        "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}
+      },
+      "Internal": {"description": "Internal error", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}}
+    },
+    "schemas": {
+      "Version": {
+        "type": "object",
+        "required": ["version", "author", "repository", "homepage"],
+        "properties": {
+          "version": {"type": "string"},
+          "author": {"type": "string"},
+          "repository": {"type": "string", "format": "uri"},
+          "homepage": {"type": "string", "format": "uri"}
+        }
+      },
+      "Result": {
+        "type": "string",
+        "description": "Result code: of the library (ok ... internal-error) or of the server (bad-request ... busy)",
+        "enum": ["ok", "no-invoice", "unknown-format", "file-error", "broken-pdf", "broken-xml", "encrypted", "unsupported", "invalid-data", "internal-error",
+                 "bad-request", "not-found", "method-not-allowed", "timeout", "length-required", "too-large", "busy"]
+      },
+      "Message": {
+        "type": "object",
+        "required": ["severity", "code", "origin", "text"],
+        "properties": {
+          "severity": {"type": "string", "enum": ["info", "warning", "error"]},
+          "code": {"type": "string", "description": "Stable identifier, e.g. BR-CO-10, PDF-NO-PDFA, HTTP-TOO-LARGE"},
+          "origin": {"type": "string", "enum": ["file", "official", "extra"], "description": "file: reading the file; official: rule of an official rule set; extra: additional check of abdecker"},
+          "text": {"type": "string"}
+        }
+      },
+      "Error": {
+        "type": "object",
+        "required": ["result", "messages"],
+        "properties": {
+          "result": {"$ref": "#/components/schemas/Result"},
+          "truncated": {"type": "boolean", "description": "Only in X-Abdecker-Messages: not all messages fitted"},
+          "messages": {"type": "array", "items": {"$ref": "#/components/schemas/Message"}}
+        }
+      },
+      "InfoResult": {
+        "type": "object",
+        "properties": {
+          "file": {"type": "string", "description": "Empty for the server"},
+          "result": {"$ref": "#/components/schemas/Result"},
+          "container": {"type": "string", "enum": ["", "xml", "pdf"]},
+          "syntax": {"type": "string", "enum": ["", "cii", "ubl-invoice", "ubl-creditnote", "zugferd1"]},
+          "profile": {"type": "string", "enum": ["", "minimum", "basicwl", "basic", "comfort", "en16931", "extended", "xrechnung", "peppol"]},
+          "guidelineId": {"type": "string", "description": "BT-24"},
+          "xrechnungVersion": {"type": "string"},
+          "pdf": {
+            "type": "object",
+            "properties": {
+              "version": {"type": "string"},
+              "pdfaPart": {"type": "string"},
+              "pdfaConformance": {"type": "string"},
+              "xmpDocumentType": {"type": "string"},
+              "xmpDocumentFileName": {"type": "string"},
+              "xmpVersion": {"type": "string"},
+              "xmpConformanceLevel": {"type": "string"},
+              "invoiceFile": {"type": "string"}
+            }
+          },
+          "invoice": {
+            "type": "object",
+            "properties": {
+              "number": {"type": "string"},
+              "issueDate": {"type": "string"},
+              "typeCode": {"type": "string"},
+              "currency": {"type": "string"},
+              "seller": {"type": "string"},
+              "buyer": {"type": "string"},
+              "grandTotal": {"type": "string", "description": "Decimal as text"},
+              "duePayable": {"type": "string", "description": "Decimal as text"}
+            }
+          },
+          "attachments": {
+            "type": "array",
+            "description": "Embedded files of the PDF (metadata only)",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {"type": "string"},
+                "mimeType": {"type": "string"},
+                "relationship": {"type": "string"},
+                "size": {"type": "integer", "description": "-1 = unknown"},
+                "inAF": {"type": "boolean"}
+              }
+            }
+          },
+          "messages": {"type": "array", "items": {"$ref": "#/components/schemas/Message"}}
+        }
+      },
+      "CheckResult": {
+        "type": "object",
+        "properties": {
+          "file": {"type": "string", "description": "Empty for the server"},
+          "result": {"$ref": "#/components/schemas/Result"},
+          "syntax": {"type": "string"},
+          "profile": {"type": "string"},
+          "xrechnungVersion": {"type": "string"},
+          "errors": {"type": "integer"},
+          "warnings": {"type": "integer"},
+          "ruleSets": {"type": "array", "items": {"type": "string"}, "description": "e.g. EN 16931, XRechnung 3.0"},
+          "notChecked": {"type": "array", "items": {"type": "string"}, "description": "What this invoice contains but the check does not cover"},
+          "rules": {"type": "array", "items": {"$ref": "#/components/schemas/Rule"}, "description": "Only with verbose=1: every rule of the applied rule sets plus rules applied as extra checks, ordered by ID (numbers by value)"},
+          "messages": {"type": "array", "items": {"$ref": "#/components/schemas/Message"}}
+        }
+      },
+      "Rule": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string", "description": "Rule ID, e.g. BR-CO-10"},
+          "status": {"type": "string", "enum": ["passed", "failed", "not-applied"], "description": "not-applied: the invoice does not contain what the rule is about, or the rule cannot be decided (see notChecked)"},
+          "origin": {"type": "string", "enum": ["official", "extra"], "description": "extra: own rule of abdecker or applied beyond its rule set"}
+        }
+      },
+      "Attachment": {
+        "type": "object",
+        "properties": {
+          "source": {"type": "string", "enum": ["pdf", "invoice"], "description": "pdf: embedded file of the PDF; invoice: BG-24 of the invoice"},
+          "name": {"type": "string"},
+          "description": {"type": "string"},
+          "mimeType": {"type": "string"},
+          "relationship": {"type": "string", "description": "PDF: AFRelationship"},
+          "id": {"type": "string", "description": "BG-24: BT-122"},
+          "uri": {"type": "string", "description": "BG-24: BT-124, a reference without content"},
+          "invoice": {"type": "boolean", "description": "This embedded file is the invoice XML"},
+          "size": {"type": "integer", "description": "Bytes of content (0 = none)"},
+          "content": {"type": "string", "format": "byte", "description": "Base64, only with content=1"}
+        }
+      },
+      "Address": {
+        "type": "object",
+        "properties": {
+          "scheme": {"type": "string", "description": "e.g. EM (e-mail), 0204 (Leitweg-ID), 0088 (GLN)"},
+          "id": {"type": "string"}
+        }
+      },
+      "InvoiceResult": {
+        "type": "object",
+        "properties": {
+          "file": {"type": "string", "description": "Empty for the server"},
+          "result": {"$ref": "#/components/schemas/Result"},
+          "syntax": {"type": "string"},
+          "profile": {"type": "string"},
+          "xrechnungVersion": {"type": "string"},
+          "invoice": {
+            "type": "object",
+            "description": "Empty unless result is ok. Amounts are numbers exactly as in the invoice (decimal places kept); unusable numbers are left out with a warning JSON-NUMBER.",
+            "properties": {
+              "typeCode": {"type": "string", "description": "BT-3, e.g. 380 invoice, 381 credit note, 384 corrected invoice"},
+              "number": {"type": "string", "description": "BT-1"},
+              "issueDate": {"type": "string", "description": "BT-2, YYYY-MM-DD where possible"},
+              "dueDate": {"type": "string", "description": "BT-9"},
+              "currency": {"type": "string", "description": "BT-5"},
+              "buyerReference": {"type": "string", "description": "BT-10 (Leitweg-ID)"},
+              "orderReference": {"type": "string", "description": "BT-13"},
+              "period": {"type": "object", "description": "BG-14", "properties": {"start": {"type": "string"}, "end": {"type": "string"}}},
+              "deliveryDate": {"type": "string", "description": "BT-72"},
+              "precedingInvoice": {"type": "object", "description": "BG-3 (the first)", "properties": {"number": {"type": "string"}, "issueDate": {"type": "string"}}},
+              "note": {"type": "string", "description": "BT-22, all notes, separated by line breaks"},
+              "paymentTerms": {"type": "string", "description": "BT-20, as in the invoice (XRechnung: #SKONTO# lines included)"},
+              "seller": {
+                "type": "object",
+                "properties": {
+                  "name": {"type": "string"}, "street": {"type": "string"}, "line2": {"type": "string"}, "line3": {"type": "string"},
+                  "postcode": {"type": "string"}, "city": {"type": "string"}, "country": {"type": "string"},
+                  "vatId": {"type": "string", "description": "BT-31"},
+                  "taxNumber": {"type": "string", "description": "BT-32"},
+                  "id": {"type": "string", "description": "BT-29 (the first)"},
+                  "legalInfo": {"type": "string", "description": "BT-33"},
+                  "contact": {"type": "object", "properties": {"name": {"type": "string"}, "phone": {"type": "string"}, "email": {"type": "string"}}},
+                  "electronicAddress": {"$ref": "#/components/schemas/Address"},
+                  "iban": {"type": "string", "description": "BT-84 (the first account)"},
+                  "bic": {"type": "string", "description": "BT-86"},
+                  "accountName": {"type": "string", "description": "BT-85"}
+                }
+              },
+              "buyer": {
+                "type": "object",
+                "properties": {
+                  "name": {"type": "string"}, "street": {"type": "string"}, "line2": {"type": "string"}, "line3": {"type": "string"},
+                  "postcode": {"type": "string"}, "city": {"type": "string"}, "country": {"type": "string"},
+                  "vatId": {"type": "string", "description": "BT-48"},
+                  "id": {"type": "string", "description": "BT-46 (the first)"},
+                  "electronicAddress": {"$ref": "#/components/schemas/Address"}
+                }
+              },
+              "paymentMeans": {"type": "string", "description": "BT-81, e.g. 58 SEPA credit transfer, 59 SEPA direct debit"},
+              "lines": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {"type": "string", "description": "BT-153"},
+                    "description": {"type": "string", "description": "BT-154"},
+                    "itemNumber": {"type": "string", "description": "BT-155"},
+                    "quantity": {"type": "number", "description": "BT-129"},
+                    "unit": {"type": "string", "description": "BT-130, UN/ECE code, e.g. H87, HUR"},
+                    "price": {"type": "number", "description": "BT-146, net price per base quantity"},
+                    "baseQuantity": {"type": "number", "description": "BT-149"},
+                    "net": {"type": "number", "description": "BT-131, line net amount"},
+                    "vat": {"type": "number", "description": "BT-152, VAT rate in percent"},
+                    "vatCategory": {"type": "string", "description": "BT-151"}
+                  }
+                }
+              },
+              "allowancesCharges": {
+                "type": "array",
+                "description": "Document level (BG-20, BG-21)",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "charge": {"type": "boolean", "description": "false = allowance, true = charge"},
+                    "amount": {"type": "number"},
+                    "reason": {"type": "string"},
+                    "vat": {"type": "number", "description": "VAT rate in percent"},
+                    "vatCategory": {"type": "string"}
+                  }
+                }
+              },
+              "vat": {
+                "type": "array",
+                "description": "VAT breakdown (BG-23)",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "category": {"type": "string", "description": "BT-118"},
+                    "rate": {"type": "number", "description": "BT-119"},
+                    "net": {"type": "number", "description": "BT-116"},
+                    "vat": {"type": "number", "description": "BT-117"},
+                    "exemptionReason": {"type": "string", "description": "BT-120"}
+                  }
+                }
+              },
+              "totals": {
+                "type": "object",
+                "properties": {
+                  "net": {"type": "number", "description": "BT-109"},
+                  "vat": {"type": "number", "description": "BT-110"},
+                  "gross": {"type": "number", "description": "BT-112"},
+                  "prepaid": {"type": "number", "description": "BT-113"},
+                  "rounding": {"type": "number", "description": "BT-114"},
+                  "due": {"type": "number", "description": "BT-115"}
+                }
+              },
+              "attachments": {
+                "type": "array",
+                "description": "Supporting documents (BG-24), metadata only",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {"type": "string", "description": "BT-122"},
+                    "name": {"type": "string"},
+                    "description": {"type": "string"},
+                    "mimeType": {"type": "string"},
+                    "uri": {"type": "string", "description": "BT-124, a reference without content"},
+                    "size": {"type": "integer", "description": "Bytes of content"}
+                  }
+                }
+              }
+            }
+          },
+          "messages": {"type": "array", "items": {"$ref": "#/components/schemas/Message"}}
+        }
+      },
+      "AttachmentsResult": {
+        "type": "object",
+        "properties": {
+          "file": {"type": "string", "description": "Empty for the server"},
+          "result": {"$ref": "#/components/schemas/Result"},
+          "attachments": {"type": "array", "items": {"$ref": "#/components/schemas/Attachment"}},
+          "messages": {"type": "array", "items": {"$ref": "#/components/schemas/Message"}}
+        }
+      }
+    }
+  }
+}

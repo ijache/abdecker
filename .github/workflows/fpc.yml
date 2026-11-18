@@ -1,0 +1,42 @@
+# FPC build and all tests on Linux and macOS (Windows: build.bat / build-fpc.sh locally)
+name: fpc
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install FPC
+        run: |
+          if [ "$RUNNER_OS" = macOS ]; then brew install fpc; else sudo apt-get update -q && sudo apt-get install -y -q fpc; fi
+          fpc -iV
+      - name: Test data cache
+        uses: actions/cache@v4
+        with:
+          path: testdata
+          key: testdata-${{ hashFiles('tools/fetch-testdata.sh') }}
+      - name: Fetch test data
+        run: '[ -d testdata/external/corpus ] || sh tools/fetch-testdata.sh'
+      - name: Build
+        run: sh build-fpc.sh
+      - name: Test runner
+        run: bin/abdeckertests
+      - name: Reference tests
+        run: |
+          pip install -q segno jsonschema
+          python tests/cli.py
+          python tests/serve.py
+          python tests/schema.py
+          python tests/qr.py

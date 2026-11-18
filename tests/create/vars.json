@@ -1,0 +1,7 @@
+{
+  "nr": "2026-0999",
+  "po": "PO-2026-0001",
+  "hours": 7.5,
+  "ignored": { "nested": "objects are not read" },
+  "flag": true
+}

@@ -1,0 +1,24 @@
+{
+  "number": "2026-017",
+  "issueDate": "2026-11-14",
+  "buyerReference": "KST-4711",
+  "orderReference": "PO-2026-1250",
+  "deliveryDate": "2026-11-10",
+  "dueDate": "2026-11-28",
+  "seller": {
+    "name": "Erika Muster Grafikdesign", "street": "Gartenweg 5", "postcode": "12345", "city": "Musterstadt",
+    "taxNumber": "12/345/67890",
+    "contact": { "name": "Erika Muster", "phone": "+49 30 7654321", "email": "post@muster-design.de" },
+    "electronicAddress": "post@muster-design.de",
+    "iban": "DE89370400440532013000"
+  },
+  "buyer": {
+    "name": "Kunde AG", "street": "Industriestraße 99", "postcode": "54321", "city": "Großstadt",
+    "electronicAddress": "eingangsrechnungen@kunde.example"
+  },
+  "vatMode": "small-business",
+  "lines": [
+    { "name": "Logo-Entwurf",       "quantity": 1, "unit": "lump", "price": 850.00 },
+    { "name": "Korrekturschleife",  "quantity": 2, "unit": "hour", "price": 65.00 }
+  ]
+}

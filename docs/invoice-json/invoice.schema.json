@@ -1,0 +1,276 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://abdecker.jache.de/schema/invoice.schema.json",
+  "title": "abdecker – Rechnung zum Erstellen",
+  "description": "Eigenes JSON-Format von abdecker für `abdecker create` und `POST /create`. Doku: docs/invoice-json/. Das Schema hilft beim Schreiben (Vervollständigen, Tippfehler, Pflichtfelder); maßgeblich ist abdecker selbst: Format-Fehler meldet `create` mit Zeile und Spalte, fachliche Regeln (EN 16931, XRechnung) prüft es nach dem Erstellen.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["number", "seller", "buyer", "lines"],
+  "properties": {
+    "profile": {
+      "description": "Profil der Rechnung. \"en16931\" (Standard): ZUGFeRD/Factur-X EN 16931, reicht für B2B. \"xrechnung\": XRechnung 3.0, Pflicht bei öffentlichen Auftraggebern; verlangt zusätzlich buyerReference, Kontakt und elektronische Adressen.",
+      "enum": ["en16931", "xrechnung"],
+      "default": "en16931"
+    },
+    "type": {
+      "description": "Art der Rechnung (BT-3). \"invoice\" (Standard) = Rechnung (380), \"correction\" = Rechnungskorrektur (381), mit positiven Beträgen.",
+      "enum": ["invoice", "correction"],
+      "default": "invoice"
+    },
+    "number": {
+      "description": "Rechnungsnummer (BT-1), fortlaufend und einmalig.",
+      "type": "string"
+    },
+    "issueDate": {
+      "description": "Rechnungsdatum (BT-2), JJJJ-MM-TT. Fehlt es, nimmt abdecker das heutige Datum.",
+      "$ref": "#/definitions/date"
+    },
+    "currency": {
+      "description": "Währung (BT-5), ISO 4217. Standard: EUR.",
+      "type": "string",
+      "default": "EUR",
+      "examples": ["EUR"]
+    },
+    "buyerReference": {
+      "description": "Käuferreferenz (BT-10). Bei \"xrechnung\" Pflicht: bei Behörden die Leitweg-ID.",
+      "type": "string"
+    },
+    "orderReference": {
+      "description": "Bestellnummer des Kunden (BT-13).",
+      "type": "string"
+    },
+    "period": {
+      "description": "Leistungszeitraum (BG-14). Alternativ deliveryDate.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start": { "description": "Beginn (BT-73), JJJJ-MM-TT.", "$ref": "#/definitions/date" },
+        "end": { "description": "Ende (BT-74), JJJJ-MM-TT.", "$ref": "#/definitions/date" }
+      }
+    },
+    "deliveryDate": {
+      "description": "Liefer- bzw. Leistungsdatum (BT-72), JJJJ-MM-TT. Alternativ period.",
+      "$ref": "#/definitions/date"
+    },
+    "precedingInvoice": {
+      "description": "Die korrigierte Rechnung (BG-3), bei \"type\": \"correction\".",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["number"],
+      "properties": {
+        "number": { "description": "Nummer der korrigierten Rechnung (BT-25).", "type": "string" },
+        "issueDate": { "description": "Datum der korrigierten Rechnung (BT-26), JJJJ-MM-TT.", "$ref": "#/definitions/date" }
+      }
+    },
+    "note": {
+      "description": "Freitext zur Rechnung (BT-22).",
+      "type": "string"
+    },
+    "dueDate": {
+      "description": "Fälligkeitsdatum (BT-9), JJJJ-MM-TT.",
+      "$ref": "#/definitions/date"
+    },
+    "paymentTerms": {
+      "description": "Zahlungsbedingungen als Text (BT-20), z. B. \"Zahlbar innerhalb von 14 Tagen ohne Abzug.\"",
+      "type": "string"
+    },
+    "cashDiscount": {
+      "description": "Skonto. abdecker hängt an paymentTerms die XRechnung-Zeile #SKONTO#TAGE=n#PROZENT=n.nn# an.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["days", "percent"],
+      "properties": {
+        "days": { "description": "Skontofrist in Tagen (ganze Zahl, mindestens 1).", "$ref": "#/definitions/decimal" },
+        "percent": { "description": "Skontosatz in Prozent, z. B. 2.00.", "$ref": "#/definitions/decimal" }
+      }
+    },
+    "seller": { "$ref": "#/definitions/seller" },
+    "buyer": { "$ref": "#/definitions/buyer" },
+    "vatMode": {
+      "description": "Umsatzsteuer für die ganze Rechnung. \"standard\" (Standard): Satz je Position in lines[].vat (Kategorie S). \"reverse-charge\": Steuerschuldnerschaft des Leistungsempfängers (Kategorie AE, 0 %); buyer.vatId nötig. \"small-business\": Kleinunternehmer § 19 UStG (Kategorie E, 0 %). Bei den beiden letzten entfällt lines[].vat.",
+      "enum": ["standard", "reverse-charge", "small-business"],
+      "default": "standard"
+    },
+    "lines": {
+      "description": "Rechnungspositionen (BG-25), mindestens eine. Nummeriert werden sie von abdecker (1, 2, 3 …).",
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/line" }
+    },
+    "attachments": {
+      "description": "Anhänge (BG-24): PDF, PNG, JPEG, CSV, XLSX oder ODS. Je Anhang entweder \"file\" (nur Kommandozeile) oder \"name\" und \"content\" (base64).",
+      "type": "array",
+      "items": { "$ref": "#/definitions/attachment" }
+    },
+    "totals": {
+      "description": "Summen zur Kontrolle, optional. abdecker rechnet sie selbst; weichen angegebene ab, wird die Rechnung nicht erstellt.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "net": { "description": "Nettosumme (BT-109).", "$ref": "#/definitions/decimal" },
+        "vat": { "description": "Umsatzsteuer (BT-110).", "$ref": "#/definitions/decimal" },
+        "gross": { "description": "Bruttosumme (BT-112).", "$ref": "#/definitions/decimal" },
+        "due": { "description": "Zahlbetrag (BT-115).", "$ref": "#/definitions/decimal" }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "description": "Ohne \"type\": \"correction\" wird per Überweisung gezahlt: seller.iban ist Pflicht.",
+      "if": { "properties": { "type": { "const": "correction" } }, "required": ["type"] },
+      "else": { "properties": { "seller": { "required": ["iban"] } } }
+    },
+    {
+      "description": "\"standard\": jede Position braucht \"vat\"; sonst setzt abdecker die Steuer und \"vat\" ist nicht erlaubt.",
+      "if": { "properties": { "vatMode": { "enum": ["reverse-charge", "small-business"] } }, "required": ["vatMode"] },
+      "then": { "properties": { "lines": { "items": { "not": { "required": ["vat"] } } } } },
+      "else": { "properties": { "lines": { "items": { "required": ["vat"] } } } }
+    },
+    {
+      "description": "Reverse Charge braucht die USt-IdNr. des Käufers.",
+      "if": { "properties": { "vatMode": { "const": "reverse-charge" } }, "required": ["vatMode"] },
+      "then": { "properties": { "buyer": { "required": ["vatId"] } } }
+    },
+    {
+      "description": "XRechnung verlangt Käuferreferenz, Kontakt, PLZ, Ort und elektronische Adressen.",
+      "if": { "properties": { "profile": { "const": "xrechnung" } }, "required": ["profile"] },
+      "then": {
+        "required": ["buyerReference"],
+        "properties": {
+          "seller": { "required": ["postcode", "city", "contact", "electronicAddress"] },
+          "buyer": { "required": ["postcode", "city", "electronicAddress"] }
+        }
+      }
+    }
+  ],
+  "definitions": {
+    "placeholder": {
+      "description": "Ein String mit Platzhalter {{name}}, ersetzt beim Erstellen.",
+      "type": "string",
+      "pattern": "\\{\\{[^}]*\\}\\}"
+    },
+    "date": {
+      "anyOf": [
+        { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        { "$ref": "#/definitions/placeholder" }
+      ]
+    },
+    "decimal": {
+      "description": "Zahl mit Punkt als Dezimaltrenner, ohne Exponent. Als JSON-Zahl oder String; abdecker liest sie exakt als Text.",
+      "anyOf": [
+        { "type": "number" },
+        { "type": "string", "pattern": "^\\s*[+-]?([0-9]+\\.?[0-9]*|\\.[0-9]+)\\s*$" },
+        { "$ref": "#/definitions/placeholder" }
+      ]
+    },
+    "electronicAddress": {
+      "anyOf": [
+        { "description": "E-Mail-Adresse (Schema EM).", "type": "string" },
+        {
+          "description": "Adresse mit Schema (EAS-Code), z. B. 0204 = Leitweg-ID, 9930 = deutsche USt-IdNr., 0088 = GLN.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["scheme", "id"],
+          "properties": {
+            "scheme": { "description": "EAS-Code des Schemas.", "type": "string", "examples": ["0204", "9930", "0088", "EM"] },
+            "id": { "description": "Die Adresse selbst.", "type": "string" }
+          }
+        }
+      ]
+    },
+    "contact": {
+      "description": "Ansprechpartner des Verkäufers (BG-6). Bei \"xrechnung\" Pflicht, mit Name, Telefon und E-Mail.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "description": "Name (BT-41).", "type": "string" },
+        "phone": { "description": "Telefon (BT-42).", "type": "string" },
+        "email": { "description": "E-Mail (BT-43).", "type": "string" }
+      }
+    },
+    "seller": {
+      "description": "Verkäufer (BG-4): wer die Rechnung stellt.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": { "description": "Name (BT-27).", "type": "string" },
+        "street": { "description": "Straße und Hausnummer (BT-35).", "type": "string" },
+        "line2": { "description": "Zusatzzeile der Anschrift (BT-36).", "type": "string" },
+        "postcode": { "description": "Postleitzahl (BT-38).", "type": "string" },
+        "city": { "description": "Ort (BT-37).", "type": "string" },
+        "country": { "description": "Land (BT-40), ISO 3166-1 alpha-2. Standard: DE.", "type": "string", "default": "DE" },
+        "vatId": { "description": "Umsatzsteuer-Identifikationsnummer (BT-31). vatId oder taxNumber ist Pflicht.", "type": "string" },
+        "taxNumber": { "description": "Steuernummer (BT-32). Ohne vatId und id wird sie auch Kennung des Verkäufers (BT-29).", "type": "string" },
+        "id": { "description": "Kennung des Verkäufers (BT-29), z. B. die Lieferantennummer beim Kunden.", "type": "string" },
+        "legalInfo": { "description": "Rechtliche Angaben (BT-33), z. B. Geschäftsführer, Registergericht, HRB.", "type": "string" },
+        "contact": { "$ref": "#/definitions/contact" },
+        "electronicAddress": { "description": "Elektronische Adresse (BT-34): E-Mail als String oder { \"scheme\", \"id\" }. Bei \"xrechnung\" Pflicht.", "$ref": "#/definitions/electronicAddress" },
+        "iban": { "description": "IBAN für die Überweisung (BT-84). Pflicht außer bei einer Korrektur, die verrechnet wird.", "type": "string" },
+        "bic": { "description": "BIC (BT-86), nur mit iban.", "type": "string" },
+        "accountName": { "description": "Kontoinhaber (BT-85), nur mit iban.", "type": "string" }
+      },
+      "dependencies": {
+        "bic": ["iban"],
+        "accountName": ["iban"]
+      },
+      "anyOf": [
+        { "required": ["vatId"] },
+        { "required": ["taxNumber"] }
+      ]
+    },
+    "buyer": {
+      "description": "Käufer (BG-7): wer die Rechnung bekommt.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": { "description": "Name (BT-44).", "type": "string" },
+        "street": { "description": "Straße und Hausnummer (BT-50).", "type": "string" },
+        "line2": { "description": "Zusatzzeile der Anschrift (BT-51).", "type": "string" },
+        "postcode": { "description": "Postleitzahl (BT-53).", "type": "string" },
+        "city": { "description": "Ort (BT-52).", "type": "string" },
+        "country": { "description": "Land (BT-55), ISO 3166-1 alpha-2. Standard: DE.", "type": "string", "default": "DE" },
+        "vatId": { "description": "Umsatzsteuer-Identifikationsnummer (BT-48). Bei Reverse Charge Pflicht.", "type": "string" },
+        "electronicAddress": { "description": "Elektronische Adresse (BT-49): E-Mail als String oder { \"scheme\", \"id\" }, z. B. die Leitweg-ID mit Schema 0204. Bei \"xrechnung\" Pflicht.", "$ref": "#/definitions/electronicAddress" }
+      }
+    },
+    "line": {
+      "description": "Eine Rechnungsposition (BG-25).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "quantity", "unit", "price"],
+      "properties": {
+        "name": { "description": "Bezeichnung der Leistung oder Ware (BT-153).", "type": "string" },
+        "description": { "description": "Beschreibung (BT-154).", "type": "string" },
+        "itemNumber": { "description": "Artikelnummer des Verkäufers (BT-155).", "type": "string" },
+        "quantity": { "description": "Menge (BT-129).", "$ref": "#/definitions/decimal" },
+        "unit": {
+          "description": "Einheit (BT-130): \"hour\", \"day\", \"month\", \"piece\", \"lump\" (pauschal), \"km\" oder ein UNECE-Code wie \"MTR\".",
+          "anyOf": [
+            { "enum": ["hour", "day", "month", "piece", "lump", "km"] },
+            { "type": "string", "pattern": "^[A-Z0-9]{2,3}$" },
+            { "$ref": "#/definitions/placeholder" }
+          ]
+        },
+        "price": { "description": "Nettopreis je Einheit (BT-146).", "$ref": "#/definitions/decimal" },
+        "vat": { "description": "Umsatzsteuersatz in Prozent (BT-152), z. B. 19 oder 7. Nur bei vatMode \"standard\", dort Pflicht.", "$ref": "#/definitions/decimal" }
+      }
+    },
+    "attachment": {
+      "description": "Ein Anhang (BG-24).",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "file": { "description": "Pfad der Datei, relativ zur JSON-Datei. Nur auf der Kommandozeile, nicht beim Server.", "type": "string" },
+        "name": { "description": "Dateiname (mit Endung), zusammen mit content.", "type": "string" },
+        "content": { "description": "Inhalt der Datei, base64.", "type": "string", "contentEncoding": "base64" },
+        "description": { "description": "Beschreibung (BT-123).", "type": "string" }
+      },
+      "oneOf": [
+        { "required": ["file"], "not": { "anyOf": [{ "required": ["name"] }, { "required": ["content"] }] } },
+        { "required": ["name", "content"], "not": { "required": ["file"] } }
+      ]
+    }
+  }
+}

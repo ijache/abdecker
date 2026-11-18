@@ -1,0 +1,167 @@
+== kosit/instances/standard/01.01a-INVOICE
+== kosit/instances/standard/01.02a-INVOICE
+UBL: BT-13 = Dummywert
+== kosit/instances/standard/01.03a-INVOICE
+== kosit/instances/standard/01.04a-INVOICE
+== kosit/instances/standard/01.05a-INVOICE
+== kosit/instances/standard/01.06a-INVOICE
+== kosit/instances/standard/01.07a-INVOICE
+== kosit/instances/standard/01.08a-INVOICE
+UBL: BT-13 = Dummywert
+== kosit/instances/standard/01.09a-INVOICE
+UBL: BT-13 = Dummywert
+== kosit/instances/standard/01.10a-INVOICE
+UBL: BT-13 = Dummywert
+== kosit/instances/standard/01.11a-INVOICE
+UBL: BT-13 = Dummywert
+== kosit/instances/standard/01.12a-INVOICE
+UBL: BT-13 = Dummywert
+== kosit/instances/standard/01.13a-INVOICE
+UBL: BT-13 = Dummywert
+== kosit/instances/standard/01.14a-INVOICE
+== kosit/instances/standard/01.15a-INVOICE
+== kosit/instances/standard/01.17a-INVOICE
+== kosit/instances/standard/01.18a-INVOICE
+== kosit/instances/standard/01.19a-INVOICE
+== kosit/instances/standard/01.20a-INVOICE
+CII: BT-35 = [Street]
+CII: BT-37 = [City]
+CII: BT-107 = 0
+CII: BT-108 = 0
+CII: BT-113 = 0
+UBL: BT-35 = [Seller street]
+UBL: BT-37 = [Seller city]
+== kosit/instances/standard/01.21a-INVOICE
+CII: BT-31 = DE152338654
+CII: BT-82 = Rechnung
+CII: BT-107 = 0
+CII: BG-23[1] BT-120 = als gemeinnützig anerkannt
+UBL: BT-31 = DE 123456789
+UBL: BT-82 = Information
+UBL: BG-23[1] BT-120 = Umkehrung der Steuerschuldnerschaft
+== kosit/instances/standard/02.01a-INVOICE
+CII: BT-114 = 0
+== kosit/instances/standard/02.02a-INVOICE
+CII: BT-114 = 0
+== kosit/instances/standard/02.03a-INVOICE
+CII: BT-114 = 0
+== kosit/instances/standard/02.04a-INVOICE
+CII: BT-114 = 0
+== kosit/instances/standard/02.05a-INVOICE
+== kosit/instances/standard/02.06a-INVOICE
+== kosit/instances/standard/03.01a-INVOICE
+UBL: BT-45 = [Buyer name]
+== kosit/instances/standard/03.02a-INVOICE
+== kosit/instances/standard/03.03a-INVOICE
+== kosit/instances/standard/03.04a-INVOICE
+== kosit/instances/standard/03.05a-INVOICE
+== kosit/instances/standard/03.06a-INVOICE
+CII: BT-37 = Testhausen
+CII: BT-38 = 12345
+CII: BT-52 = Testhausen
+CII: BT-53 = 12345
+UBL: BT-37 = 12345
+UBL: BT-38 = Testhausen
+UBL: BT-52 = 12345
+UBL: BT-53 = Testhausen
+== kosit/instances/standard/03.07a-INVOICE
+CII: BT-29[1] = 9876543217894897438
+CII: BT-29[2] = 748387437438
+CII: BT-29[3] = 987654321
+CII: BT-29[3]-1 = 0088
+CII: BT-61 = 90000000-03083-72
+CII: BT-61-1 = 0204
+CII: BT-114 = 0
+UBL: BT-29[1] = 987654321
+UBL: BT-29[1]-1 = 0088
+== kosit/instances/technical-cases/cius/01.01_comprehensive_test
+CII: BT-29[1] = 9876543217894897438
+CII: BT-29[2] = 748387437438
+CII: BT-29[3] = 987654321
+CII: BT-29[3]-1 = 0088
+CII: BT-44 = [Buyer name]
+CII: BT-45 = [Buyer trading name]
+CII: BT-61 = 90000000-03083-72
+CII: BT-61-1 = 0204
+CII: BT-114 = 0
+UBL: BG-3[2] BT-25 = PIR0987654321
+UBL: BG-3[2] BT-26 = 2018-03-05
+UBL: BT-29[1] = 987654321
+UBL: BT-29[1]-1 = 0088
+UBL: BT-44 = [Buyer trading name]
+UBL: BT-45 = [Buyer name]
+UBL: BG-25[2] BT-149 = 1
+UBL: BG-25[2] BT-150 = XPP
+== kosit/instances/technical-cases/cius/01.02_comprehensive_test
+CII: BT-44 = [Buyer name]
+CII: BT-45 = [Buyer trading name]
+CII: BT-61 = 90000000-03083-72
+CII: BT-61-1 = 0204
+CII: BT-114 = 0
+UBL: BT-44 = [Buyer trading name]
+UBL: BT-45 = [Buyer name]
+UBL: BG-25[2] BT-149 = 1
+UBL: BG-25[2] BT-150 = XPP
+== kosit/instances/technical-cases/cius/01.03_comprehensive_test
+CII: BT-41 = Testorganisation
+CII: BT-44 = [Buyer name]
+CII: BT-45 = [Buyer trading name]
+CII: BT-61 = 90000000-03083-72
+CII: BT-61-1 = 0204
+CII: BT-114 = 0
+UBL: BT-41 = Tim Tester
+UBL: BT-44 = [Buyer trading name]
+UBL: BT-45 = [Buyer name]
+UBL: BG-25[2] BT-149 = 1
+UBL: BG-25[2] BT-150 = XPP
+== kosit/instances/technical-cases/cius/01.04_comprehensive_test
+CII: BT-41 = Testorganisation
+CII: BT-44 = [Buyer name]
+CII: BT-45 = [Buyer trading name]
+CII: BT-61 = 90000000-03083-72
+CII: BT-61-1 = 0204
+CII: BT-114 = 0
+UBL: BT-41 = Tim Tester
+UBL: BT-44 = [Buyer trading name]
+UBL: BT-45 = [Buyer name]
+UBL: BG-25[2] BT-149 = 1
+UBL: BG-25[2] BT-150 = XPP
+== kosit/instances/technical-cases/cius/01.05_minimal_test
+UBL: BT-110 = 0
+== kosit/instances/technical-cases/cius/01.06_minimal_test
+== kosit/instances/technical-cases/cvd/02.01a-cvd_INVOICE
+CII: BT-29[1] = 9876543217894897438
+CII: BT-29[2] = 748387437438
+CII: BT-29[3] = 987654321
+CII: BT-29[3]-1 = 0088
+CII: BT-61 = 90000000-03083-72
+CII: BT-61-1 = 0204
+CII: BT-114 = 0
+CII: BG-25[1] BT-154 = Gruppe von Fahrzeugde XY der Klasse Z
+CII: BG-25[1] BG-32[1] BT-160 = Leistung
+CII: BG-25[1] BG-32[1] BT-161 = [Leistung Value]
+CII: BG-25[1] BG-32[2] BT-160 = Länge
+CII: BG-25[1] BG-32[2] BT-161 = [Länge Value]
+CII: BG-25[1] BG-32[3] BT-160 = Starthöchstmasse
+CII: BG-25[1] BG-32[3] BT-161 = [Starthöchstmasse Value]
+CII: BG-25[1] BG-32[4] BT-160 = Laufleistung
+CII: BG-25[1] BG-32[4] BT-161 = [Laufleistung Value]
+CII: BG-25[1] BG-32[5] BT-160 = Zeitpunkt Inbetriebnahme
+CII: BG-25[1] BG-32[5] BT-161 = [Zeitpunkt Inbetriebnahme Value]
+CII: BG-25[1] BG-32[6] BT-160 = cva
+CII: BG-25[1] BG-32[6] BT-161 = clean
+UBL: BT-29[1] = 987654321
+UBL: BT-29[1]-1 = 0088
+UBL: BG-25[1] BT-154 = Gruppe von Fahrzeug XY der Klasse Z
+UBL: BG-25[1] BG-32[1] BT-160 = cva
+UBL: BG-25[1] BG-32[1] BT-161 = clean
+UBL: BG-25[1] BG-32[2] BT-160 = Leistung
+UBL: BG-25[1] BG-32[2] BT-161 = [Leistung Value]
+UBL: BG-25[1] BG-32[3] BT-160 = Länge
+UBL: BG-25[1] BG-32[3] BT-161 = [Länge Value]
+UBL: BG-25[1] BG-32[4] BT-160 = Starthöchstmasse
+UBL: BG-25[1] BG-32[4] BT-161 = [Starthöchstmasse Value]
+UBL: BG-25[1] BG-32[5] BT-160 = Laufleistung
+UBL: BG-25[1] BG-32[5] BT-161 = [Laufleistung Value]
+UBL: BG-25[1] BG-32[6] BT-160 = Zeitpunkt Inbetriebnahme
+UBL: BG-25[1] BG-32[6] BT-161 = [Zeitpunkt Inbetriebnahme Value]

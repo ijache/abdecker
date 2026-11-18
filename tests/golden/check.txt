@@ -1,0 +1,1238 @@
+== corpus/corpus-master/other/eicar.cii.xml
+rules: EN 16931
+rules: XRechnung 3.0
+E BR-09 Seller country code (BT-40) is missing.
+E BR-11 Buyer country code (BT-55) is missing.
+E BR-CL-24 MIME code of the attached document (BT-125) is not allowed. [application/octet-stream]
+applied: 95 passed, 3 failed, 158 not applied
+== corpus/corpus-master/other/eicar.ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+E BR-09 Seller country code (BT-40) is missing.
+E BR-11 Buyer country code (BT-55) is missing.
+E BR-CL-24 MIME code of the attached document (BT-125) is not allowed. [application/octet-stream]
+applied: 94 passed, 3 failed, 159 not applied
+== corpus/corpus-master/PEPPOL/Valid/Qvalia/Large_Invoice_sample1.xml
+rules: EN 16931
+not checked: Peppol BIS rules
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/PEPPOL/Valid/Qvalia/Large_Invoice_sample2.xml
+rules: EN 16931
+not checked: Peppol BIS rules
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_1_Teilrechnung.cii.xml
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 4: 55.46, expected 55.40]
+applied: 83 passed, 1 failed, 130 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_2_Teilrechnung.cii.xml
+rules: EN 16931
+applied: 63 passed, 0 failed, 151 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_AbweichenderZahlungsempf.cii.xml
+rules: EN 16931
+applied: 73 passed, 0 failed, 141 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Betriebskostenabrechnung.cii.xml
+rules: EN 16931
+applied: 70 passed, 0 failed, 144 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Einfach.cii.xml
+rules: EN 16931
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Einfach_DueDate.cii.xml
+rules: EN 16931
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Einfach_negativePaymentDue.cii.xml
+rules: EN 16931
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Elektron.cii.xml
+rules: EN 16931
+applied: 69 passed, 0 failed, 145 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_ElektronischeAdresse.cii.xml
+rules: EN 16931
+E BR-CL-25 Electronic address scheme is not in the code list (EAS). [9958]
+applied: 67 passed, 1 failed, 146 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Gutschrift.cii.xml
+rules: EN 16931
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Haftpflichtversicherung_Versicherungssteuer.cii.xml
+rules: EN 16931
+applied: 65 passed, 0 failed, 149 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Innergemeinschaftliche_Lieferungen.cii.xml
+rules: EN 16931
+applied: 76 passed, 0 failed, 138 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Kraftfahrversicherung_Bruttopreise.cii.xml
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 80.00, expected 67.22]
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 2: 140.00, expected 117.65]
+applied: 64 passed, 1 failed, 149 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Miete.cii.xml
+rules: EN 16931
+applied: 65 passed, 0 failed, 149 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_OEPNV.cii.xml
+rules: EN 16931
+applied: 63 passed, 0 failed, 151 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Physiotherapeut.cii.xml
+rules: EN 16931
+applied: 62 passed, 0 failed, 152 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Rabatte.cii.xml
+rules: EN 16931
+applied: 84 passed, 0 failed, 130 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Rechnungskorrektur.cii.xml
+rules: EN 16931
+applied: 75 passed, 0 failed, 139 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_RechnungsUebertragung.cii.xml
+rules: EN 16931
+E BR-CL-25 Electronic address scheme is not in the code list (EAS). [9958]
+applied: 67 passed, 1 failed, 146 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Reisekostenabrechnung.cii.xml
+rules: EN 16931
+applied: 69 passed, 0 failed, 145 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Sachversicherung_berechneter_Steuersatz.cii.xml
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 1163.40, expected 1000.00]
+applied: 65 passed, 1 failed, 148 not applied
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_SEPA_Prenotification.cii.xml
+rules: EN 16931
+applied: 70 passed, 0 failed, 144 not applied
+== corpus/corpus-master/XML-Rechnung/CII/not_validating_full_invoice_based_onTest_EeISI_300_CENfullmodel.cii.xml
+rules: EN 16931
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 133 passed, 0 failed, 81 not applied
+== corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Betriebskostenabrechnung.cii.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 104 passed, 0 failed, 152 not applied
+== corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 98 passed, 0 failed, 158 not applied
+== corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Elektron.cii.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 98 passed, 0 failed, 158 not applied
+== corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Reisekostenabrechnung.cii.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 103 passed, 0 failed, 153 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_1_Teilrechnung.pdf
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 4: 55.46, expected 55.40]
+applied: 83 passed, 1 failed, 130 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_2_Teilrechnung.pdf
+rules: EN 16931
+applied: 63 passed, 0 failed, 151 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_AbweichenderZahlungsempf.pdf
+rules: EN 16931
+applied: 73 passed, 0 failed, 141 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Betriebskostenabrechnung.pdf
+rules: EN 16931
+applied: 70 passed, 0 failed, 144 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf
+rules: EN 16931
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach_DueDate.pdf
+rules: EN 16931
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach_negativePaymentDue.pdf
+rules: EN 16931
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Elektron.pdf
+rules: EN 16931
+applied: 69 passed, 0 failed, 145 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_ElektronischeAdresse.pdf
+rules: EN 16931
+E BR-CL-25 Electronic address scheme is not in the code list (EAS). [9958]
+applied: 67 passed, 1 failed, 146 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Gutschrift.pdf
+rules: EN 16931
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Haftpflichtversicherung_Versicherungssteuer.pdf
+rules: EN 16931
+applied: 65 passed, 0 failed, 149 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Innergemeinschaftliche_Lieferungen.pdf
+rules: EN 16931
+applied: 76 passed, 0 failed, 138 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Kraftfahrversicherung_Bruttopreise.pdf
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 80.00, expected 67.22]
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 2: 140.00, expected 117.65]
+applied: 64 passed, 1 failed, 149 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Miete.pdf
+rules: EN 16931
+applied: 65 passed, 0 failed, 149 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_OEPNV.pdf
+rules: EN 16931
+applied: 63 passed, 0 failed, 151 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Physiotherapeut.pdf
+rules: EN 16931
+applied: 62 passed, 0 failed, 152 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Rabatte.pdf
+rules: EN 16931
+applied: 84 passed, 0 failed, 130 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Rechnungskorrektur.pdf
+rules: EN 16931
+applied: 75 passed, 0 failed, 139 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_RechnungsUebertragung.pdf
+rules: EN 16931
+E BR-CL-25 Electronic address scheme is not in the code list (EAS). [9958]
+applied: 67 passed, 1 failed, 146 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Reisekostenabrechnung.pdf
+rules: EN 16931
+applied: 69 passed, 0 failed, 145 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Sachversicherung_berechneter_Steuersatz.pdf
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 1163.40, expected 1000.00]
+applied: 65 passed, 1 failed, 148 not applied
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_SEPA_Prenotification.pdf
+rules: EN 16931
+applied: 70 passed, 0 failed, 144 not applied
+== corpus/corpus-master/XML-Rechnung/FX/XRECHNUNG_Betriebskostenabrechnung.pdf
+rules: EN 16931
+not checked: XRechnung 2.1: national rules (BR-DE) are only implemented for version 3.0
+applied: 75 passed, 0 failed, 139 not applied
+== corpus/corpus-master/XML-Rechnung/FX/XRECHNUNG_Einfach.pdf
+rules: EN 16931
+not checked: XRechnung 2.1: national rules (BR-DE) are only implemented for version 3.0
+applied: 72 passed, 0 failed, 142 not applied
+== corpus/corpus-master/XML-Rechnung/FX/XRECHNUNG_Elektron.pdf
+rules: EN 16931
+not checked: XRechnung 2.1: national rules (BR-DE) are only implemented for version 3.0
+applied: 71 passed, 0 failed, 143 not applied
+== corpus/corpus-master/XML-Rechnung/FX/XRECHNUNG_Reisekostenabrechnung.pdf
+rules: EN 16931
+not checked: XRechnung 2.1: national rules (BR-DE) are only implemented for version 3.0
+applied: 74 passed, 0 failed, 140 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_1_Teilrechnung.ubl.xml
+rules: EN 16931
+W PEPPOL-EN16931-R120 Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 4: 55.46, expected 55.40]
+not checked: Peppol BIS rules
+applied: 82 passed, 1 failed, 131 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_2_Teilrechnung.ubl.xml
+rules: EN 16931
+not checked: Peppol BIS rules
+applied: 62 passed, 0 failed, 152 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_AbweichenderZahlungsempf.ubl.xml
+rules: EN 16931
+not checked: Peppol BIS rules
+applied: 72 passed, 0 failed, 142 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Betriebskostenabrechnung.ubl.xml
+rules: EN 16931
+not checked: Peppol BIS rules
+applied: 70 passed, 0 failed, 144 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Einfach.ubl.xml
+rules: EN 16931
+not checked: Peppol BIS rules
+applied: 67 passed, 0 failed, 147 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Einfach_DueDate.ubl.xml
+rules: EN 16931
+not checked: Peppol BIS rules
+applied: 67 passed, 0 failed, 147 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Einfach_negativePaymentDue.ubl.xml
+rules: EN 16931
+not checked: Peppol BIS rules
+applied: 67 passed, 0 failed, 147 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Elektron.ubl.xml
+rules: EN 16931
+not checked: Peppol BIS rules
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_ElektronischeAdresse.ubl.xml
+rules: EN 16931
+E BR-CL-25 Electronic address scheme is not in the code list (EAS). [9958]
+not checked: Peppol BIS rules
+applied: 67 passed, 1 failed, 146 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Gutschrift.ubl.xml
+rules: EN 16931
+not checked: Peppol BIS rules
+applied: 67 passed, 0 failed, 147 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Haftpflichtversicherung_Versicherungssteuer.ubl.xml
+rules: EN 16931
+not checked: Peppol BIS rules
+applied: 64 passed, 0 failed, 150 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Innergemeinschaftliche_Lieferungen.ubl.xml
+rules: EN 16931
+not checked: Peppol BIS rules
+applied: 75 passed, 0 failed, 139 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Kraftfahrversicherung_Bruttopreise.ubl.xml
+rules: EN 16931
+W PEPPOL-EN16931-R120 Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 80, expected 67.22]
+W PEPPOL-EN16931-R120 Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 2: 140, expected 117.65]
+not checked: Peppol BIS rules
+applied: 63 passed, 1 failed, 150 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Miete.ubl.xml
+rules: EN 16931
+not checked: Peppol BIS rules
+applied: 65 passed, 0 failed, 149 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_OEPNV.ubl.xml
+rules: EN 16931
+not checked: Peppol BIS rules
+applied: 63 passed, 0 failed, 151 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Physiotherapeut.ubl.xml
+rules: EN 16931
+not checked: Peppol BIS rules
+applied: 62 passed, 0 failed, 152 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Rabatte.ubl.xml
+rules: EN 16931
+not checked: Peppol BIS rules
+applied: 83 passed, 0 failed, 131 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Rechnungskorrektur.ubl.xml
+rules: EN 16931
+not checked: Peppol BIS rules
+applied: 74 passed, 0 failed, 140 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_RechnungsUebertragung.ubl.xml
+rules: EN 16931
+E BR-CL-25 Electronic address scheme is not in the code list (EAS). [9958]
+not checked: Peppol BIS rules
+applied: 67 passed, 1 failed, 146 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Reisekostenabrechnung.ubl.xml
+rules: EN 16931
+not checked: Peppol BIS rules
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Sachversicherung_berechneter_Steuersatz.ubl.xml
+rules: EN 16931
+W PEPPOL-EN16931-R120 Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 1163.4, expected 1000.00]
+not checked: Peppol BIS rules
+applied: 64 passed, 1 failed, 149 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_SEPA_Prenotification.ubl.xml
+rules: EN 16931
+not checked: Peppol BIS rules
+applied: 69 passed, 0 failed, 145 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/not_validating_full_invoice_based_onTest_EeISI_300_CENfullmodel.ubl.xml
+rules: EN 16931
+E BR-CO-10 Sum of invoice line net amounts (BT-106) does not match the lines (BT-131). [BT-106 = 200, sum = 2000]
+E BR-CO-15 Total with VAT (BT-112) is not total without VAT (BT-109) + VAT (BT-110). [BT-112 = 205, expected 250]
+W PEPPOL-EN16931-R120 Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1a: 1000, expected 100.00]
+W PEPPOL-EN16931-R120 Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1b: 1000, expected 100.00]
+not checked: Peppol BIS rules
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 123 passed, 3 failed, 88 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/ubl-tc434-creditnote1.xml
+rules: EN 16931
+applied: 65 passed, 0 failed, 149 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/XRECHNUNG_Betriebskostenabrechnung.ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 104 passed, 0 failed, 152 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/XRECHNUNG_Einfach.ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 98 passed, 0 failed, 158 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/XRECHNUNG_Elektron.ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 98 passed, 0 failed, 158 not applied
+== corpus/corpus-master/XML-Rechnung/UBL/XRECHNUNG_Reisekostenabrechnung.ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 103 passed, 0 failed, 153 not applied
+== corpus/corpus-master/ZUGFeRDv1/correct/4s4u/additional-data-sample-1.pdf
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: Rules specific to the EXTENDED profile
+not checked: 52 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_BASIC_Einfach.pdf
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: 2 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_BASIC_Rechnungskorrektur.pdf
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: 2 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_Einfach.pdf
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: 2 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_Haftpflichtversicherung_Versicherungssteuer.pdf
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: 3 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_Kraftfahrversicherung_Bruttopreise.pdf
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: 3 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_Rabatte.pdf
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: 8 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_Rechnungskorrektur.pdf
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: 13 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_Sachversicherung_berechneter_Steuersatz.pdf
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: 3 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_SEPA_Prenotification.pdf
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: 5 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_EXTENDED_Kostenrechnung.pdf
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: Rules specific to the EXTENDED profile
+not checked: 41 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_EXTENDED_Rechnungskorrektur.pdf
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: Rules specific to the EXTENDED profile
+not checked: 26 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_EXTENDED_Warenrechnung.pdf
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: Rules specific to the EXTENDED profile
+not checked: 52 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/correct/Konik/acme_invoice-42_ZUGFeRD.pdf
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: 2 element(s) outside EN 16931, e.g. HeaderExchangedDocument/Name
+== corpus/corpus-master/ZUGFeRDv1/correct/Mustangproject/MustangGnuaccountingBeispielRE-20140703_502.pdf
+W ZF-XMP The XMP metadata contains no ZUGFeRD/Factur-X data
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: 3 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/correct/Mustangproject/MustangGnuaccountingBeispielRE-20150613_503.pdf
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: 3 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/correct/Mustangproject/MustangGnuaccountingBeispielRE-20151008_504.pdf
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: 3 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/correct/Mustangproject/MustangGnuaccountingBeispielRE-20151008_504new.pdf
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: Rules specific to the EXTENDED profile
+not checked: 3 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/correct/Mustangproject/MustangGnuaccountingBeispielRE-20170509_505.pdf
+W ZF-XMP The XMP metadata contains no ZUGFeRD/Factur-X data
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: Rules specific to the EXTENDED profile
+not checked: 3 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/fail/Mustangproject/fail1.pdf
+W PROFILE-UNKNOWN Profile not recognized (identifier "urn:ferd:CrossIndustryDocument:invoice:1p0:komfort")
+W NUMBER BT-152: "19.00e" is not a valid number
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: 3 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/fail/Mustangproject/fail2.pdf
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: 4 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv1/fail/Mustangproject/fail3.pdf
+W ZF-XMP The XMP metadata contains no ZUGFeRD/Factur-X data
+not checked: ZUGFeRD 1.0 predates EN 16931: content rules not applied
+not checked: Rules specific to the EXTENDED profile
+not checked: 3 element(s) outside EN 16931, e.g. SpecifiedExchangedDocumentContext/TestIndicator/Indicator
+== corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Avoir_FR_type381_BASIC.pdf
+rules: EN 16931
+applied: 65 passed, 0 failed, 149 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Facture_DOM_BASICWL.pdf
+W ZF-NOT-EINVOICE Profile BASIC WL does not count as an e-invoice under §14 UStG (accounting aid only)
+not checked: Profile BASIC WL is not an EN 16931 invoice: content rules not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Facture_DOM_MINIMUM.pdf
+W ZF-NOT-EINVOICE Profile MINIMUM does not count as an e-invoice under §14 UStG (accounting aid only)
+not checked: Profile MINIMUM is not an EN 16931 invoice: content rules not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Facture_FR_BASICWL.pdf
+W ZF-NOT-EINVOICE Profile BASIC WL does not count as an e-invoice under §14 UStG (accounting aid only)
+not checked: Profile BASIC WL is not an EN 16931 invoice: content rules not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Facture_FR_MINIMUM.pdf
+W ZF-NOT-EINVOICE Profile MINIMUM does not count as an e-invoice under §14 UStG (accounting aid only)
+not checked: Profile MINIMUM is not an EN 16931 invoice: content rules not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Facture_UE_BASICWL.pdf
+W ZF-NOT-EINVOICE Profile BASIC WL does not count as an e-invoice under §14 UStG (accounting aid only)
+not checked: Profile BASIC WL is not an EN 16931 invoice: content rules not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Facture_UE_MINIMUM.pdf
+W ZF-NOT-EINVOICE Profile MINIMUM does not count as an e-invoice under §14 UStG (accounting aid only)
+not checked: Profile MINIMUM is not an EN 16931 invoice: content rules not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/BASIC/zugferd_2p0_BASIC_Einfach.pdf
+rules: EN 16931
+applied: 64 passed, 0 failed, 150 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/BASIC/zugferd_2p0_BASIC_Rechnungskorrektur.pdf
+rules: EN 16931
+applied: 69 passed, 0 failed, 145 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/BASIC/zugferd_2p0_BASIC_Taxifahrt.pdf
+rules: EN 16931
+applied: 62 passed, 0 failed, 152 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_1_Teilrechnung.pdf
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 4: 55.46, expected 55.40]
+not checked: 1 element(s) outside EN 16931, e.g. SupplyChainTradeTransaction/IncludedSupplyChainTradeLineItem/SpecifiedLineTradeAgreement/GrossPriceProductTradePrice/AppliedTradeAllowanceCharge/Reason
+applied: 83 passed, 1 failed, 130 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_2_Teilrechnung.pdf
+rules: EN 16931
+applied: 63 passed, 0 failed, 151 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_AbweichenderZahlungsempf.pdf
+rules: EN 16931
+applied: 73 passed, 0 failed, 141 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Betriebskostenabrechnung.pdf
+rules: EN 16931
+not checked: 1 element(s) outside EN 16931, e.g. SupplyChainTradeTransaction/ApplicableHeaderTradeAgreement/AdditionalReferencedDocument/ReferenceTypeCode
+applied: 70 passed, 0 failed, 144 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Einfach.pdf
+rules: EN 16931
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Elektron.pdf
+rules: EN 16931
+applied: 69 passed, 0 failed, 145 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_ElektronischeAdresse.pdf
+rules: EN 16931
+E BR-CL-25 Electronic address scheme is not in the code list (EAS). [9958]
+applied: 67 passed, 1 failed, 146 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Gutschrift.pdf
+rules: EN 16931
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Haftpflichtversicherung_Versicherungssteuer.pdf
+rules: EN 16931
+applied: 65 passed, 0 failed, 149 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Innergemeinschaftliche_Lieferungen.pdf
+rules: EN 16931
+applied: 76 passed, 0 failed, 138 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Kraftfahrversicherung_Bruttopreise.pdf
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 80.00, expected 67.22]
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 2: 140.00, expected 117.65]
+applied: 64 passed, 1 failed, 149 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Miete.pdf
+rules: EN 16931
+applied: 65 passed, 0 failed, 149 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_OEPNV.pdf
+rules: EN 16931
+applied: 63 passed, 0 failed, 151 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Physiotherapeut.pdf
+rules: EN 16931
+applied: 62 passed, 0 failed, 152 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Rabatte.pdf
+rules: EN 16931
+not checked: 1 element(s) outside EN 16931, e.g. SupplyChainTradeTransaction/IncludedSupplyChainTradeLineItem/SpecifiedLineTradeAgreement/GrossPriceProductTradePrice/AppliedTradeAllowanceCharge/Reason
+applied: 84 passed, 0 failed, 130 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Rechnungskorrektur.pdf
+rules: EN 16931
+not checked: 1 element(s) outside EN 16931, e.g. SupplyChainTradeTransaction/IncludedSupplyChainTradeLineItem/SpecifiedLineTradeAgreement/GrossPriceProductTradePrice/AppliedTradeAllowanceCharge/Reason
+applied: 75 passed, 0 failed, 139 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_RechnungsUebertragung.pdf
+rules: EN 16931
+E BR-CL-25 Electronic address scheme is not in the code list (EAS). [9958]
+applied: 67 passed, 1 failed, 146 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Reisekostenabrechnung.pdf
+rules: EN 16931
+applied: 69 passed, 0 failed, 145 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Sachversicherung_berechneter_Steuersatz.pdf
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 1163.40, expected 1000.00]
+applied: 65 passed, 1 failed, 148 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_SEPA_Prenotification.pdf
+rules: EN 16931
+applied: 70 passed, 0 failed, 144 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EXTENDED/zugferd_2p0_EXTENDED_Fremdwaehrung.pdf
+rules: EN 16931
+not checked: Code lists (the EXTENDED profile has its own)
+not checked: Rules specific to the EXTENDED profile
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+not checked: 9 element(s) outside EN 16931, e.g. ExchangedDocument/Name
+applied: 91 passed, 0 failed, 123 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EXTENDED/zugferd_2p0_EXTENDED_InnergemeinschLieferungMehrereBestellungen.pdf
+rules: EN 16931
+not checked: Code lists (the EXTENDED profile has its own)
+not checked: Rules specific to the EXTENDED profile
+not checked: 5 element(s) outside EN 16931, e.g. SupplyChainTradeTransaction/IncludedSupplyChainTradeLineItem/SpecifiedLineTradeAgreement/BuyerOrderReferencedDocument/IssuerAssignedID
+applied: 67 passed, 0 failed, 147 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EXTENDED/zugferd_2p0_EXTENDED_Kostenrechnung.pdf
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 52.00, expected 520.00]
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 2: 20.50, expected 205.00]
+not checked: Code lists (the EXTENDED profile has its own)
+not checked: Rules specific to the EXTENDED profile
+not checked: 17 element(s) outside EN 16931, e.g. ExchangedDocumentContext/TestIndicator/Indicator
+applied: 73 passed, 1 failed, 140 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EXTENDED/zugferd_2p0_EXTENDED_Rechnungskorrektur.pdf
+rules: EN 16931
+not checked: Code lists (the EXTENDED profile has its own)
+not checked: Rules specific to the EXTENDED profile
+not checked: 19 element(s) outside EN 16931, e.g. ExchangedDocumentContext/TestIndicator/Indicator
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EXTENDED/zugferd_2p0_EXTENDED_Warenrechnung.pdf
+rules: EN 16931
+not checked: Code lists (the EXTENDED profile has its own)
+not checked: Rules specific to the EXTENDED profile
+not checked: 39 element(s) outside EN 16931, e.g. ExchangedDocumentContext/TestIndicator/Indicator
+applied: 75 passed, 0 failed, 139 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/MINIMUM/zugferd_2p0_MINIMUM.pdf
+W ZF-NOT-EINVOICE Profile MINIMUM does not count as an e-invoice under §14 UStG (accounting aid only)
+not checked: Profile MINIMUM is not an EN 16931 invoice: content rules not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/hate1.xml
+rules: EN 16931
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/MustangGnuaccountingBeispielRE-20190610_507.pdf
+rules: EN 16931
+E BR-CL-11 Legal registration identifier scheme is not in the code list (ISO 6523). [9930]
+not checked: 1 element(s) outside EN 16931, e.g. SupplyChainTradeTransaction/ApplicableHeaderTradeSettlement/SpecifiedTradeSettlementPaymentMeans/PayeeSpecifiedCreditorFinancialInstitution/GermanBankleitzahlID
+applied: 66 passed, 1 failed, 147 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/MustangGnuaccountingBeispielRE-20201121_508.pdf
+rules: EN 16931
+applied: 67 passed, 0 failed, 147 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/MustangGnuaccountingBeispielRE-20201121_508_withBOM.pdf
+rules: EN 16931
+applied: 67 passed, 0 failed, 147 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-XR.xml
+rules: EN 16931
+not checked: XRechnung 1.2: national rules (BR-DE) are only implemented for version 3.0
+applied: 67 passed, 0 failed, 147 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-XR-Edge.xml
+rules: EN 16931
+not checked: XRechnung 1.2: national rules (BR-DE) are only implemented for version 3.0
+applied: 69 passed, 0 failed, 145 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushAllowances.xml
+rules: EN 16931
+applied: 71 passed, 0 failed, 143 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushChargesAllowances.xml
+rules: EN 16931
+applied: 78 passed, 0 failed, 136 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushCorrection.xml
+rules: EN 16931
+applied: 65 passed, 0 failed, 149 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushCreditNote.xml
+rules: EN 16931
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushEdge.xml
+rules: EN 16931
+applied: 81 passed, 0 failed, 133 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushItemChargesAllowances.xml
+rules: EN 16931
+not checked: Code lists (the EXTENDED profile has its own)
+not checked: Rules specific to the EXTENDED profile
+not checked: 3 element(s) outside EN 16931, e.g. SupplyChainTradeTransaction/IncludedSupplyChainTradeLineItem/SpecifiedLineTradeAgreement/GrossPriceProductTradePrice/AppliedTradeAllowanceCharge/CalculationPercent
+applied: 58 passed, 0 failed, 156 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushRelativeChargesAllowances.xml
+rules: EN 16931
+not checked: Code lists (the EXTENDED profile has its own)
+not checked: Rules specific to the EXTENDED profile
+not checked: 2 element(s) outside EN 16931, e.g. SupplyChainTradeTransaction/IncludedSupplyChainTradeLineItem/SpecifiedLineTradeAgreement/GrossPriceProductTradePrice/AppliedTradeAllowanceCharge/CalculationPercent
+applied: 65 passed, 0 failed, 149 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushReverseCharge.xml
+rules: EN 16931
+not checked: Code lists (the EXTENDED profile has its own)
+not checked: Rules specific to the EXTENDED profile
+not checked: 5 element(s) outside EN 16931, e.g. SupplyChainTradeTransaction/IncludedSupplyChainTradeLineItem/SpecifiedLineTradeSettlement/ApplicableTradeTax/ExemptionReason
+applied: 58 passed, 0 failed, 156 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/PHP_@gpFacturX/sample_inofficial_20190125_atgp_factur-x_v_1_0.pdf
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 81.90, expected 82.00]
+applied: 69 passed, 1 failed, 144 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/BASIC WL/zugferd_2p1_BASIC-WL_Buchungshilfe.pdf
+W ZF-NOT-EINVOICE Profile BASIC WL does not count as an e-invoice under §14 UStG (accounting aid only)
+not checked: Profile BASIC WL is not an EN 16931 invoice: content rules not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/BASIC WL/zugferd_2p1_BASIC-WL_Einfach.pdf
+W ZF-NOT-EINVOICE Profile BASIC WL does not count as an e-invoice under §14 UStG (accounting aid only)
+not checked: Profile BASIC WL is not an EN 16931 invoice: content rules not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/BASIC/zugferd_2p1_BASIC_Einfach.pdf
+rules: EN 16931
+applied: 64 passed, 0 failed, 150 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/BASIC/zugferd_2p1_BASIC_Rechnungskorrektur.pdf
+rules: EN 16931
+applied: 69 passed, 0 failed, 145 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/BASIC/zugferd_2p1_BASIC_Taxifahrt.pdf
+rules: EN 16931
+applied: 62 passed, 0 failed, 152 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_1_Teilrechnung.pdf
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 4: 55.46, expected 55.40]
+applied: 83 passed, 1 failed, 130 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_2_Teilrechnung.pdf
+rules: EN 16931
+applied: 63 passed, 0 failed, 151 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_AbweichenderZahlungsempf.pdf
+rules: EN 16931
+applied: 73 passed, 0 failed, 141 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Betriebskostenabrechnung.pdf
+rules: EN 16931
+applied: 70 passed, 0 failed, 144 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Betriebskostenabrechnung_XRechnung_embedded.pdf
+rules: EN 16931
+W ZF-XMP-PROFILE Profile in the XMP metadata (EN 16931) does not match the invoice profile (XRECHNUNG)
+not checked: XRechnung 1.2: national rules (BR-DE) are only implemented for version 3.0
+applied: 75 passed, 0 failed, 139 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Einfach.pdf
+rules: EN 16931
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Einfach_DueDate.pdf
+rules: EN 16931
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Einfach_negativePaymentDue.pdf
+rules: EN 16931
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Elektron.pdf
+rules: EN 16931
+applied: 69 passed, 0 failed, 145 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Elektron_embedded.pdf
+rules: EN 16931
+applied: 71 passed, 0 failed, 143 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Elektron_XRechnung.pdf
+rules: EN 16931
+W ZF-XMP-PROFILE Profile in the XMP metadata (EN 16931) does not match the invoice profile (XRECHNUNG)
+not checked: XRechnung 1.2: national rules (BR-DE) are only implemented for version 3.0
+applied: 71 passed, 0 failed, 143 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_ElektronischeAdresse.pdf
+rules: EN 16931
+E BR-CL-25 Electronic address scheme is not in the code list (EAS). [9958]
+applied: 67 passed, 1 failed, 146 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Gutschrift.pdf
+rules: EN 16931
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Haftpflichtversicherung_Versicherungssteuer.pdf
+rules: EN 16931
+applied: 65 passed, 0 failed, 149 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Innergemeinschaftliche_Lieferungen.pdf
+rules: EN 16931
+applied: 76 passed, 0 failed, 138 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Kraftfahrversicherung_Bruttopreise.pdf
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 80.00, expected 67.22]
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 2: 140.00, expected 117.65]
+applied: 64 passed, 1 failed, 149 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Miete.pdf
+rules: EN 16931
+applied: 65 passed, 0 failed, 149 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_OEPNV.pdf
+rules: EN 16931
+applied: 63 passed, 0 failed, 151 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Physiotherapeut.pdf
+rules: EN 16931
+applied: 62 passed, 0 failed, 152 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Rabatte.pdf
+rules: EN 16931
+applied: 84 passed, 0 failed, 130 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Rechnungskorrektur.pdf
+rules: EN 16931
+applied: 75 passed, 0 failed, 139 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_RechnungsUebertragung.pdf
+rules: EN 16931
+E BR-CL-25 Electronic address scheme is not in the code list (EAS). [9958]
+applied: 67 passed, 1 failed, 146 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Reisekostenabrechnung.pdf
+rules: EN 16931
+applied: 69 passed, 0 failed, 145 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Reisekostenabrechnung_XRechnung_embedded.pdf
+rules: EN 16931
+W ZF-XMP-PROFILE Profile in the XMP metadata (EN 16931) does not match the invoice profile (XRECHNUNG)
+not checked: XRechnung 1.2: national rules (BR-DE) are only implemented for version 3.0
+applied: 74 passed, 0 failed, 140 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Sachversicherung_berechneter_Steuersatz.pdf
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 1163.40, expected 1000.00]
+applied: 65 passed, 1 failed, 148 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_SEPA_Prenotification.pdf
+rules: EN 16931
+applied: 70 passed, 0 failed, 144 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EXTENDED/zugferd_2p1_EXTENDED_Fremdwaehrung.pdf
+rules: EN 16931
+not checked: Code lists (the EXTENDED profile has its own)
+not checked: Rules specific to the EXTENDED profile
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+not checked: 9 element(s) outside EN 16931, e.g. ExchangedDocument/Name
+applied: 91 passed, 0 failed, 123 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EXTENDED/zugferd_2p1_EXTENDED_InnergemeinschLieferungMehrereBestellungen.pdf
+rules: EN 16931
+not checked: Code lists (the EXTENDED profile has its own)
+not checked: Rules specific to the EXTENDED profile
+not checked: 5 element(s) outside EN 16931, e.g. SupplyChainTradeTransaction/IncludedSupplyChainTradeLineItem/SpecifiedLineTradeAgreement/BuyerOrderReferencedDocument/IssuerAssignedID
+applied: 67 passed, 0 failed, 147 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EXTENDED/zugferd_2p1_EXTENDED_Kostenrechnung.pdf
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 52.00, expected 520.00]
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 2: 20.50, expected 205.00]
+not checked: Code lists (the EXTENDED profile has its own)
+not checked: Rules specific to the EXTENDED profile
+not checked: 17 element(s) outside EN 16931, e.g. ExchangedDocumentContext/TestIndicator/Indicator
+applied: 73 passed, 1 failed, 140 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EXTENDED/zugferd_2p1_EXTENDED_Rechnungskorrektur.pdf
+rules: EN 16931
+not checked: Code lists (the EXTENDED profile has its own)
+not checked: Rules specific to the EXTENDED profile
+not checked: 19 element(s) outside EN 16931, e.g. ExchangedDocumentContext/TestIndicator/Indicator
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EXTENDED/zugferd_2p1_EXTENDED_Warenrechnung.pdf
+rules: EN 16931
+not checked: Code lists (the EXTENDED profile has its own)
+not checked: Rules specific to the EXTENDED profile
+not checked: 39 element(s) outside EN 16931, e.g. ExchangedDocumentContext/TestIndicator/Indicator
+applied: 75 passed, 0 failed, 139 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/MINIMUM/zugferd_2p1_MINIMUM_Buchungshilfe.pdf
+W ZF-NOT-EINVOICE Profile MINIMUM does not count as an e-invoice under §14 UStG (accounting aid only)
+not checked: Profile MINIMUM is not an EN 16931 invoice: content rules not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/MINIMUM/zugferd_2p1_MINIMUM_Rechnung.pdf
+W ZF-NOT-EINVOICE Profile MINIMUM does not count as an e-invoice under §14 UStG (accounting aid only)
+not checked: Profile MINIMUM is not an EN 16931 invoice: content rules not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/xml/ZUGFeRD-invoice_rabatte_3_abschlag_duepayableamount.xml
+rules: EN 16931
+applied: 70 passed, 0 failed, 144 not applied
+== corpus/corpus-master/ZUGFeRDv2/correct/xml/ZUGFeRD-invoice_rabatte_4_abschlag_taxbasistotalamount.xml
+rules: EN 16931
+applied: 70 passed, 0 failed, 144 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Avoir_FR_type380_BASIC.pdf
+rules: EN 16931
+applied: 65 passed, 0 failed, 149 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Avoir_FR_type380_EN16931.pdf
+rules: EN 16931
+not checked: 2 element(s) outside EN 16931, e.g. SupplyChainTradeTransaction/IncludedSupplyChainTradeLineItem/SpecifiedLineTradeAgreement/GrossPriceProductTradePrice/AppliedTradeAllowanceCharge/CalculationPercent
+applied: 67 passed, 0 failed, 147 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Avoir_FR_type380_MINIMUM.pdf
+W ZF-NOT-EINVOICE Profile MINIMUM does not count as an e-invoice under §14 UStG (accounting aid only)
+not checked: Profile MINIMUM is not an EN 16931 invoice: content rules not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Avoir_FR_type381_BASICWL.pdf
+W ZF-NOT-EINVOICE Profile BASIC WL does not count as an e-invoice under §14 UStG (accounting aid only)
+not checked: Profile BASIC WL is not an EN 16931 invoice: content rules not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Avoir_FR_type381_EN16931.pdf
+rules: EN 16931
+not checked: 2 element(s) outside EN 16931, e.g. SupplyChainTradeTransaction/IncludedSupplyChainTradeLineItem/SpecifiedLineTradeAgreement/GrossPriceProductTradePrice/AppliedTradeAllowanceCharge/CalculationPercent
+applied: 67 passed, 0 failed, 147 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Avoir_FR_type381_MINIMUM.pdf
+W ZF-NOT-EINVOICE Profile MINIMUM does not count as an e-invoice under §14 UStG (accounting aid only)
+not checked: Profile MINIMUM is not an EN 16931 invoice: content rules not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Facture_DOM_BASIC.pdf
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 204.75, expected 205.00]
+applied: 65 passed, 1 failed, 148 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Facture_DOM_EN16931.pdf
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 204.75, expected 205.00]
+not checked: 2 element(s) outside EN 16931, e.g. SupplyChainTradeTransaction/IncludedSupplyChainTradeLineItem/SpecifiedLineTradeAgreement/GrossPriceProductTradePrice/AppliedTradeAllowanceCharge/CalculationPercent
+applied: 67 passed, 1 failed, 146 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Facture_FR_BASIC.pdf
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 81.90, expected 82.00]
+applied: 67 passed, 1 failed, 146 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Facture_FR_EN16931.pdf
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 81.90, expected 82.00]
+not checked: 2 element(s) outside EN 16931, e.g. SupplyChainTradeTransaction/IncludedSupplyChainTradeLineItem/SpecifiedLineTradeAgreement/GrossPriceProductTradePrice/AppliedTradeAllowanceCharge/CalculationPercent
+applied: 69 passed, 1 failed, 144 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Facture_UE_BASIC.pdf
+rules: EN 16931
+E BR-IC-11 Intra-community supply needs the actual delivery date (BT-72) or the invoicing period (BG-14).
+E BR-IC-12 Intra-community supply needs the deliver to country code (BT-80).
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 32.76, expected 32.80]
+applied: 65 passed, 3 failed, 146 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Facture_UE_EN16931.pdf
+rules: EN 16931
+E BR-IC-11 Intra-community supply needs the actual delivery date (BT-72) or the invoicing period (BG-14).
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 32.76, expected 32.80]
+not checked: 2 element(s) outside EN 16931, e.g. SupplyChainTradeTransaction/IncludedSupplyChainTradeLineItem/SpecifiedLineTradeAgreement/GrossPriceProductTradePrice/AppliedTradeAllowanceCharge/CalculationPercent
+applied: 68 passed, 2 failed, 144 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/FX-With-UBL-REC50304330.pdf
+rules: EN 16931
+applied: 72 passed, 0 failed, 142 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/Mustangproject/factur-x-invalid-xml-encoding-attribute.pdf
+rules: EN 16931
+applied: 67 passed, 0 failed, 147 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/Mustangproject/MustangGnuaccountingBeispielRE-20171118_506.pdf
+rules: EN 16931
+not checked: Code lists (the EXTENDED profile has its own)
+not checked: Rules specific to the EXTENDED profile
+not checked: 3 element(s) outside EN 16931, e.g. ExchangedDocumentContext/TestIndicator/Indicator
+applied: 59 passed, 0 failed, 155 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/Mustangproject/MustangGnuaccountingBeispielRE-20190610_507a.pdf
+rules: EN 16931
+not checked: 1 element(s) outside EN 16931, e.g. SupplyChainTradeTransaction/ApplicableHeaderTradeSettlement/SpecifiedTradeSettlementPaymentMeans/PayeeSpecifiedCreditorFinancialInstitution/GermanBankleitzahlID
+applied: 66 passed, 0 failed, 148 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/Mustangproject/MustangGnuaccountingBeispielRE-20190610_507b.pdf
+rules: EN 16931
+E BR-CL-11 Legal registration identifier scheme is not in the code list (ISO 6523). [9930]
+not checked: 1 element(s) outside EN 16931, e.g. SupplyChainTradeTransaction/ApplicableHeaderTradeSettlement/SpecifiedTradeSettlementPaymentMeans/PayeeSpecifiedCreditorFinancialInstitution/GermanBankleitzahlID
+applied: 66 passed, 1 failed, 147 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/Mustangproject/noNetPriceValidation.xml
+rules: EN 16931
+W PEPPOL-EN16931-R120 (extra) Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 1: 316.00, expected 40.00]
+applied: 65 passed, 1 failed, 148 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/Mustangproject/wrongFilename.pdf
+rules: EN 16931
+I ZF-FILENAME Unusual file name "factur-y.xml" for the invoice (usual: factur-x.xml)
+applied: 68 passed, 0 failed, 146 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/MustangRE-20171118_506_ZUGFeRD1and2.pdf
+rules: EN 16931
+not checked: Code lists (the EXTENDED profile has its own)
+not checked: Rules specific to the EXTENDED profile
+not checked: 3 element(s) outside EN 16931, e.g. ExchangedDocumentContext/TestIndicator/Indicator
+applied: 59 passed, 0 failed, 155 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/python-factur-x/python-factur-x.pdf
+rules: EN 16931
+W ZF-AF The invoice file is not listed in the /AF array of the PDF (PDF/A-3)
+applied: 66 passed, 0 failed, 148 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/XRechnung 722825203.XML
+rules: EN 16931
+rules: XRechnung 3.0
+E BR-DE-18 XRechnung: early payment discount line in the payment terms (BT-20) is not in the required format (#SKONTO#TAGE=n#PROZENT=n.nn#).
+not checked: 8 element(s) outside EN 16931, e.g. SupplyChainTradeTransaction/IncludedSupplyChainTradeLineItem/SpecifiedLineTradeDelivery/DeliveryNoteReferencedDocument/IssuerAssignedID
+applied: 97 passed, 1 failed, 158 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/ZUGFeRD_2.0_fully_compliant_complete.pdf
+rules: EN 16931
+E BR-CL-23 Unit of measure code is not in the code list (UN/ECE Rec. 20/21). [line 10: ST]
+E BR-CL-23 Unit of measure code is not in the code list (UN/ECE Rec. 20/21). [line 10: ST]
+E BR-CL-23 Unit of measure code is not in the code list (UN/ECE Rec. 20/21). [line 20: ST]
+E BR-CL-23 Unit of measure code is not in the code list (UN/ECE Rec. 20/21). [line 20: ST]
+E BR-CL-23 Unit of measure code is not in the code list (UN/ECE Rec. 20/21). [line 30: ST]
+E BR-CL-23 Unit of measure code is not in the code list (UN/ECE Rec. 20/21). [line 30: ST]
+E BR-CL-23 Unit of measure code is not in the code list (UN/ECE Rec. 20/21). [line 40: ST]
+E BR-CL-23 Unit of measure code is not in the code list (UN/ECE Rec. 20/21). [line 40: ST]
+applied: 62 passed, 1 failed, 151 not applied
+== corpus/corpus-master/ZUGFeRDv2/fail/ZUGFeRD_2_fully_compliant_complete.pdf
+rules: EN 16931
+applied: 63 passed, 0 failed, 151 not applied
+== kosit/instances/extension/04.01a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: Amount due (BT-115) with third party payments (XRechnung extension)
+not checked: Rules of the XRechnung extension (BR-DEX)
+not checked: Sub-lines (XRechnung extension)
+applied: 86 passed, 0 failed, 170 not applied
+== kosit/instances/extension/04.02a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: Amount due (BT-115) with third party payments (XRechnung extension)
+not checked: Rules of the XRechnung extension (BR-DEX)
+not checked: Sub-lines (XRechnung extension)
+applied: 89 passed, 0 failed, 167 not applied
+== kosit/instances/extension/04.03a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: Amount due (BT-115) with third party payments (XRechnung extension)
+not checked: Rules of the XRechnung extension (BR-DEX)
+not checked: Sub-lines (XRechnung extension)
+applied: 106 passed, 0 failed, 150 not applied
+== kosit/instances/extension/04.04a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: Amount due (BT-115) with third party payments (XRechnung extension)
+not checked: Rules of the XRechnung extension (BR-DEX)
+not checked: Sub-lines (XRechnung extension)
+applied: 87 passed, 0 failed, 169 not applied
+== kosit/instances/extension/04.05a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: Amount due (BT-115) with third party payments (XRechnung extension)
+not checked: Rules of the XRechnung extension (BR-DEX)
+applied: 90 passed, 0 failed, 166 not applied
+== kosit/instances/extension/05.01a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: Amount due (BT-115) with third party payments (XRechnung extension)
+not checked: Rules of the XRechnung extension (BR-DEX)
+not checked: 6 element(s) outside EN 16931, e.g. PrepaidPayment/ID
+applied: 91 passed, 0 failed, 165 not applied
+== kosit/instances/standard/01.01a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 92 passed, 0 failed, 164 not applied
+== kosit/instances/standard/01.01a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 92 passed, 0 failed, 164 not applied
+== kosit/instances/standard/01.02a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 90 passed, 0 failed, 166 not applied
+== kosit/instances/standard/01.02a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 90 passed, 0 failed, 166 not applied
+== kosit/instances/standard/01.03a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 89 passed, 0 failed, 167 not applied
+== kosit/instances/standard/01.03a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 89 passed, 0 failed, 167 not applied
+== kosit/instances/standard/01.04a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 88 passed, 0 failed, 168 not applied
+== kosit/instances/standard/01.04a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 88 passed, 0 failed, 168 not applied
+== kosit/instances/standard/01.05a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 93 passed, 0 failed, 163 not applied
+== kosit/instances/standard/01.05a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 93 passed, 0 failed, 163 not applied
+== kosit/instances/standard/01.06a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 93 passed, 0 failed, 163 not applied
+== kosit/instances/standard/01.06a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 93 passed, 0 failed, 163 not applied
+== kosit/instances/standard/01.07a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 93 passed, 0 failed, 163 not applied
+== kosit/instances/standard/01.07a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 93 passed, 0 failed, 163 not applied
+== kosit/instances/standard/01.08a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 88 passed, 0 failed, 168 not applied
+== kosit/instances/standard/01.08a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 88 passed, 0 failed, 168 not applied
+== kosit/instances/standard/01.09a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 88 passed, 0 failed, 168 not applied
+== kosit/instances/standard/01.09a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 88 passed, 0 failed, 168 not applied
+== kosit/instances/standard/01.10a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 92 passed, 0 failed, 164 not applied
+== kosit/instances/standard/01.10a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 92 passed, 0 failed, 164 not applied
+== kosit/instances/standard/01.11a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 88 passed, 0 failed, 168 not applied
+== kosit/instances/standard/01.11a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 88 passed, 0 failed, 168 not applied
+== kosit/instances/standard/01.12a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 88 passed, 0 failed, 168 not applied
+== kosit/instances/standard/01.12a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 88 passed, 0 failed, 168 not applied
+== kosit/instances/standard/01.13a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 89 passed, 0 failed, 167 not applied
+== kosit/instances/standard/01.13a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 89 passed, 0 failed, 167 not applied
+== kosit/instances/standard/01.14a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 98 passed, 0 failed, 158 not applied
+== kosit/instances/standard/01.14a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 98 passed, 0 failed, 158 not applied
+== kosit/instances/standard/01.15a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 92 passed, 0 failed, 164 not applied
+== kosit/instances/standard/01.15a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 92 passed, 0 failed, 164 not applied
+== kosit/instances/standard/01.17a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 93 passed, 0 failed, 163 not applied
+== kosit/instances/standard/01.17a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 93 passed, 0 failed, 163 not applied
+== kosit/instances/standard/01.18a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 95 passed, 0 failed, 161 not applied
+== kosit/instances/standard/01.18a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 95 passed, 0 failed, 161 not applied
+== kosit/instances/standard/01.19a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 88 passed, 0 failed, 168 not applied
+== kosit/instances/standard/01.19a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 88 passed, 0 failed, 168 not applied
+== kosit/instances/standard/01.20a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 91 passed, 0 failed, 165 not applied
+== kosit/instances/standard/01.20a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 96 passed, 0 failed, 160 not applied
+== kosit/instances/standard/01.21a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 98 passed, 0 failed, 158 not applied
+== kosit/instances/standard/01.21a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: 1 element(s) outside EN 16931, e.g. SupplyChainTradeTransaction/IncludedSupplyChainTradeLineItem/SpecifiedLineTradeSettlement/ApplicableTradeTax/ExemptionReason
+applied: 100 passed, 0 failed, 156 not applied
+== kosit/instances/standard/02.01a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 144 passed, 0 failed, 112 not applied
+== kosit/instances/standard/02.01a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 145 passed, 0 failed, 111 not applied
+== kosit/instances/standard/02.02a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 140 passed, 0 failed, 116 not applied
+== kosit/instances/standard/02.02a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 141 passed, 0 failed, 115 not applied
+== kosit/instances/standard/02.03a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 144 passed, 0 failed, 112 not applied
+== kosit/instances/standard/02.03a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 145 passed, 0 failed, 111 not applied
+== kosit/instances/standard/02.04a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 144 passed, 0 failed, 112 not applied
+== kosit/instances/standard/02.04a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 145 passed, 0 failed, 111 not applied
+== kosit/instances/standard/02.05a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 124 passed, 0 failed, 132 not applied
+== kosit/instances/standard/02.05a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 124 passed, 0 failed, 132 not applied
+== kosit/instances/standard/02.06a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 93 passed, 0 failed, 163 not applied
+== kosit/instances/standard/02.06a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 93 passed, 0 failed, 163 not applied
+== kosit/instances/standard/03.01a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 97 passed, 0 failed, 159 not applied
+== kosit/instances/standard/03.01a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 97 passed, 0 failed, 159 not applied
+== kosit/instances/standard/03.02a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 90 passed, 0 failed, 166 not applied
+== kosit/instances/standard/03.02a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 90 passed, 0 failed, 166 not applied
+== kosit/instances/standard/03.03a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 89 passed, 0 failed, 167 not applied
+== kosit/instances/standard/03.03a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 89 passed, 0 failed, 167 not applied
+== kosit/instances/standard/03.04a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 97 passed, 0 failed, 159 not applied
+== kosit/instances/standard/03.04a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 97 passed, 0 failed, 159 not applied
+== kosit/instances/standard/03.05a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 97 passed, 0 failed, 159 not applied
+== kosit/instances/standard/03.05a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 97 passed, 0 failed, 159 not applied
+== kosit/instances/standard/03.06a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 96 passed, 0 failed, 160 not applied
+== kosit/instances/standard/03.06a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 96 passed, 0 failed, 160 not applied
+== kosit/instances/standard/03.07a-INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 158 passed, 0 failed, 98 not applied
+== kosit/instances/standard/03.07a-INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 159 passed, 0 failed, 97 not applied
+== kosit/instances/technical-cases/cius/01.01_comprehensive_test_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 161 passed, 0 failed, 95 not applied
+== kosit/instances/technical-cases/cius/01.01_comprehensive_test_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 162 passed, 0 failed, 94 not applied
+== kosit/instances/technical-cases/cius/01.02_comprehensive_test_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 162 passed, 0 failed, 94 not applied
+== kosit/instances/technical-cases/cius/01.02_comprehensive_test_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 163 passed, 0 failed, 93 not applied
+== kosit/instances/technical-cases/cius/01.03_comprehensive_test_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 159 passed, 0 failed, 97 not applied
+== kosit/instances/technical-cases/cius/01.03_comprehensive_test_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 160 passed, 0 failed, 96 not applied
+== kosit/instances/technical-cases/cius/01.04_comprehensive_test_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 162 passed, 0 failed, 94 not applied
+== kosit/instances/technical-cases/cius/01.04_comprehensive_test_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 163 passed, 0 failed, 93 not applied
+== kosit/instances/technical-cases/cius/01.05_minimal_test_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 88 passed, 0 failed, 168 not applied
+== kosit/instances/technical-cases/cius/01.05_minimal_test_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 85 passed, 0 failed, 171 not applied
+== kosit/instances/technical-cases/cius/01.06_minimal_test_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 88 passed, 0 failed, 168 not applied
+== kosit/instances/technical-cases/cius/01.06_minimal_test_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+applied: 87 passed, 0 failed, 169 not applied
+== kosit/instances/technical-cases/cvd/02.01a-cvd_INVOICE_ubl.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 157 passed, 0 failed, 99 not applied
+== kosit/instances/technical-cases/cvd/02.01a-cvd_INVOICE_uncefact.xml
+rules: EN 16931
+rules: XRechnung 3.0
+not checked: VAT total in accounting currency (BT-111) is not recalculated
+applied: 158 passed, 0 failed, 98 not applied

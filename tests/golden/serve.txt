@@ -1,0 +1,682 @@
+== GET /version
+status: 200 OK
+content-type: application/json; charset=utf-8
+body:
+  {"version": "0.1.0-dev", "author": "Ingo Jache", "repository": "https://github.com/ijache/abdecker", "homepage": "https://abdecker.jache.de"}
+== POST /info PDF
+status: 200 OK
+content-type: application/json; charset=utf-8
+body:
+  {
+    "file": "",
+    "result": "ok",
+    "container": "pdf",
+    "syntax": "cii",
+    "profile": "en16931",
+    "guidelineId": "urn:cen.eu:en16931:2017",
+    "xrechnungVersion": "",
+    "pdf": {
+      "version": "1.4",
+      "pdfaPart": "3",
+      "pdfaConformance": "B",
+      "xmpDocumentType": "INVOICE",
+      "xmpDocumentFileName": "factur-x.xml",
+      "xmpVersion": "1.0",
+      "xmpConformanceLevel": "EN 16931",
+      "invoiceFile": "factur-x.xml"
+    },
+    "invoice": {
+      "number": "471102",
+      "issueDate": "2018-03-05",
+      "typeCode": "380",
+      "currency": "EUR",
+      "seller": "Lieferant GmbH",
+      "buyer": "Kunden AG Mitte",
+      "grandTotal": "529.87",
+      "duePayable": "529.87"
+    },
+    "attachments": [
+      {"name": "factur-x.xml", "mimeType": "text/xml", "relationship": "Alternative", "size": -1, "inAF": true}
+    ],
+    "messages": []
+  }
+== POST /info UBL
+status: 200 OK
+content-type: application/json; charset=utf-8
+body:
+  {
+    "file": "",
+    "result": "ok",
+    "container": "xml",
+    "syntax": "ubl-invoice",
+    "profile": "peppol",
+    "guidelineId": "urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0",
+    "xrechnungVersion": "",
+    "pdf": {
+      "version": "",
+      "pdfaPart": "",
+      "pdfaConformance": "",
+      "xmpDocumentType": "",
+      "xmpDocumentFileName": "",
+      "xmpVersion": "",
+      "xmpConformanceLevel": "",
+      "invoiceFile": ""
+    },
+    "invoice": {
+      "number": "471102",
+      "issueDate": "2018-03-05",
+      "typeCode": "389",
+      "currency": "EUR",
+      "seller": "Lieferant GmbH",
+      "buyer": "Kunden AG Mitte",
+      "grandTotal": "529.87",
+      "duePayable": "529.87"
+    },
+    "attachments": [],
+    "messages": []
+  }
+== POST /info no invoice
+status: 422 Unprocessable Content
+content-type: application/json; charset=utf-8
+body:
+  {
+    "file": "",
+    "result": "no-invoice",
+    "container": "pdf",
+    "syntax": "",
+    "profile": "",
+    "guidelineId": "",
+    "xrechnungVersion": "",
+    "pdf": {
+      "version": "1.4",
+      "pdfaPart": "",
+      "pdfaConformance": "",
+      "xmpDocumentType": "",
+      "xmpDocumentFileName": "",
+      "xmpVersion": "",
+      "xmpConformanceLevel": "",
+      "invoiceFile": ""
+    },
+    "invoice": {
+      "number": "",
+      "issueDate": "",
+      "typeCode": "",
+      "currency": "",
+      "seller": "",
+      "buyer": "",
+      "grandTotal": "",
+      "duePayable": ""
+    },
+    "attachments": [],
+    "messages": [
+      {"severity": "info", "code": "PDF-NO-INVOICE", "origin": "file", "text": "The PDF contains no embedded e-invoice"}
+    ]
+  }
+== POST /info unknown XML
+status: 422 Unprocessable Content
+content-type: application/json; charset=utf-8
+body:
+  {
+    "file": "",
+    "result": "unknown-format",
+    "container": "xml",
+    "syntax": "",
+    "profile": "",
+    "guidelineId": "",
+    "xrechnungVersion": "",
+    "pdf": {
+      "version": "",
+      "pdfaPart": "",
+      "pdfaConformance": "",
+      "xmpDocumentType": "",
+      "xmpDocumentFileName": "",
+      "xmpVersion": "",
+      "xmpConformanceLevel": "",
+      "invoiceFile": ""
+    },
+    "invoice": {
+      "number": "",
+      "issueDate": "",
+      "typeCode": "",
+      "currency": "",
+      "seller": "",
+      "buyer": "",
+      "grandTotal": "",
+      "duePayable": ""
+    },
+    "attachments": [],
+    "messages": [
+      {"severity": "error", "code": "XML-UNKNOWN", "origin": "file", "text": "Unknown XML format (root element \"FatturaElettronica\", namespace \"http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2\")"}
+    ]
+  }
+== POST /info neither PDF nor XML
+status: 422 Unprocessable Content
+content-type: application/json; charset=utf-8
+body:
+  {
+    "file": "",
+    "result": "unknown-format",
+    "container": "",
+    "syntax": "",
+    "profile": "",
+    "guidelineId": "",
+    "xrechnungVersion": "",
+    "pdf": {
+      "version": "",
+      "pdfaPart": "",
+      "pdfaConformance": "",
+      "xmpDocumentType": "",
+      "xmpDocumentFileName": "",
+      "xmpVersion": "",
+      "xmpConformanceLevel": "",
+      "invoiceFile": ""
+    },
+    "invoice": {
+      "number": "",
+      "issueDate": "",
+      "typeCode": "",
+      "currency": "",
+      "seller": "",
+      "buyer": "",
+      "grandTotal": "",
+      "duePayable": ""
+    },
+    "attachments": [],
+    "messages": [
+      {"severity": "error", "code": "FORMAT", "origin": "file", "text": "The file is neither PDF nor XML"}
+    ]
+  }
+== POST /info empty body
+status: 422 Unprocessable Content
+content-type: application/json; charset=utf-8
+body:
+  {
+    "file": "",
+    "result": "unknown-format",
+    "container": "",
+    "syntax": "",
+    "profile": "",
+    "guidelineId": "",
+    "xrechnungVersion": "",
+    "pdf": {
+      "version": "",
+      "pdfaPart": "",
+      "pdfaConformance": "",
+      "xmpDocumentType": "",
+      "xmpDocumentFileName": "",
+      "xmpVersion": "",
+      "xmpConformanceLevel": "",
+      "invoiceFile": ""
+    },
+    "invoice": {
+      "number": "",
+      "issueDate": "",
+      "typeCode": "",
+      "currency": "",
+      "seller": "",
+      "buyer": "",
+      "grandTotal": "",
+      "duePayable": ""
+    },
+    "attachments": [],
+    "messages": [
+      {"severity": "error", "code": "FORMAT", "origin": "file", "text": "The file is neither PDF nor XML"}
+    ]
+  }
+== POST /check valid
+status: 200 OK
+content-type: application/json; charset=utf-8
+body:
+  {
+    "file": "",
+    "result": "ok",
+    "syntax": "cii",
+    "profile": "xrechnung",
+    "xrechnungVersion": "3.0",
+    "errors": 0,
+    "warnings": 0,
+    "ruleSets": ["EN 16931", "XRechnung 3.0"],
+    "notChecked": [],
+    "messages": []
+  }
+== POST /check errors
+status: 200 OK
+content-type: application/json; charset=utf-8
+body:
+  {
+    "file": "",
+    "result": "ok",
+    "syntax": "cii",
+    "profile": "xrechnung",
+    "xrechnungVersion": "3.0",
+    "errors": 3,
+    "warnings": 0,
+    "ruleSets": ["EN 16931", "XRechnung 3.0"],
+    "notChecked": [],
+    "messages": [
+      {"severity": "error", "code": "BR-09", "origin": "official", "text": "Seller country code (BT-40) is missing."},
+      {"severity": "error", "code": "BR-11", "origin": "official", "text": "Buyer country code (BT-55) is missing."},
+      {"severity": "error", "code": "BR-CL-24", "origin": "official", "text": "MIME code of the attached document (BT-125) is not allowed. [application/octet-stream]"}
+    ]
+  }
+== POST /check?verbose=1
+status: 200 OK
+content-type: application/json; charset=utf-8
+body:
+  <text 274 lines, 18259 bytes, sha256 ba0a3456a277791c>
+== POST /check?verbose=x
+status: 400 Bad Request
+content-type: application/json; charset=utf-8
+body:
+  {
+    "result": "bad-request",
+    "messages": [
+      {"severity": "error", "code": "HTTP-BAD-REQUEST", "origin": "file", "text": "verbose must be 0 or 1"}
+    ]
+  }
+== POST /check extra-check warning
+status: 200 OK
+content-type: application/json; charset=utf-8
+body:
+  {
+    "file": "",
+    "result": "ok",
+    "syntax": "cii",
+    "profile": "en16931",
+    "xrechnungVersion": "",
+    "errors": 0,
+    "warnings": 1,
+    "ruleSets": ["EN 16931"],
+    "notChecked": [],
+    "messages": [
+      {"severity": "warning", "code": "PEPPOL-EN16931-R120", "origin": "extra", "text": "Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances. [line 4: 55.46, expected 55.40]"}
+    ]
+  }
+== POST /check no invoice
+status: 422 Unprocessable Content
+content-type: application/json; charset=utf-8
+body:
+  {
+    "file": "",
+    "result": "no-invoice",
+    "syntax": "",
+    "profile": "",
+    "xrechnungVersion": "",
+    "errors": 0,
+    "warnings": 0,
+    "ruleSets": [],
+    "notChecked": [],
+    "messages": [
+      {"severity": "info", "code": "PDF-NO-INVOICE", "origin": "file", "text": "The PDF contains no embedded e-invoice"}
+    ]
+  }
+== POST /extract
+status: 200 OK
+content-type: application/xml
+content-disposition: attachment; filename="factur-x.xml"
+body:
+  <text 244 lines, 13153 bytes, sha256 ca379db6cd6d25b5>
+== POST /extract no invoice
+status: 422 Unprocessable Content
+content-type: application/json; charset=utf-8
+body:
+  {
+    "result": "no-invoice",
+    "messages": [
+      {"severity": "info", "code": "PDF-NO-INVOICE", "origin": "file", "text": "The PDF contains no embedded e-invoice"}
+    ]
+  }
+== POST /extract XML
+status: 422 Unprocessable Content
+content-type: application/json; charset=utf-8
+body:
+  {
+    "result": "unsupported",
+    "messages": [
+      {"severity": "error", "code": "EXTRACT-XML", "origin": "file", "text": "The input is already XML, there is nothing to extract"}
+    ]
+  }
+== POST /html
+status: 200 OK
+content-type: text/html; charset=utf-8
+content-security-policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:
+body:
+  <text 10 lines, 6120 bytes, sha256 5d17c9c87d89cb9f>
+== POST /html?lang=en&check=0
+status: 200 OK
+content-type: text/html; charset=utf-8
+content-security-policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:
+body:
+  <text 11 lines, 7201 bytes, sha256 f40efd509105c889>
+== POST /html?lang=fr
+status: 400 Bad Request
+content-type: application/json; charset=utf-8
+body:
+  {
+    "result": "bad-request",
+    "messages": [
+      {"severity": "error", "code": "HTTP-BAD-REQUEST", "origin": "file", "text": "lang must be de or en"}
+    ]
+  }
+== POST /html?check=2
+status: 400 Bad Request
+content-type: application/json; charset=utf-8
+body:
+  {
+    "result": "bad-request",
+    "messages": [
+      {"severity": "error", "code": "HTTP-BAD-REQUEST", "origin": "file", "text": "check must be 0 or 1"}
+    ]
+  }
+== POST /html?payment=1
+status: 200 OK
+content-type: text/html; charset=utf-8
+content-security-policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:
+body:
+  <text 10 lines, 8658 bytes, sha256 43ab2e184c253883>
+== POST /html?payment=2
+status: 400 Bad Request
+content-type: application/json; charset=utf-8
+body:
+  {
+    "result": "bad-request",
+    "messages": [
+      {"severity": "error", "code": "HTTP-BAD-REQUEST", "origin": "file", "text": "payment must be 0 or 1"}
+    ]
+  }
+== POST /html no invoice
+status: 422 Unprocessable Content
+content-type: application/json; charset=utf-8
+body:
+  {
+    "result": "no-invoice",
+    "messages": [
+      {"severity": "info", "code": "PDF-NO-INVOICE", "origin": "file", "text": "The PDF contains no embedded e-invoice"}
+    ]
+  }
+== POST /json
+status: 200 OK
+content-type: application/json; charset=utf-8
+body:
+  <text 78 lines, 1927 bytes, sha256 078ad4ecc790434d>
+== POST /json UBL
+status: 200 OK
+content-type: application/json; charset=utf-8
+body:
+  <text 79 lines, 1914 bytes, sha256 6f36c267ab4135ee>
+== POST /json no invoice
+status: 422 Unprocessable Content
+content-type: application/json; charset=utf-8
+body:
+  {
+    "file": "",
+    "result": "no-invoice",
+    "syntax": "",
+    "profile": "",
+    "xrechnungVersion": "",
+    "invoice": {},
+    "messages": [
+      {"severity": "info", "code": "PDF-NO-INVOICE", "origin": "file", "text": "The PDF contains no embedded e-invoice"}
+    ]
+  }
+== POST /attachments PDF
+status: 200 OK
+content-type: application/json; charset=utf-8
+body:
+  {
+    "file": "",
+    "result": "ok",
+    "attachments": [
+      {"source": "pdf", "name": "AWV_13_Betriebskosten.pdf", "description": "Betriebskosten", "mimeType": "application/pdf", "relationship": "Unspecified", "id": "", "uri": "", "invoice": false, "size": 254551},
+      {"source": "pdf", "name": "zugferd-invoice.xml", "description": "ZUGFeRD Rechnung", "mimeType": "text/xml", "relationship": "Alternative", "id": "", "uri": "", "invoice": true, "size": 9540},
+      {"source": "invoice", "name": "Betriebskostenabrechnung.pdf", "description": "Betriebskostenabrechnung", "mimeType": "application/pdf", "relationship": "", "id": "Abrechnung 2010", "uri": "", "invoice": false, "size": 0}
+    ],
+    "messages": []
+  }
+== POST /attachments?content=1
+status: 200 OK
+content-type: application/json; charset=utf-8
+body:
+  <text 9 lines, 1289373 bytes, sha256 895b5548ee56eb26>
+== POST /attachments?content=2
+status: 400 Bad Request
+content-type: application/json; charset=utf-8
+body:
+  {
+    "result": "bad-request",
+    "messages": [
+      {"severity": "error", "code": "HTTP-BAD-REQUEST", "origin": "file", "text": "content must be 0 or 1"}
+    ]
+  }
+== POST /attachments unknown XML
+status: 422 Unprocessable Content
+content-type: application/json; charset=utf-8
+body:
+  {
+    "file": "",
+    "result": "unknown-format",
+    "attachments": [],
+    "messages": [
+      {"severity": "error", "code": "XML-UNKNOWN", "origin": "file", "text": "Unknown XML format (root element \"FatturaElettronica\", namespace \"http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2\")"}
+    ]
+  }
+== POST /strip
+status: 200 OK
+content-type: application/pdf
+body:
+  <PDF 153566 bytes, %PDF-1.4>
+== POST /strip no invoice
+status: 422 Unprocessable Content
+content-type: application/json; charset=utf-8
+body:
+  {
+    "result": "no-invoice",
+    "messages": [
+      {"severity": "info", "code": "PDF-NO-INVOICE", "origin": "file", "text": "The PDF contains no embedded e-invoice"}
+    ]
+  }
+== POST /create
+status: 200 OK
+content-type: application/xml
+body:
+  <text 155 lines, 7455 bytes, sha256 2207da2554ad593b>
+== POST /create?today=...&nr=...
+status: 200 OK
+content-type: application/xml
+body:
+  <text 110 lines, 5226 bytes, sha256 e81455cf37a7dd81>
+== POST /create format errors
+status: 422 Unprocessable Content
+content-type: application/json; charset=utf-8
+body:
+  {
+    "result": "invalid-data",
+    "messages": [
+      {"severity": "error", "code": "JSON-FIELD", "origin": "file", "text": "line 3, column 3: isueDate: unknown field"},
+      {"severity": "error", "code": "JSON-PLACEHOLDER", "origin": "file", "text": "line 5, column 11: note: unknown placeholder {{unknown}}"},
+      {"severity": "error", "code": "JSON-VALUE", "origin": "file", "text": "line 9, column 39: lines[1].quantity: \"1,5\" is not a number (digits with \".\" as decimal point)"},
+      {"severity": "error", "code": "JSON-MISSING", "origin": "file", "text": "line 9, column 5: lines[1].vat: required"},
+      {"severity": "error", "code": "JSON-VALUE", "origin": "file", "text": "line 4, column 14: dueDate: \"2026-13-01\" is not a date (YYYY-MM-DD)"}
+    ]
+  }
+== POST /create check errors
+status: 200 OK
+content-type: application/xml
+x-abdecker-messages: {"result": "ok","messages": [{"severity": "error", "code": "BR-02", "origin": "official", "text": "Invoice number (BT-1) is missing."}]}
+body:
+  <text 100 lines, 4783 bytes, sha256 12e9caafb76d9b68>
+== POST /create attachment file
+status: 422 Unprocessable Content
+content-type: application/json; charset=utf-8
+body:
+  {
+    "result": "invalid-data",
+    "messages": [
+      {"severity": "error", "code": "JSON-ATTACHMENT", "origin": "file", "text": "line 15, column 5: attachments[1].file: files cannot be read here; use \"name\" and \"content\" (base64)"}
+    ]
+  }
+== POST /create not JSON
+status: 422 Unprocessable Content
+content-type: application/json; charset=utf-8
+body:
+  {
+    "result": "invalid-data",
+    "messages": [
+      {"severity": "error", "code": "JSON-SYNTAX", "origin": "file", "text": "Broken JSON: line 1, column 1: unexpected character"}
+    ]
+  }
+== POST /embed
+status: 200 OK
+content-type: application/pdf
+x-abdecker-messages: {"result": "ok","messages": [{"severity": "warning", "code": "EMBED-NO-PDFA", "origin": "file", "text": "The PDF is not PDF/A. ZUGFeRD/Factur-X require PDF/A-3; the result contains the invoice and its metadata but is formally not a valid ZUGFeRD PDF."}]}
+body:
+  <PDF 42472 bytes, %PDF-1.4>
+== POST /embed into ZUGFeRD PDF
+status: 422 Unprocessable Content
+content-type: application/json; charset=utf-8
+body:
+  {
+    "result": "unsupported",
+    "messages": [
+      {"severity": "error", "code": "EMBED-EXISTS", "origin": "file", "text": "The PDF already contains an e-invoice (factur-x.xml)"}
+    ]
+  }
+== POST /embed UBL
+status: 200 OK
+content-type: application/pdf
+x-abdecker-messages: {"result": "ok","messages": [{"severity": "info", "code": "EMBED-PEPPOL", "origin": "file", "text": "Peppol BIS is no ZUGFeRD/Factur-X profile; embedded as EN 16931 (specification identifier BT-24 \"urn:cen.eu:en16931:2017\" instead of \"urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0\"), which every Peppol BIS invoice also meets"},{"severity": "info", "code": "EMBED-UBL", "origin": "file", "text": "UBL converted to CII (the same content according to EN 16931); the PDF contains the CII"},{"severity": "warning", "code": "EMBED-NO-PDFA", "origin": "file", "text": "The PDF is not PDF/A. ZUGFeRD/Factur-X require PDF/A-3; the result contains the invoice and its metadata but is formally not a valid ZUGFeRD PDF."}]}
+body:
+  <PDF 40212 bytes, %PDF-1.4>
+== POST /embed without xml
+status: 400 Bad Request
+content-type: application/json; charset=utf-8
+body:
+  {
+    "result": "bad-request",
+    "messages": [
+      {"severity": "error", "code": "HTTP-BAD-REQUEST", "origin": "file", "text": "multipart/form-data with the parts \"pdf\" and \"xml\" expected"}
+    ]
+  }
+== POST /embed not multipart
+status: 400 Bad Request
+content-type: application/json; charset=utf-8
+body:
+  {
+    "result": "bad-request",
+    "messages": [
+      {"severity": "error", "code": "HTTP-BAD-REQUEST", "origin": "file", "text": "multipart/form-data with the parts \"pdf\" and \"xml\" expected"}
+    ]
+  }
+== POST /attach two files
+status: 200 OK
+content-type: application/xml
+body:
+  <text 287 lines, 106534 bytes, sha256 db61bd0aacc6c58e>
+== POST /attach unsupported type
+status: 422 Unprocessable Content
+content-type: application/json; charset=utf-8
+body:
+  {
+    "result": "unsupported",
+    "messages": [
+      {"severity": "error", "code": "ATTACH-TYPE", "origin": "file", "text": "\"LICENSE\": this file type is not allowed in e-invoices (allowed: pdf, png, jpg, jpeg, csv, xlsx, ods)"}
+    ]
+  }
+== POST /attach without file
+status: 400 Bad Request
+content-type: application/json; charset=utf-8
+body:
+  {
+    "result": "bad-request",
+    "messages": [
+      {"severity": "error", "code": "HTTP-BAD-REQUEST", "origin": "file", "text": "at least one part \"file\" expected"}
+    ]
+  }
+== GET /docs
+status: 200 OK
+content-type: text/html; charset=utf-8
+content-security-policy: default-src 'none'; script-src https://cdn.jsdelivr.net 'unsafe-inline'; style-src https://cdn.jsdelivr.net 'unsafe-inline'; img-src data: https://cdn.jsdelivr.net; connect-src 'self'
+body:
+  <!DOCTYPE html>
+  <html lang="en"><head><meta charset="utf-8"><title>abdecker API</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css">
+  </head><body><div id="swagger-ui"></div>
+  <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
+  <script>window.onload = function () { SwaggerUIBundle({url: "openapi.json", dom_id: "#swagger-ui"}); };</script>
+  </body></html>
+== POST /openapi.json
+status: 405 Method Not Allowed
+content-type: application/json; charset=utf-8
+allow: GET
+body:
+  {
+    "result": "method-not-allowed",
+    "messages": [
+      {"severity": "error", "code": "HTTP-METHOD", "origin": "file", "text": "Use GET for /openapi.json"}
+    ]
+  }
+== GET /nope
+status: 404 Not Found
+content-type: application/json; charset=utf-8
+body:
+  {
+    "result": "not-found",
+    "messages": [
+      {"severity": "error", "code": "HTTP-NOT-FOUND", "origin": "file", "text": "Unknown route /nope"}
+    ]
+  }
+== GET /check
+status: 405 Method Not Allowed
+content-type: application/json; charset=utf-8
+allow: POST
+body:
+  {
+    "result": "method-not-allowed",
+    "messages": [
+      {"severity": "error", "code": "HTTP-METHOD", "origin": "file", "text": "Use POST for /check"}
+    ]
+  }
+== POST /version
+status: 405 Method Not Allowed
+content-type: application/json; charset=utf-8
+allow: GET
+body:
+  {
+    "result": "method-not-allowed",
+    "messages": [
+      {"severity": "error", "code": "HTTP-METHOD", "origin": "file", "text": "Use GET for /version"}
+    ]
+  }
+== POST /test/raise
+status: 500 Internal Server Error
+content-type: application/json; charset=utf-8
+body:
+  {
+    "result": "internal-error",
+    "messages": [
+      {"severity": "error", "code": "INTERNAL", "origin": "file", "text": "Internal error: test exception"}
+    ]
+  }
+== GET /openapi.json
+status: 200 OK
+content-type: application/json; charset=utf-8
+same as data/openapi.json: True
+all $ref resolve: True
+documented: GET /docs, GET /openapi.json, GET /version, POST /attach, POST /attachments, POST /check, POST /create, POST /embed, POST /extract, POST /html, POST /info, POST /json, POST /strip
+documented = answered: True
+== server behaviour (2 workers, queue 2, timeout 2 s)
+slow client: HTTP/1.1 408 Request Timeout (after deadline: True)
+queue full: HTTP/1.1 503 Service Unavailable (at once: True)
+idle connections: HTTP/1.1 408 Request Timeout, HTTP/1.1 408 Request Timeout, HTTP/1.1 408 Request Timeout, HTTP/1.1 408 Request Timeout
+expired in the queue: HTTP/1.1 503 Service Unavailable
+busy workers: HTTP/1.1 200 OK, HTTP/1.1 200 OK
+exception 5x: [500, 500, 500, 500, 500], then /version: 200
+no Content-Length: HTTP/1.1 411 Length Required
+chunked: HTTP/1.1 411 Length Required
+too large: HTTP/1.1 413 Content Too Large
+invalid Content-Length: HTTP/1.1 400 Bad Request
+malformed request line: HTTP/1.1 400 Bad Request
+not HTTP/1.x: HTTP/1.1 400 Bad Request
+header too large: HTTP/1.1 400 Bad Request
+expect 100-continue: HTTP/1.1 100 Continue, then HTTP/1.1 200 OK

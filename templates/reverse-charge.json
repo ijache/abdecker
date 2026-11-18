@@ -1,0 +1,26 @@
+{
+  "number": "2026-0816",
+  "issueDate": "2026-11-14",
+  "buyerReference": "KST-4711",
+  "orderReference": "PO-2026-1234",
+  "period": { "start": "2026-10-01", "end": "2026-10-31" },
+  "dueDate": "2026-11-28",
+  "seller": {
+    "name": "Muster IT GmbH", "street": "Musterstraße 1", "postcode": "12345", "city": "Musterstadt",
+    "vatId": "DE123456788",
+    "legalInfo": "Geschäftsführer: Max Muster, Amtsgericht Musterstadt HRB 12345",
+    "contact": { "name": "Erika Muster", "phone": "+49 30 1234567", "email": "buchhaltung@muster-it.de" },
+    "electronicAddress": "rechnung@muster-it.de",
+    "iban": "DE02120300000000202051"
+  },
+  "buyer": {
+    "name": "Kunde GmbH", "street": "Kärntner Straße 10", "postcode": "1010", "city": "Wien", "country": "AT",
+    "vatId": "ATU12345675",
+    "electronicAddress": "rechnungen@kunde.example"
+  },
+  "vatMode": "reverse-charge",
+  "lines": [
+    { "name": "Softwareentwicklung", "quantity": 32.5, "unit": "hour",  "price": 95.00 },
+    { "name": "Lizenz Werkzeug XY",  "quantity": 3,    "unit": "piece", "price": 49.90 }
+  ]
+}

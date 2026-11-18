@@ -1,0 +1,283 @@
+# Rules of the plausibility check: ID <TAB> severity <TAB> text
+#
+# IDs are those of the official rule sets (EN 16931 validation artefacts of CEN,
+# XRechnung schematron of KoSIT, Peppol rules used by XRechnung), so that results
+# can be compared. The texts are our own short wording.
+# Severity follows the official flag: fatal = error, warning = warning.
+#
+# Own checks of abdecker that no official rule set demands get IDs starting with
+# AB- (e.g. AB-VAT-RATE). They are reported with origin "extra" ("extra check"),
+# like official rules applied beyond their rule set (R120 outside XRechnung/Peppol).
+# Edit this file, then run: python tools/gen-data.py
+
+# ---- EN 16931: mandatory content
+BR-01	error	Specification identifier (BT-24) is missing.
+BR-02	error	Invoice number (BT-1) is missing.
+BR-03	error	Invoice issue date (BT-2) is missing.
+BR-04	error	Invoice type code (BT-3) is missing.
+BR-05	error	Invoice currency code (BT-5) is missing.
+BR-06	error	Seller name (BT-27) is missing.
+BR-07	error	Buyer name (BT-44) is missing.
+BR-08	error	Seller postal address (BG-5) is missing.
+BR-09	error	Seller country code (BT-40) is missing.
+BR-10	error	Buyer postal address (BG-8) is missing.
+BR-11	error	Buyer country code (BT-55) is missing.
+BR-12	error	Sum of invoice line net amounts (BT-106) is missing.
+BR-13	error	Invoice total without VAT (BT-109) is missing.
+BR-14	error	Invoice total with VAT (BT-112) is missing.
+BR-15	error	Amount due for payment (BT-115) is missing.
+BR-16	error	The invoice has no invoice line (BG-25).
+BR-17	error	Payee name (BT-59) is missing although a payee (BG-10) is given.
+BR-18	error	Seller tax representative name (BT-62) is missing.
+BR-19	error	Seller tax representative postal address (BG-12) is missing.
+BR-20	error	Seller tax representative country code (BT-69) is missing.
+BR-21	error	Invoice line identifier (BT-126) is missing.
+BR-22	error	Invoiced quantity (BT-129) is missing.
+BR-23	error	Unit of measure (BT-130) is missing.
+BR-24	error	Invoice line net amount (BT-131) is missing.
+BR-25	error	Item name (BT-153) is missing.
+BR-26	error	Item net price (BT-146) is missing.
+BR-27	error	Item net price (BT-146) is negative.
+BR-28	error	Item gross price (BT-148) is negative.
+BR-29	error	Invoicing period ends (BT-74) before it starts (BT-73).
+BR-30	error	Invoice line period ends (BT-135) before it starts (BT-134).
+BR-31	error	Document level allowance amount (BT-92) is missing.
+BR-32	error	Document level allowance VAT category (BT-95) is missing.
+BR-33	error	Document level allowance has neither reason (BT-97) nor reason code (BT-98).
+BR-36	error	Document level charge amount (BT-99) is missing.
+BR-37	error	Document level charge VAT category (BT-102) is missing.
+BR-38	error	Document level charge has neither reason (BT-104) nor reason code (BT-105).
+BR-41	error	Invoice line allowance amount (BT-136) is missing.
+BR-42	error	Invoice line allowance has neither reason (BT-139) nor reason code (BT-140).
+BR-43	error	Invoice line charge amount (BT-141) is missing.
+BR-44	error	Invoice line charge has neither reason (BT-144) nor reason code (BT-145).
+BR-45	error	VAT breakdown: taxable amount (BT-116) is missing.
+BR-46	error	VAT breakdown: tax amount (BT-117) is missing.
+BR-47	error	VAT breakdown: VAT category code (BT-118) is missing.
+BR-48	error	VAT breakdown: VAT rate (BT-119) is missing.
+BR-49	error	Payment means type code (BT-81) is missing.
+BR-50	error	Credit transfer without payment account identifier (BT-84).
+BR-51	warning	Card number (BT-87) should show at most the first 6 and last 4 digits.
+BR-52	error	Additional supporting document without reference (BT-122).
+BR-53	error	VAT accounting currency (BT-6) is given, but not the VAT total in that currency (BT-111).
+BR-55	error	Preceding invoice reference (BT-25) is missing.
+BR-56	error	Seller tax representative VAT identifier (BT-63) is missing.
+BR-57	error	Deliver to country code (BT-80) is missing.
+BR-61	error	Payment means is a credit transfer, but the payment account (BT-84) is missing.
+BR-62	error	Seller electronic address (BT-34) has no scheme identifier.
+BR-63	error	Buyer electronic address (BT-49) has no scheme identifier.
+BR-64	error	Item standard identifier (BT-157) has no scheme identifier.
+BR-65	error	Item classification identifier (BT-158) has no scheme identifier.
+
+# ---- EN 16931: calculations and consistency
+BR-CO-03	error	VAT point date (BT-7) and VAT point date code (BT-8) must not both be given.
+BR-CO-04	error	Invoice line has no VAT category (BT-151).
+BR-CO-09	error	VAT identifier does not start with a country code.
+BR-CO-10	error	Sum of invoice line net amounts (BT-106) does not match the lines (BT-131).
+BR-CO-11	error	Sum of document level allowances (BT-107) does not match the allowances (BT-92).
+BR-CO-12	error	Sum of document level charges (BT-108) does not match the charges (BT-99).
+BR-CO-13	error	Total without VAT (BT-109) is not line total (BT-106) - allowances (BT-107) + charges (BT-108).
+BR-CO-14	error	Total VAT amount (BT-110) is not the sum of the VAT breakdown (BT-117).
+BR-CO-15	error	Total with VAT (BT-112) is not total without VAT (BT-109) + VAT (BT-110).
+BR-CO-16	error	Amount due (BT-115) is not total with VAT (BT-112) - paid (BT-113) + rounding (BT-114).
+BR-CO-17	error	VAT amount (BT-117) does not match taxable amount (BT-116) x rate (BT-119).
+BR-CO-18	error	The invoice has no VAT breakdown (BG-23).
+BR-CO-21	error	Document level allowance has neither reason (BT-97) nor reason code (BT-98).
+BR-CO-22	error	Document level charge has neither reason (BT-104) nor reason code (BT-105).
+BR-CO-23	error	Invoice line allowance has neither reason (BT-139) nor reason code (BT-140).
+BR-CO-24	error	Invoice line charge has neither reason (BT-144) nor reason code (BT-145).
+BR-CO-26	error	Seller cannot be identified: none of seller identifier (BT-29), legal registration (BT-30) or VAT identifier (BT-31).
+
+# ---- EN 16931: at most two decimals
+BR-DEC-01	error	Document level allowance amount (BT-92) has more than 2 decimals.
+BR-DEC-02	error	Document level allowance base amount (BT-93) has more than 2 decimals.
+BR-DEC-05	error	Document level charge amount (BT-99) has more than 2 decimals.
+BR-DEC-06	error	Document level charge base amount (BT-100) has more than 2 decimals.
+BR-DEC-09	error	Sum of line net amounts (BT-106) has more than 2 decimals.
+BR-DEC-10	error	Sum of allowances (BT-107) has more than 2 decimals.
+BR-DEC-11	error	Sum of charges (BT-108) has more than 2 decimals.
+BR-DEC-12	error	Total without VAT (BT-109) has more than 2 decimals.
+BR-DEC-13	error	Total VAT amount (BT-110) has more than 2 decimals.
+BR-DEC-14	error	Total with VAT (BT-112) has more than 2 decimals.
+BR-DEC-15	error	VAT total in accounting currency (BT-111) has more than 2 decimals.
+BR-DEC-16	error	Paid amount (BT-113) has more than 2 decimals.
+BR-DEC-17	error	Rounding amount (BT-114) has more than 2 decimals.
+BR-DEC-18	error	Amount due (BT-115) has more than 2 decimals.
+BR-DEC-19	error	VAT taxable amount (BT-116) has more than 2 decimals.
+BR-DEC-20	error	VAT tax amount (BT-117) has more than 2 decimals.
+BR-DEC-23	error	Invoice line net amount (BT-131) has more than 2 decimals.
+BR-DEC-24	error	Invoice line allowance amount (BT-136) has more than 2 decimals.
+BR-DEC-25	error	Invoice line allowance base amount (BT-137) has more than 2 decimals.
+BR-DEC-27	error	Invoice line charge amount (BT-141) has more than 2 decimals.
+BR-DEC-28	error	Invoice line charge base amount (BT-142) has more than 2 decimals.
+
+# ---- EN 16931: code lists
+BR-CL-01	error	Invoice type code (BT-3) is not in the code list (UNTDID 1001).
+BR-CL-04	error	Invoice currency code (BT-5) is not in the code list (ISO 4217).
+BR-CL-05	error	VAT accounting currency code (BT-6) is not in the code list (ISO 4217).
+BR-CL-06	error	VAT point date code (BT-8) is not in the code list (UNTDID 2005).
+BR-CL-07	error	Object identifier scheme (BT-18-1, BT-128-1) is not in the code list (UNTDID 1153).
+BR-CL-08	error	Note subject code (BT-21) is not in the code list (UNTDID 4451).
+BR-CL-10	error	Identifier scheme is not in the code list (ISO 6523).
+BR-CL-11	error	Legal registration identifier scheme is not in the code list (ISO 6523).
+BR-CL-13	error	Item classification scheme (BT-158-1) is not in the code list (UNTDID 7143).
+BR-CL-14	error	Country code is not in the code list (ISO 3166-1).
+BR-CL-15	error	Item country of origin (BT-159) is not in the code list (ISO 3166-1).
+BR-CL-16	error	Payment means type code (BT-81) is not in the code list (UNTDID 4461).
+BR-CL-17	error	VAT category code is not in the code list (UNTDID 5305).
+BR-CL-18	error	Invoice line VAT category code (BT-151) is not in the code list (UNTDID 5305).
+BR-CL-19	error	Allowance reason code is not in the code list (UNTDID 5189).
+BR-CL-20	error	Charge reason code is not in the code list (UNTDID 7161).
+BR-CL-21	error	Item standard identifier scheme (BT-157-1) is not in the code list (ISO 6523).
+BR-CL-22	error	VAT exemption reason code (BT-121) is not in the code list (VATEX).
+BR-CL-23	error	Unit of measure code is not in the code list (UN/ECE Rec. 20/21).
+BR-CL-24	error	MIME code of the attached document (BT-125) is not allowed.
+BR-CL-25	error	Electronic address scheme is not in the code list (EAS).
+BR-CL-26	error	Deliver to location identifier scheme (BT-71-1) is not in the code list (ISO 6523).
+
+# ---- EN 16931: VAT categories. One block per category, same pattern:
+#      -01 breakdown present, -02..-04 identifiers, -05..-07 rate,
+#      -08 taxable amount, -09 tax amount, -10 exemption reason
+BR-S-01	error	Category S (standard rate) is used, but the VAT breakdown does not match.
+BR-S-02	error	Invoice line with category S, but neither seller VAT identifier, tax registration nor tax representative.
+BR-S-03	error	Allowance with category S, but neither seller VAT identifier, tax registration nor tax representative.
+BR-S-04	error	Charge with category S, but neither seller VAT identifier, tax registration nor tax representative.
+BR-S-05	error	Invoice line with category S needs a VAT rate greater than zero.
+BR-S-06	error	Allowance with category S needs a VAT rate greater than zero.
+BR-S-07	error	Charge with category S needs a VAT rate greater than zero.
+BR-S-08	error	VAT breakdown S: taxable amount does not match lines, allowances and charges of this rate.
+BR-S-09	error	VAT breakdown S: tax amount does not match taxable amount x rate.
+BR-S-10	error	VAT breakdown S must not have an exemption reason.
+BR-Z-01	error	Category Z (zero rated) is used, but there is not exactly one VAT breakdown Z.
+BR-Z-02	error	Invoice line with category Z, but neither seller VAT identifier, tax registration nor tax representative.
+BR-Z-03	error	Allowance with category Z, but neither seller VAT identifier, tax registration nor tax representative.
+BR-Z-04	error	Charge with category Z, but neither seller VAT identifier, tax registration nor tax representative.
+BR-Z-05	error	Invoice line with category Z must have VAT rate 0.
+BR-Z-06	error	Allowance with category Z must have VAT rate 0.
+BR-Z-07	error	Charge with category Z must have VAT rate 0.
+BR-Z-08	error	VAT breakdown Z: taxable amount does not match lines, allowances and charges.
+BR-Z-09	error	VAT breakdown Z: tax amount must be 0.
+BR-Z-10	error	VAT breakdown Z must not have an exemption reason.
+BR-E-01	error	Category E (exempt) is used, but there is not exactly one VAT breakdown E.
+BR-E-02	error	Invoice line with category E, but neither seller VAT identifier, tax registration nor tax representative.
+BR-E-03	error	Allowance with category E, but neither seller VAT identifier, tax registration nor tax representative.
+BR-E-04	error	Charge with category E, but neither seller VAT identifier, tax registration nor tax representative.
+BR-E-05	error	Invoice line with category E must have VAT rate 0.
+BR-E-06	error	Allowance with category E must have VAT rate 0.
+BR-E-07	error	Charge with category E must have VAT rate 0.
+BR-E-08	error	VAT breakdown E: taxable amount does not match lines, allowances and charges.
+BR-E-09	error	VAT breakdown E: tax amount must be 0.
+BR-E-10	error	VAT breakdown E needs an exemption reason (BT-120) or reason code (BT-121).
+BR-AE-01	error	Category AE (reverse charge) is used, but there is not exactly one VAT breakdown AE.
+BR-AE-02	error	Invoice line with category AE: seller VAT/tax identifier and buyer VAT or legal identifier are required.
+BR-AE-03	error	Allowance with category AE: seller VAT/tax identifier and buyer VAT or legal identifier are required.
+BR-AE-04	error	Charge with category AE: seller VAT/tax identifier and buyer VAT or legal identifier are required.
+BR-AE-05	error	Invoice line with category AE must have VAT rate 0.
+BR-AE-06	error	Allowance with category AE must have VAT rate 0.
+BR-AE-07	error	Charge with category AE must have VAT rate 0.
+BR-AE-08	error	VAT breakdown AE: taxable amount does not match lines, allowances and charges.
+BR-AE-09	error	VAT breakdown AE: tax amount must be 0.
+BR-AE-10	error	VAT breakdown AE needs an exemption reason (BT-120) or reason code (BT-121).
+BR-IC-01	error	Category K (intra-community supply) is used, but there is not exactly one VAT breakdown K.
+BR-IC-02	error	Invoice line with category K: seller and buyer VAT identifiers are required.
+BR-IC-03	error	Allowance with category K: seller and buyer VAT identifiers are required.
+BR-IC-04	error	Charge with category K: seller and buyer VAT identifiers are required.
+BR-IC-05	error	Invoice line with category K must have VAT rate 0.
+BR-IC-06	error	Allowance with category K must have VAT rate 0.
+BR-IC-07	error	Charge with category K must have VAT rate 0.
+BR-IC-08	error	VAT breakdown K: taxable amount does not match lines, allowances and charges.
+BR-IC-09	error	VAT breakdown K: tax amount must be 0.
+BR-IC-10	error	VAT breakdown K needs an exemption reason (BT-120) or reason code (BT-121).
+BR-IC-11	error	Intra-community supply needs the actual delivery date (BT-72) or the invoicing period (BG-14).
+BR-IC-12	error	Intra-community supply needs the deliver to country code (BT-80).
+BR-G-01	error	Category G (export outside the EU) is used, but there is not exactly one VAT breakdown G.
+BR-G-02	error	Invoice line with category G needs the seller VAT identifier or the tax representative VAT identifier.
+BR-G-03	error	Allowance with category G needs the seller VAT identifier or the tax representative VAT identifier.
+BR-G-04	error	Charge with category G needs the seller VAT identifier or the tax representative VAT identifier.
+BR-G-05	error	Invoice line with category G must have VAT rate 0.
+BR-G-06	error	Allowance with category G must have VAT rate 0.
+BR-G-07	error	Charge with category G must have VAT rate 0.
+BR-G-08	error	VAT breakdown G: taxable amount does not match lines, allowances and charges.
+BR-G-09	error	VAT breakdown G: tax amount must be 0.
+BR-G-10	error	VAT breakdown G needs an exemption reason (BT-120) or reason code (BT-121).
+BR-O-01	error	Category O (not subject to VAT) is used, but there is not exactly one VAT breakdown O.
+BR-O-02	error	Invoice line with category O: no seller, tax representative or buyer VAT identifier allowed.
+BR-O-03	error	Allowance with category O: no seller, tax representative or buyer VAT identifier allowed.
+BR-O-04	error	Charge with category O: no seller, tax representative or buyer VAT identifier allowed.
+BR-O-05	error	Invoice line with category O must not have a VAT rate.
+BR-O-06	error	Allowance with category O must not have a VAT rate.
+BR-O-07	error	Charge with category O must not have a VAT rate.
+BR-O-08	error	VAT breakdown O: taxable amount does not match lines, allowances and charges.
+BR-O-09	error	VAT breakdown O: tax amount must be 0.
+BR-O-10	error	VAT breakdown O needs an exemption reason (BT-120) or reason code (BT-121).
+BR-O-11	error	With a VAT breakdown O no other VAT breakdown is allowed.
+BR-O-12	error	With a VAT breakdown O all invoice lines must have category O.
+BR-O-13	error	With a VAT breakdown O all allowances must have category O.
+BR-O-14	error	With a VAT breakdown O all charges must have category O.
+BR-IG-01	error	Category L (IGIC, Canary Islands) is used, but there is no VAT breakdown L.
+BR-IG-02	error	Invoice line with category L, but neither seller VAT identifier, tax registration nor tax representative.
+BR-IG-03	error	Allowance with category L, but neither seller VAT identifier, tax registration nor tax representative.
+BR-IG-04	error	Charge with category L, but neither seller VAT identifier, tax registration nor tax representative.
+BR-IG-05	error	Invoice line with category L needs a VAT rate of 0 or more.
+BR-IG-06	error	Allowance with category L needs a VAT rate of 0 or more.
+BR-IG-07	error	Charge with category L needs a VAT rate of 0 or more.
+BR-IG-08	error	VAT breakdown L: taxable amount does not match lines, allowances and charges of this rate.
+BR-IG-09	error	VAT breakdown L: tax amount does not match taxable amount x rate.
+BR-IG-10	error	VAT breakdown L must not have an exemption reason.
+BR-IP-01	error	Category M (IPSI, Ceuta and Melilla) is used, but there is no VAT breakdown M.
+BR-IP-02	error	Invoice line with category M, but neither seller VAT identifier, tax registration nor tax representative.
+BR-IP-03	error	Allowance with category M, but neither seller VAT identifier, tax registration nor tax representative.
+BR-IP-04	error	Charge with category M, but neither seller VAT identifier, tax registration nor tax representative.
+BR-IP-05	error	Invoice line with category M needs a VAT rate of 0 or more.
+BR-IP-06	error	Allowance with category M needs a VAT rate of 0 or more.
+BR-IP-07	error	Charge with category M needs a VAT rate of 0 or more.
+BR-IP-08	error	VAT breakdown M: taxable amount does not match lines, allowances and charges of this rate.
+BR-IP-09	error	VAT breakdown M: tax amount does not match taxable amount x rate.
+BR-IP-10	error	VAT breakdown M must not have an exemption reason.
+
+# ---- XRechnung 3.0 (KoSIT), only for invoices with XRechnung specification identifier
+BR-DE-1	error	XRechnung: payment instructions (BG-16) are missing.
+BR-DE-2	error	XRechnung: seller contact (BG-6) is missing.
+BR-DE-3	error	XRechnung: seller city (BT-37) is missing.
+BR-DE-4	error	XRechnung: seller post code (BT-38) is missing.
+BR-DE-5	error	XRechnung: seller contact point (BT-41) is missing.
+BR-DE-6	error	XRechnung: seller contact telephone number (BT-42) is missing.
+BR-DE-7	error	XRechnung: seller contact email address (BT-43) is missing.
+BR-DE-8	error	XRechnung: buyer city (BT-52) is missing.
+BR-DE-9	error	XRechnung: buyer post code (BT-53) is missing.
+BR-DE-10	error	XRechnung: deliver to city (BT-77) is missing.
+BR-DE-11	error	XRechnung: deliver to post code (BT-78) is missing.
+BR-DE-14	error	XRechnung: VAT breakdown without VAT rate (BT-119).
+BR-DE-15	error	XRechnung: buyer reference (BT-10, Leitweg-ID) is missing.
+BR-DE-16	error	XRechnung: with VAT categories S, Z, E, AE, K, G, L or M the seller VAT identifier (BT-31), tax number (BT-32) or a tax representative (BG-11) is required.
+BR-DE-17	warning	XRechnung: invoice type code (BT-3) should be 326, 380, 381, 384, 389, 875, 876 or 877.
+BR-DE-18	error	XRechnung: early payment discount line in the payment terms (BT-20) is not in the required format (#SKONTO#TAGE=n#PROZENT=n.nn#).
+BR-DE-19	warning	XRechnung: payment account (BT-84) should be a valid IBAN for SEPA credit transfer (58).
+BR-DE-20	warning	XRechnung: debited account (BT-91) should be a valid IBAN for SEPA direct debit (59).
+BR-DE-21	warning	XRechnung: specification identifier (BT-24) should be the one of XRechnung 3.0.
+BR-DE-22	error	XRechnung: attached documents must have unique file names.
+BR-DE-23-a	error	XRechnung: credit transfer (30, 58) needs the credit transfer information (BG-17).
+BR-DE-23-b	error	XRechnung: with credit transfer (30, 58) no card (BG-18) or direct debit (BG-19) information is allowed.
+BR-DE-24-a	error	XRechnung: card payment (48, 54, 55) needs the card information (BG-18).
+BR-DE-24-b	error	XRechnung: with card payment (48, 54, 55) no credit transfer (BG-17) or direct debit (BG-19) information is allowed.
+BR-DE-25-a	error	XRechnung: direct debit (59) needs the direct debit information (BG-19).
+BR-DE-25-b	error	XRechnung: with direct debit (59) no credit transfer (BG-17) or card (BG-18) information is allowed.
+BR-DE-26	warning	XRechnung: a corrected invoice (384) should reference the preceding invoice (BG-3).
+BR-DE-27	warning	XRechnung: seller telephone number (BT-42) should contain at least three digits.
+BR-DE-28	warning	XRechnung: seller email address (BT-43) does not look like an email address.
+BR-DE-30	error	XRechnung: direct debit needs the creditor identifier (BT-90).
+BR-DE-31	error	XRechnung: direct debit needs the debited account (BT-91).
+
+# ---- Peppol rules that XRechnung 3.0 applies as well
+PEPPOL-EN16931-R001	error	Business process (BT-23) is missing.
+PEPPOL-EN16931-R005	error	VAT accounting currency (BT-6) must differ from the invoice currency (BT-5).
+PEPPOL-EN16931-R010	error	Buyer electronic address (BT-49) is missing.
+PEPPOL-EN16931-R020	error	Seller electronic address (BT-34) is missing.
+PEPPOL-EN16931-R040	error	Allowance/charge amount is not base amount x percentage / 100.
+PEPPOL-EN16931-R041	error	Allowance/charge percentage given without base amount.
+PEPPOL-EN16931-R042	error	Allowance/charge base amount given without percentage.
+PEPPOL-EN16931-R061	error	Direct debit (49, 59) needs the mandate reference (BT-89).
+PEPPOL-EN16931-R110	error	Invoice line period starts before the invoicing period.
+PEPPOL-EN16931-R111	error	Invoice line period ends after the invoicing period.
+PEPPOL-EN16931-R120	warning	Invoice line net amount (BT-131) is not quantity x price / base quantity + charges - allowances.
+PEPPOL-EN16931-R121	error	Item price base quantity (BT-149) must be greater than zero.

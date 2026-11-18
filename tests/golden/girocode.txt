@@ -1,0 +1,975 @@
+== corpus/corpus-master/other/eicar.cii.xml
+kind: transfer 1.00 EUR
+iban: DE12500105170648489890
+code: BCD\n002\n1\nSCT\nCOBADEFXXX\nVR Factoring GmbH\nDE12500105170648489890\nEUR1.00\n\n\n123
+skonto: 2.00 % 7 days until 2024-11-22: 0.98
+code: BCD\n002\n1\nSCT\nCOBADEFXXX\nVR Factoring GmbH\nDE12500105170648489890\nEUR0.98\n\n\n123
+skonto: 3.00 % 14 days until 2024-11-29: 0.97
+code: BCD\n002\n1\nSCT\nCOBADEFXXX\nVR Factoring GmbH\nDE12500105170648489890\nEUR0.97\n\n\n123
+== corpus/corpus-master/other/eicar.ubl.xml
+kind: transfer 1 EUR
+iban: DE12500105170648489890
+code: BCD\n002\n1\nSCT\nCOBADEFXXX\nVR Factoring GmbH\nDE12500105170648489890\nEUR1.00\n\n\n123
+skonto: 2.00 % 7 days until 2024-11-22: 0.98
+code: BCD\n002\n1\nSCT\nCOBADEFXXX\nVR Factoring GmbH\nDE12500105170648489890\nEUR0.98\n\n\n123
+skonto: 3.00 % 14 days until 2024-11-29: 0.97
+code: BCD\n002\n1\nSCT\nCOBADEFXXX\nVR Factoring GmbH\nDE12500105170648489890\nEUR0.97\n\n\n123
+== corpus/corpus-master/PEPPOL/Valid/Qvalia/Large_Invoice_sample1.xml
+kind: transfer 517229.45 SEK
+account: 52491234
+no code: currency
+== corpus/corpus-master/PEPPOL/Valid/Qvalia/Large_Invoice_sample2.xml
+kind: transfer 1839487.38 SEK
+account: 52491234
+no code: currency
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_1_Teilrechnung.cii.xml
+kind: none 147.65 EUR
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_2_Teilrechnung.cii.xml
+kind: none 23.54 EUR
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_AbweichenderZahlungsempf.cii.xml
+kind: transfer 529.87 EUR
+iban: DE12123456781234567890 (invalid)
+no code: iban
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Betriebskostenabrechnung.cii.xml
+kind: none 502.63 EUR
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Einfach.cii.xml
+kind: none 529.87 EUR
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Einfach_DueDate.cii.xml
+kind: none 529.87 EUR
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Einfach_negativePaymentDue.cii.xml
+kind: credit 529.87 EUR
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Elektron.cii.xml
+kind: transfer 300 EUR
+iban: DE91100000000123456789
+code: BCD\n002\n1\nSCT\n\nELEKTRON Industrieservice GmbH\nDE91100000000123456789\nEUR300.00\n\n\nRechnung 181301674
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_ElektronischeAdresse.cii.xml
+kind: none 340.96 EUR
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Gutschrift.cii.xml
+kind: none 529.87 EUR
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Haftpflichtversicherung_Versicherungssteuer.cii.xml
+kind: none 50.00 EUR
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Innergemeinschaftliche_Lieferungen.cii.xml
+kind: transfer 2000.00 EUR
+iban: DE1212344321987600 (invalid)
+no code: iban
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Kraftfahrversicherung_Bruttopreise.cii.xml
+kind: none 440.00 EUR
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Miete.cii.xml
+kind: none 340.96 EUR
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_OEPNV.cii.xml
+kind: transfer 9.00 EUR
+iban: DE12123456789012345678 (invalid)
+no code: iban
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Physiotherapeut.cii.xml
+kind: transfer 380.00 EUR
+iban: DE02120300000000202051
+code: BCD\n002\n1\nSCT\n\nTanja Tinder\nDE02120300000000202051\nEUR380.00\n\n\nR18-31
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Rabatte.cii.xml
+kind: none 165.07 EUR
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Rechnungskorrektur.cii.xml
+kind: credit 8.79 EUR
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_RechnungsUebertragung.cii.xml
+kind: none 340.96 EUR
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Reisekostenabrechnung.cii.xml
+kind: none 230.48 EUR
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_Sachversicherung_berechneter_Steuersatz.cii.xml
+kind: none 1163.40 EUR
+== corpus/corpus-master/XML-Rechnung/CII/EN16931_SEPA_Prenotification.cii.xml
+kind: direct-debit 529.87 EUR
+== corpus/corpus-master/XML-Rechnung/CII/not_validating_full_invoice_based_onTest_EeISI_300_CENfullmodel.cii.xml
+kind: transfer 205.00 EUR
+iban: IT1212341234123412 (invalid)
+no code: iban
+== corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Betriebskostenabrechnung.cii.xml
+kind: transfer 502.63 EUR
+iban: DE02120300000000202051
+code: BCD\n002\n1\nSCT\nBYLADEM1001\nKunden AG\nDE02120300000000202051\nEUR502.63\n\n\n471102
+== corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Einfach.cii.xml
+kind: transfer 529.87 EUR
+iban: DE02120300000000202051
+code: BCD\n002\n1\nSCT\nBYLADEM1001\nKunden AG\nDE02120300000000202051\nEUR529.87\n\n\n471102
+== corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Elektron.cii.xml
+kind: transfer 300 EUR
+iban: DE91100000000123456789
+code: BCD\n002\n1\nSCT\n\nELEKTRON Industrieservice GmbH\nDE91100000000123456789\nEUR300.00\n\n\nRechnung 181301674
+== corpus/corpus-master/XML-Rechnung/CII/XRECHNUNG_Reisekostenabrechnung.cii.xml
+kind: transfer 230.48 EUR
+iban: DE02120300000000202051
+code: BCD\n002\n1\nSCT\nBYLADEM1001\nKunden AG\nDE02120300000000202051\nEUR230.48\n\n\n280081
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_1_Teilrechnung.pdf
+kind: none 147.65 EUR
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_2_Teilrechnung.pdf
+kind: none 23.54 EUR
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_AbweichenderZahlungsempf.pdf
+kind: transfer 529.87 EUR
+iban: DE12123456781234567890 (invalid)
+no code: iban
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Betriebskostenabrechnung.pdf
+kind: none 502.63 EUR
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach.pdf
+kind: none 529.87 EUR
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach_DueDate.pdf
+kind: none 529.87 EUR
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Einfach_negativePaymentDue.pdf
+kind: credit 529.87 EUR
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Elektron.pdf
+kind: transfer 300 EUR
+iban: DE91100000000123456789
+code: BCD\n002\n1\nSCT\n\nELEKTRON Industrieservice GmbH\nDE91100000000123456789\nEUR300.00\n\n\nRechnung 181301674
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_ElektronischeAdresse.pdf
+kind: none 340.96 EUR
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Gutschrift.pdf
+kind: none 529.87 EUR
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Haftpflichtversicherung_Versicherungssteuer.pdf
+kind: none 50.00 EUR
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Innergemeinschaftliche_Lieferungen.pdf
+kind: transfer 2000.00 EUR
+iban: DE1212344321987600 (invalid)
+no code: iban
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Kraftfahrversicherung_Bruttopreise.pdf
+kind: none 440.00 EUR
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Miete.pdf
+kind: none 340.96 EUR
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_OEPNV.pdf
+kind: transfer 9.00 EUR
+iban: DE12123456789012345678 (invalid)
+no code: iban
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Physiotherapeut.pdf
+kind: transfer 380.00 EUR
+iban: DE02120300000000202051
+code: BCD\n002\n1\nSCT\n\nTanja Tinder\nDE02120300000000202051\nEUR380.00\n\n\nR18-31
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Rabatte.pdf
+kind: none 165.07 EUR
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Rechnungskorrektur.pdf
+kind: credit 8.79 EUR
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_RechnungsUebertragung.pdf
+kind: none 340.96 EUR
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Reisekostenabrechnung.pdf
+kind: none 230.48 EUR
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_Sachversicherung_berechneter_Steuersatz.pdf
+kind: none 1163.40 EUR
+== corpus/corpus-master/XML-Rechnung/FX/EN16931_SEPA_Prenotification.pdf
+kind: direct-debit 529.87 EUR
+== corpus/corpus-master/XML-Rechnung/FX/XRECHNUNG_Betriebskostenabrechnung.pdf
+kind: transfer 502.63 EUR
+iban: DE02120300000000202051
+code: BCD\n002\n1\nSCT\nBYLADEM1001\nKunden AG\nDE02120300000000202051\nEUR502.63\n\n\n471102
+== corpus/corpus-master/XML-Rechnung/FX/XRECHNUNG_Einfach.pdf
+kind: transfer 529.87 EUR
+iban: DE02120300000000202051
+code: BCD\n002\n1\nSCT\nBYLADEM1001\nKunden AG\nDE02120300000000202051\nEUR529.87\n\n\n471102
+== corpus/corpus-master/XML-Rechnung/FX/XRECHNUNG_Elektron.pdf
+kind: transfer 300 EUR
+iban: DE91100000000123456789
+code: BCD\n002\n1\nSCT\n\nELEKTRON Industrieservice GmbH\nDE91100000000123456789\nEUR300.00\n\n\nRechnung 181301674
+== corpus/corpus-master/XML-Rechnung/FX/XRECHNUNG_Reisekostenabrechnung.pdf
+kind: transfer 230.48 EUR
+iban: DE02120300000000202051
+code: BCD\n002\n1\nSCT\nBYLADEM1001\nKunden AG\nDE02120300000000202051\nEUR230.48\n\n\n280081
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_1_Teilrechnung.ubl.xml
+kind: none 147.65 EUR
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_2_Teilrechnung.ubl.xml
+kind: none 23.54 EUR
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_AbweichenderZahlungsempf.ubl.xml
+kind: transfer 529.87 EUR
+iban: DE12123456781234567890 (invalid)
+no code: iban
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Betriebskostenabrechnung.ubl.xml
+kind: none 502.63 EUR
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Einfach.ubl.xml
+kind: none 529.87 EUR
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Einfach_DueDate.ubl.xml
+kind: none 529.87 EUR
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Einfach_negativePaymentDue.ubl.xml
+kind: credit 529.87 EUR
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Elektron.ubl.xml
+kind: transfer 300 EUR
+iban: DE91100000000123456789
+code: BCD\n002\n1\nSCT\n\nELEKTRON Industrieservice GmbH\nDE91100000000123456789\nEUR300.00\n\n\nRechnung 181301674
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_ElektronischeAdresse.ubl.xml
+kind: none 340.96 EUR
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Gutschrift.ubl.xml
+kind: none 529.87 EUR
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Haftpflichtversicherung_Versicherungssteuer.ubl.xml
+kind: none 50 EUR
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Innergemeinschaftliche_Lieferungen.ubl.xml
+kind: transfer 2000 EUR
+iban: DE1212344321987600 (invalid)
+no code: iban
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Kraftfahrversicherung_Bruttopreise.ubl.xml
+kind: none 440 EUR
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Miete.ubl.xml
+kind: none 340.96 EUR
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_OEPNV.ubl.xml
+kind: transfer 9 EUR
+iban: DE12123456789012345678 (invalid)
+no code: iban
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Physiotherapeut.ubl.xml
+kind: transfer 380 EUR
+iban: DE02120300000000202051
+code: BCD\n002\n1\nSCT\n\nTanja Tinder\nDE02120300000000202051\nEUR380.00\n\n\nR18-31
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Rabatte.ubl.xml
+kind: none 165.07 EUR
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Rechnungskorrektur.ubl.xml
+kind: credit 8.79 EUR
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_RechnungsUebertragung.ubl.xml
+kind: none 340.96 EUR
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Reisekostenabrechnung.ubl.xml
+kind: none 230.48 EUR
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_Sachversicherung_berechneter_Steuersatz.ubl.xml
+kind: none 1163.4 EUR
+== corpus/corpus-master/XML-Rechnung/UBL/EN16931_SEPA_Prenotification.ubl.xml
+kind: direct-debit 529.87 EUR
+== corpus/corpus-master/XML-Rechnung/UBL/not_validating_full_invoice_based_onTest_EeISI_300_CENfullmodel.ubl.xml
+kind: none 205 EUR
+== corpus/corpus-master/XML-Rechnung/UBL/ubl-tc434-creditnote1.xml
+kind: credit 100.11 EUR
+== corpus/corpus-master/XML-Rechnung/UBL/XRECHNUNG_Betriebskostenabrechnung.ubl.xml
+kind: transfer 502.63 EUR
+iban: DE02120300000000202051
+code: BCD\n002\n1\nSCT\nBYLADEM1001\nKunden AG\nDE02120300000000202051\nEUR502.63\n\n\n471102
+== corpus/corpus-master/XML-Rechnung/UBL/XRECHNUNG_Einfach.ubl.xml
+kind: transfer 529.87 EUR
+iban: DE02120300000000202051
+code: BCD\n002\n1\nSCT\nBYLADEM1001\nKunden AG\nDE02120300000000202051\nEUR529.87\n\n\n471102
+== corpus/corpus-master/XML-Rechnung/UBL/XRECHNUNG_Elektron.ubl.xml
+kind: transfer 300 EUR
+iban: DE91100000000123456789
+code: BCD\n002\n1\nSCT\n\nELEKTRON Industrieservice GmbH\nDE91100000000123456789\nEUR300.00\n\n\nRechnung 181301674
+== corpus/corpus-master/XML-Rechnung/UBL/XRECHNUNG_Reisekostenabrechnung.ubl.xml
+kind: transfer 230.48 EUR
+iban: DE02120300000000202051
+code: BCD\n002\n1\nSCT\nBYLADEM1001\nKunden AG\nDE02120300000000202051\nEUR230.48\n\n\n280081
+== corpus/corpus-master/ZUGFeRDv1/correct/4s4u/additional-data-sample-1.pdf
+kind: none 518.99 EUR
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_BASIC_Einfach.pdf
+kind: transfer
+iban: DE08700901001234567890
+no code: amount
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_BASIC_Rechnungskorrektur.pdf
+kind: none
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_Einfach.pdf
+kind: transfer 529.87 EUR
+iban: DE08700901001234567890
+code: BCD\n002\n1\nSCT\nGENODEF1M04\nLieferant GmbH\nDE08700901001234567890\nEUR529.87\n\n\n2013-471102
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_Haftpflichtversicherung_Versicherungssteuer.pdf
+kind: transfer 59.50 EUR
+iban: DE75123456780000001234 (invalid)
+no code: iban
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_Kraftfahrversicherung_Bruttopreise.pdf
+kind: transfer 440.00 EUR
+iban: DE75123456780000001234 (invalid)
+no code: iban
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_Rabatte.pdf
+kind: transfer 165.14 EUR
+iban: DE08700901001234567890
+code: BCD\n002\n1\nSCT\nGENODEF1M04\nLieferant GmbH\nDE08700901001234567890\nEUR165.14\n\n\nGE2020211-471102
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_Rechnungskorrektur.pdf
+kind: nothing-to-pay 0.00 EUR
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_Sachversicherung_berechneter_Steuersatz.pdf
+kind: transfer 1163.40 EUR
+iban: DE75123456780000001234 (invalid)
+no code: iban
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_COMFORT_SEPA_Prenotification.pdf
+kind: direct-debit 529.87 EUR
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_EXTENDED_Kostenrechnung.pdf
+kind: none 1256.70 EUR
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_EXTENDED_Rechnungskorrektur.pdf
+kind: nothing-to-pay 0.00 EUR
+== corpus/corpus-master/ZUGFeRDv1/correct/Intarsys/ZUGFeRD_1p0_EXTENDED_Warenrechnung.pdf
+kind: none 518.99 EUR
+== corpus/corpus-master/ZUGFeRDv1/correct/Konik/acme_invoice-42_ZUGFeRD.pdf
+kind: none
+== corpus/corpus-master/ZUGFeRDv1/correct/Mustangproject/MustangGnuaccountingBeispielRE-20140703_502.pdf
+kind: transfer 571.04 EUR
+iban: DE88200800000970375700
+code: BCD\n002\n1\nSCT\nCOBADEFXXX\nBei Spiel GmbH\nDE88200800000970375700\nEUR571.04\n\n\nRE-20140703/502
+== corpus/corpus-master/ZUGFeRDv1/correct/Mustangproject/MustangGnuaccountingBeispielRE-20150613_503.pdf
+kind: transfer 571.04 EUR
+iban: DE88200800000970375700
+code: BCD\n002\n1\nSCT\nCOBADEFXXX\nBei Spiel GmbH\nDE88200800000970375700\nEUR571.04\n\n\nRE-20150613/503
+== corpus/corpus-master/ZUGFeRDv1/correct/Mustangproject/MustangGnuaccountingBeispielRE-20151008_504.pdf
+kind: transfer 571.04 
+iban: DE88200800000970375700
+no code: currency
+== corpus/corpus-master/ZUGFeRDv1/correct/Mustangproject/MustangGnuaccountingBeispielRE-20151008_504new.pdf
+kind: transfer 571.04 EUR
+iban: DE88200800000970375700
+code: BCD\n002\n1\nSCT\nCOBADEFFXXX\nBei Spiel GmbH\nDE88200800000970375700\nEUR571.04\n\n\nRE-20151008/504
+== corpus/corpus-master/ZUGFeRDv1/correct/Mustangproject/MustangGnuaccountingBeispielRE-20170509_505.pdf
+kind: transfer 571.04 EUR
+iban: DE88200800000970375700
+code: BCD\n002\n1\nSCT\nCOBADEFFXXX\nBei Spiel GmbH\nDE88200800000970375700\nEUR571.04\n\n\nRE-20170509/505
+== corpus/corpus-master/ZUGFeRDv1/fail/Mustangproject/fail1.pdf
+kind: transfer 571.04 
+iban: DE88200800000970375700
+no code: currency
+== corpus/corpus-master/ZUGFeRDv1/fail/Mustangproject/fail2.pdf
+kind: transfer 571.04 
+iban: DE88200800000970375700
+no code: currency
+== corpus/corpus-master/ZUGFeRDv1/fail/Mustangproject/fail3.pdf
+kind: transfer 571.04 EUR
+iban: DE88200800000970375700
+code: BCD\n002\n1\nSCT\nCOBADEFFXXX\nBei Spiel GmbH\nDE88200800000970375700\nEUR571.04\n\n\nRE-20170509/505
+== corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Avoir_FR_type381_BASIC.pdf
+kind: credit 233.47 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Facture_DOM_BASICWL.pdf
+kind: transfer 383.75 EUR
+iban: FR2012421242124212421242124
+code: BCD\n002\n1\nSCT\n\nAu bon moulin\nFR2012421242124212421242124\nEUR383.75\n\n\nFA-2017-0009
+== corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Facture_DOM_MINIMUM.pdf
+kind: none 383.75 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Facture_FR_BASICWL.pdf
+kind: transfer 470.15 EUR
+iban: FR2012421242124212421242124
+code: BCD\n002\n1\nSCT\n\nAu bon moulin\nFR2012421242124212421242124\nEUR470.15\n\n\nFA-2017-0010
+== corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Facture_FR_MINIMUM.pdf
+kind: none 470.15 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Facture_UE_BASICWL.pdf
+kind: transfer 1453.76 EUR
+iban: FR2012421242124212421242124
+code: BCD\n002\n1\nSCT\n\nAu bon moulin\nFR2012421242124212421242124\nEUR1453.76\n\n\nFA-2017-0008
+== corpus/corpus-master/ZUGFeRDv2/correct/FNFE-factur-x-examples/Facture_UE_MINIMUM.pdf
+kind: none 1453.76 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/BASIC/zugferd_2p0_BASIC_Einfach.pdf
+kind: none 235.62 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/BASIC/zugferd_2p0_BASIC_Rechnungskorrektur.pdf
+kind: credit 8.79 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/BASIC/zugferd_2p0_BASIC_Taxifahrt.pdf
+kind: none 18.08 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_1_Teilrechnung.pdf
+kind: none 147.65 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_2_Teilrechnung.pdf
+kind: none 23.54 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_AbweichenderZahlungsempf.pdf
+kind: transfer 529.87 EUR
+iban: DE12123456781234567890 (invalid)
+no code: iban
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Betriebskostenabrechnung.pdf
+kind: none 502.63 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Einfach.pdf
+kind: none 529.87 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Elektron.pdf
+kind: transfer 300 EUR
+iban: DE5467894567876500 (invalid)
+no code: iban
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_ElektronischeAdresse.pdf
+kind: none 340.96 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Gutschrift.pdf
+kind: none 529.87 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Haftpflichtversicherung_Versicherungssteuer.pdf
+kind: none 59.50 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Innergemeinschaftliche_Lieferungen.pdf
+kind: transfer 2000.00 EUR
+iban: DE1212344321987600 (invalid)
+no code: iban
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Kraftfahrversicherung_Bruttopreise.pdf
+kind: none 440.00 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Miete.pdf
+kind: none 340.96 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_OEPNV.pdf
+kind: transfer 9.00 EUR
+iban: DE12123456789012345678 (invalid)
+no code: iban
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Physiotherapeut.pdf
+kind: transfer 380.00 EUR
+iban: DE02120300000000202051
+code: BCD\n002\n1\nSCT\n\nTanja Tinder\nDE02120300000000202051\nEUR380.00\n\n\nR18-31
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Rabatte.pdf
+kind: none 165.07 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Rechnungskorrektur.pdf
+kind: credit 8.79 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_RechnungsUebertragung.pdf
+kind: none 340.96 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Reisekostenabrechnung.pdf
+kind: none 230.48 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_Sachversicherung_berechneter_Steuersatz.pdf
+kind: none 1163.40 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EN16931/zugferd_2p0_EN16931_SEPA_Prenotification.pdf
+kind: direct-debit 529.87 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EXTENDED/zugferd_2p0_EXTENDED_Fremdwaehrung.pdf
+kind: transfer 521.91 GBP
+iban: DE1212344321987600 (invalid)
+no code: currency
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EXTENDED/zugferd_2p0_EXTENDED_InnergemeinschLieferungMehrereBestellungen.pdf
+kind: transfer 2000.00 EUR
+iban: DE1212344321987600 (invalid)
+no code: iban
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EXTENDED/zugferd_2p0_EXTENDED_Kostenrechnung.pdf
+kind: none 480.22 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EXTENDED/zugferd_2p0_EXTENDED_Rechnungskorrektur.pdf
+kind: credit 8.79 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/EXTENDED/zugferd_2p0_EXTENDED_Warenrechnung.pdf
+kind: none 518.99 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/intarsys/MINIMUM/zugferd_2p0_MINIMUM.pdf
+kind: none 235.62 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/hate1.xml
+kind: transfer 293.81 EUR
+iban: DE88200800000970375700
+code: BCD\n002\n1\nSCT\nCOBADEFFXXX\nMax Mustermann\nDE88200800000970375700\nEUR293.81\n\n\nRE-20201121/508
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/MustangGnuaccountingBeispielRE-20190610_507.pdf
+kind: transfer 571.04 EUR
+iban: DE88200800000970375700
+code: BCD\n002\n1\nSCT\nCOBADEFFXXX\nBei Spiel GmbH\nDE88200800000970375700\nEUR571.04\n\n\nRE-20190610/507
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/MustangGnuaccountingBeispielRE-20201121_508.pdf
+kind: transfer 571.04 EUR
+iban: DE88200800000970375700
+code: BCD\n002\n1\nSCT\nCOBADEFFXXX\nMax Mustermann\nDE88200800000970375700\nEUR571.04\n\n\nRE-20201121/508
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/MustangGnuaccountingBeispielRE-20201121_508_withBOM.pdf
+kind: transfer 571.04 EUR
+iban: DE88200800000970375700
+code: BCD\n002\n1\nSCT\nCOBADEFFXXX\nMax Mustermann\nDE88200800000970375700\nEUR571.04\n\n\nRE-20201121/508
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-XR.xml
+kind: transfer 1.00 EUR
+iban: DE12500105170648489890
+code: BCD\n002\n1\nSCT\nCOBADEFXXX\nTest company\nDE12500105170648489890\nEUR1.00\n\n\n123
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-XR-Edge.xml
+kind: transfer 1.00 EUR
+iban: DE12500105170648489890
+code: BCD\n002\n1\nSCT\nCOBADEFXXX\nTest company\nDE12500105170648489890\nEUR1.00\n\n\n123
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushAllowances.xml
+kind: none 4046.00 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushChargesAllowances.xml
+kind: none 11.07 CHF
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushCorrection.xml
+kind: credit 3.57 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushCreditNote.xml
+kind: credit 3.57 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushEdge.xml
+kind: none 1.48 CHF
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushItemChargesAllowances.xml
+kind: none 18.33 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushRelativeChargesAllowances.xml
+kind: none 6.25 CHF
+== corpus/corpus-master/ZUGFeRDv2/correct/Mustangproject/testout-ZF2PushReverseCharge.xml
+kind: none 15.00 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/PHP_@gpFacturX/sample_inofficial_20190125_atgp_factur-x_v_1_0.pdf
+kind: transfer 470.15 EUR
+iban: FR2012421242124212421242124
+code: BCD\n002\n1\nSCT\nFIDCFR21XXX\nAu bon moulin\nFR2012421242124212421242124\nEUR470.15\n\n\nFA-2017-0010
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/BASIC WL/zugferd_2p1_BASIC-WL_Buchungshilfe.pdf
+kind: none 235.62 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/BASIC WL/zugferd_2p1_BASIC-WL_Einfach.pdf
+kind: transfer 470.15 EUR
+iban: FR2012421242124212421242124
+code: BCD\n002\n1\nSCT\n\nLieferant GmbH\nFR2012421242124212421242124\nEUR470.15\n\n\nFA-2017-0010
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/BASIC/zugferd_2p1_BASIC_Einfach.pdf
+kind: none 235.62 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/BASIC/zugferd_2p1_BASIC_Rechnungskorrektur.pdf
+kind: credit 8.79 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/BASIC/zugferd_2p1_BASIC_Taxifahrt.pdf
+kind: none 18.08 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_1_Teilrechnung.pdf
+kind: none 147.65 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_2_Teilrechnung.pdf
+kind: none 23.54 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_AbweichenderZahlungsempf.pdf
+kind: transfer 529.87 EUR
+iban: DE12123456781234567890 (invalid)
+no code: iban
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Betriebskostenabrechnung.pdf
+kind: none 502.63 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Betriebskostenabrechnung_XRechnung_embedded.pdf
+kind: transfer 502.63 EUR
+iban: DE02120300000000202051
+code: BCD\n002\n1\nSCT\nBYLADEM1001\nKunden AG\nDE02120300000000202051\nEUR502.63\n\n\n471102
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Einfach.pdf
+kind: none 529.87 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Einfach_DueDate.pdf
+kind: none 529.87 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Einfach_negativePaymentDue.pdf
+kind: credit 529.87 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Elektron.pdf
+kind: transfer 300 EUR
+iban: DE5467894567876500 (invalid)
+no code: iban
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Elektron_embedded.pdf
+kind: transfer 300 EUR
+iban: DE5467894567876500 (invalid)
+no code: iban
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Elektron_XRechnung.pdf
+kind: transfer 300 EUR
+iban: DE5467894567876500 (invalid)
+no code: iban
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_ElektronischeAdresse.pdf
+kind: none 340.96 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Gutschrift.pdf
+kind: none 529.87 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Haftpflichtversicherung_Versicherungssteuer.pdf
+kind: none 50.00 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Innergemeinschaftliche_Lieferungen.pdf
+kind: transfer 2000.00 EUR
+iban: DE1212344321987600 (invalid)
+no code: iban
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Kraftfahrversicherung_Bruttopreise.pdf
+kind: none 440.00 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Miete.pdf
+kind: none 340.96 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_OEPNV.pdf
+kind: transfer 9.00 EUR
+iban: DE12123456789012345678 (invalid)
+no code: iban
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Physiotherapeut.pdf
+kind: transfer 380.00 EUR
+iban: DE02120300000000202051
+code: BCD\n002\n1\nSCT\n\nTanja Tinder\nDE02120300000000202051\nEUR380.00\n\n\nR18-31
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Rabatte.pdf
+kind: none 165.07 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Rechnungskorrektur.pdf
+kind: credit 8.79 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_RechnungsUebertragung.pdf
+kind: none 340.96 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Reisekostenabrechnung.pdf
+kind: none 230.48 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Reisekostenabrechnung_XRechnung_embedded.pdf
+kind: transfer 230.48 EUR
+iban: DE02120300000000202051
+code: BCD\n002\n1\nSCT\nBYLADEM1001\nKunden AG\nDE02120300000000202051\nEUR230.48\n\n\n280081
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_Sachversicherung_berechneter_Steuersatz.pdf
+kind: none 1163.40 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EN16931/zugferd_2p1_EN16931_SEPA_Prenotification.pdf
+kind: direct-debit 529.87 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EXTENDED/zugferd_2p1_EXTENDED_Fremdwaehrung.pdf
+kind: transfer 521.91 GBP
+iban: DE1212344321987600 (invalid)
+no code: currency
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EXTENDED/zugferd_2p1_EXTENDED_InnergemeinschLieferungMehrereBestellungen.pdf
+kind: transfer 2000.00 EUR
+iban: DE1212344321987600 (invalid)
+no code: iban
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EXTENDED/zugferd_2p1_EXTENDED_Kostenrechnung.pdf
+kind: none 480.22 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EXTENDED/zugferd_2p1_EXTENDED_Rechnungskorrektur.pdf
+kind: credit 8.79 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/EXTENDED/zugferd_2p1_EXTENDED_Warenrechnung.pdf
+kind: none 518.99 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/MINIMUM/zugferd_2p1_MINIMUM_Buchungshilfe.pdf
+kind: none 235.62 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/symtrax/Beispiele/MINIMUM/zugferd_2p1_MINIMUM_Rechnung.pdf
+kind: none 235.62 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/xml/ZUGFeRD-invoice_rabatte_3_abschlag_duepayableamount.xml
+kind: none 14.74 EUR
+== corpus/corpus-master/ZUGFeRDv2/correct/xml/ZUGFeRD-invoice_rabatte_4_abschlag_taxbasistotalamount.xml
+kind: none 221.37 EUR
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Avoir_FR_type380_BASIC.pdf
+kind: credit 233.47 EUR
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Avoir_FR_type380_EN16931.pdf
+kind: credit 233.47 EUR
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Avoir_FR_type380_MINIMUM.pdf
+kind: credit 233.47 EUR
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Avoir_FR_type381_BASICWL.pdf
+kind: credit 233.47 EUR
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Avoir_FR_type381_EN16931.pdf
+kind: credit 233.47 EUR
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Avoir_FR_type381_MINIMUM.pdf
+kind: credit 233.47 EUR
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Facture_DOM_BASIC.pdf
+kind: transfer 383.75 EUR
+iban: FR2012421242124212421242124
+code: BCD\n002\n1\nSCT\n\nAu bon moulin\nFR2012421242124212421242124\nEUR383.75\n\n\nFA-2017-0009
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Facture_DOM_EN16931.pdf
+kind: transfer 383.75 EUR
+iban: FR2012421242124212421242124
+code: BCD\n002\n1\nSCT\nFIDCFR21XXX\nAu bon moulin\nFR2012421242124212421242124\nEUR383.75\n\n\nFA-2017-0009
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Facture_FR_BASIC.pdf
+kind: transfer 470.15 EUR
+iban: FR2012421242124212421242124
+code: BCD\n002\n1\nSCT\n\nAu bon moulin\nFR2012421242124212421242124\nEUR470.15\n\n\nFA-2017-0010
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Facture_FR_EN16931.pdf
+kind: transfer 470.15 EUR
+iban: FR2012421242124212421242124
+code: BCD\n002\n1\nSCT\nFIDCFR21XXX\nAu bon moulin\nFR2012421242124212421242124\nEUR470.15\n\n\nFA-2017-0010
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Facture_UE_BASIC.pdf
+kind: transfer 1453.76 EUR
+iban: FR2012421242124212421242124
+code: BCD\n002\n1\nSCT\n\nAu bon moulin\nFR2012421242124212421242124\nEUR1453.76\n\n\nFA-2017-0008
+== corpus/corpus-master/ZUGFeRDv2/fail/FNFE-factur-x-examples/Facture_UE_EN16931.pdf
+kind: transfer 1453.76 EUR
+iban: FR2012421242124212421242124
+code: BCD\n002\n1\nSCT\nFIDCFR21XXX\nAu bon moulin\nFR2012421242124212421242124\nEUR1453.76\n\n\nFA-2017-0008
+== corpus/corpus-master/ZUGFeRDv2/fail/FX-With-UBL-REC50304330.pdf
+kind: transfer 3547.77 EUR
+iban: DE11111111111111111111 (invalid)
+other accounts: 3
+no code: iban
+== corpus/corpus-master/ZUGFeRDv2/fail/Mustangproject/factur-x-invalid-xml-encoding-attribute.pdf
+kind: transfer 571.04 EUR
+iban: DE88200800000970375700
+code: BCD\n002\n1\nSCT\nCOBADEFFXXX\nMax Mustermann\nDE88200800000970375700\nEUR571.04\n\n\nRE-20201121/508
+== corpus/corpus-master/ZUGFeRDv2/fail/Mustangproject/MustangGnuaccountingBeispielRE-20171118_506.pdf
+kind: transfer 571.04 EUR
+iban: DE88200800000970375700
+code: BCD\n002\n1\nSCT\nCOBADEFFXXX\nBei Spiel GmbH\nDE88200800000970375700\nEUR571.04\n\n\nRE-20171118/506
+== corpus/corpus-master/ZUGFeRDv2/fail/Mustangproject/MustangGnuaccountingBeispielRE-20190610_507a.pdf
+kind: transfer 571.04 EUR
+iban: DE88200800000970375700
+code: BCD\n002\n1\nSCT\nCOBADEFFXXX\nBei Spiel GmbH\nDE88200800000970375700\nEUR571.04\n\n\nRE-20190610/507
+== corpus/corpus-master/ZUGFeRDv2/fail/Mustangproject/MustangGnuaccountingBeispielRE-20190610_507b.pdf
+kind: transfer 571.04 EUR
+iban: DE88200800000970375700
+code: BCD\n002\n1\nSCT\nCOBADEFFXXX\nBei Spiel GmbH\nDE88200800000970375700\nEUR571.04\n\n\nRE-20190610/507
+== corpus/corpus-master/ZUGFeRDv2/fail/Mustangproject/noNetPriceValidation.xml
+kind: transfer 376.04 EUR
+iban: DE88200800000970375700
+code: BCD\n002\n1\nSCT\nCOBADEFFXXX\nMax Mustermann\nDE88200800000970375700\nEUR376.04\n\n\nRE-20201121/508
+== corpus/corpus-master/ZUGFeRDv2/fail/Mustangproject/wrongFilename.pdf
+kind: transfer 572.04 EUR
+iban: DE88200800000970375700
+code: BCD\n002\n1\nSCT\nCOBADEFFXXX\nMax Mustermann\nDE88200800000970375700\nEUR572.04\n\n\nRE-20201121/508
+== corpus/corpus-master/ZUGFeRDv2/fail/MustangRE-20171118_506_ZUGFeRD1and2.pdf
+kind: transfer 571.04 EUR
+iban: DE88200800000970375700
+code: BCD\n002\n1\nSCT\nCOBADEFFXXX\nBei Spiel GmbH\nDE88200800000970375700\nEUR571.04\n\n\nRE-20171118/506
+== corpus/corpus-master/ZUGFeRDv2/fail/python-factur-x/python-factur-x.pdf
+kind: transfer 571.04 EUR
+iban: DE88200800000970375700
+code: BCD\n002\n1\nSCT\nCOBADEFFXXX\nBei Spiel GmbH\nDE88200800000970375700\nEUR571.04\n\n\nRE-20171118/506
+== corpus/corpus-master/ZUGFeRDv2/fail/XRechnung 722825203.XML
+kind: transfer 1087.48 EUR
+iban: DE26386884070232082450
+code: BCD\n002\n1\nSCT\nBOLHDEDESZU\nZgrlnüw Unhbkqrjcipqat PvhV Kfolvqdcq\nDE26386884070232082450\nEUR1087.48\n\n\n2693590190
+== corpus/corpus-master/ZUGFeRDv2/fail/ZUGFeRD_2.0_fully_compliant_complete.pdf
+kind: transfer 39077.22 EUR
+iban: NL13RABO0377815500
+code: BCD\n002\n1\nSCT\nRABONL2U\nDie Vordefinierte Firma\nNL13RABO0377815500\nEUR39077.22\n\n\n80003371
+== corpus/corpus-master/ZUGFeRDv2/fail/ZUGFeRD_2_fully_compliant_complete.pdf
+kind: transfer 39077.22 EUR
+iban: NL13RABO0377815500
+code: BCD\n002\n1\nSCT\nRABONL2U\nDie Vordefinierte Firma\nNL13RABO0377815500\nEUR39077.22\n\n\n80003371
+== kosit/instances/extension/04.01a-INVOICE_ubl.xml
+kind: transfer 4918.84 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\nM. Meier Handwerk GbR\nDE79000000001234567890\nEUR4918.84\n\n\n12345
+== kosit/instances/extension/04.02a-INVOICE_ubl.xml
+kind: direct-debit 32.99 EUR
+== kosit/instances/extension/04.03a-INVOICE_ubl.xml
+kind: transfer 23044105.65 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\nM. Meier Handwerk GbR\nDE79000000001234567890\nEUR23044105.65\n\n\n12345
+== kosit/instances/extension/04.04a-INVOICE_ubl.xml
+kind: transfer 4175.44 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\nTest Gerüstbau GmbH\nDE79000000001234567890\nEUR4175.44\n\n\n17794
+== kosit/instances/extension/04.05a-INVOICE_uncefact.xml
+kind: transfer 119.00 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\nPayee\nDE79000000001234567890\nEUR119.00\n\n\n2020-1
+== kosit/instances/extension/05.01a-INVOICE_ubl.xml
+kind: transfer 366.86 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR366.86\n\n\n123456XX
+== kosit/instances/standard/01.01a-INVOICE_ubl.xml
+kind: transfer 336.9 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR336.90\n\n\n123456XX
+== kosit/instances/standard/01.01a-INVOICE_uncefact.xml
+kind: transfer 336.9 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR336.90\n\n\n123456XX
+== kosit/instances/standard/01.02a-INVOICE_ubl.xml
+kind: transfer 12.6 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\nVSB - Verlagsservice Braunschweig GmbH\nDE79000000001234567890\nEUR12.60\n\n\n123456
+== kosit/instances/standard/01.02a-INVOICE_uncefact.xml
+kind: transfer 12.6 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\nVSB - Verlagsservice Braunschweig GmbH\nDE79000000001234567890\nEUR12.60\n\n\n123456
+== kosit/instances/standard/01.03a-INVOICE_ubl.xml
+kind: transfer 182.2 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR182.20\n\n\nRR123456
+== kosit/instances/standard/01.03a-INVOICE_uncefact.xml
+kind: transfer 182.2 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR182.20\n\n\nRR123456
+== kosit/instances/standard/01.04a-INVOICE_ubl.xml
+kind: transfer 120 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR120.00\n\n\n1234/78/901
+== kosit/instances/standard/01.04a-INVOICE_uncefact.xml
+kind: transfer 120 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR120.00\n\n\n1234/78/901
+== kosit/instances/standard/01.05a-INVOICE_ubl.xml
+kind: transfer 10555.3 EUR
+iban: DE79000000001234567890
+other accounts: 1
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR10555.30\n\n\nPRG1502112
+== kosit/instances/standard/01.05a-INVOICE_uncefact.xml
+kind: transfer 10555.3 EUR
+iban: DE79000000001234567890
+other accounts: 1
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR10555.30\n\n\nPRG1502112
+== kosit/instances/standard/01.06a-INVOICE_ubl.xml
+kind: transfer 21701.7 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR21701.70\n\n\nR123456789
+== kosit/instances/standard/01.06a-INVOICE_uncefact.xml
+kind: transfer 21701.7 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR21701.70\n\n\nR123456789
+== kosit/instances/standard/01.07a-INVOICE_ubl.xml
+kind: transfer 45.22 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR45.22\n\n\nR1234567
+== kosit/instances/standard/01.07a-INVOICE_uncefact.xml
+kind: transfer 45.22 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR45.22\n\n\nR1234567
+== kosit/instances/standard/01.08a-INVOICE_ubl.xml
+kind: transfer 2825.87 EUR
+iban: DE79000000001234567890
+other accounts: 2
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR2825.87\n\n\nR123456789
+== kosit/instances/standard/01.08a-INVOICE_uncefact.xml
+kind: transfer 2825.87 EUR
+iban: DE79000000001234567890
+other accounts: 2
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR2825.87\n\n\nR123456789
+== kosit/instances/standard/01.09a-INVOICE_ubl.xml
+kind: transfer 7197.12 EUR
+iban: DE79000000001234567890
+other accounts: 2
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR7197.12\n\n\nR123456
+== kosit/instances/standard/01.09a-INVOICE_uncefact.xml
+kind: transfer 7197.12 EUR
+iban: DE79000000001234567890
+other accounts: 2
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR7197.12\n\n\nR123456
+== kosit/instances/standard/01.10a-INVOICE_ubl.xml
+kind: transfer 2594.2 EUR
+iban: DE79000000001234567890
+other accounts: 1
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR2594.20\n\n\nRechnungsnummer
+skonto: 2.00 % 7 days until 2016-07-04: 2542.32
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR2542.32\n\n\nRechnungsnummer
+skonto: 1.00 % 14 days until 2016-07-11: 2568.26
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR2568.26\n\n\nRechnungsnummer
+skonto: 0.00 % 30 days until 2016-07-27: 2594.20
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR2594.20\n\n\nRechnungsnummer
+== kosit/instances/standard/01.10a-INVOICE_uncefact.xml
+kind: transfer 2594.2 EUR
+iban: DE79000000001234567890
+other accounts: 1
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR2594.20\n\n\nRechnungsnummer
+skonto: 2.00 % 7 days until 2016-07-04: 2542.32
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR2542.32\n\n\nRechnungsnummer
+skonto: 1.00 % 14 days until 2016-07-11: 2568.26
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR2568.26\n\n\nRechnungsnummer
+skonto: 0.00 % 30 days until 2016-07-27: 2594.20
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR2594.20\n\n\nRechnungsnummer
+== kosit/instances/standard/01.11a-INVOICE_ubl.xml
+kind: transfer 279.38 EUR
+iban: DE79000000001234567890
+other accounts: 2
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR279.38\n\n\nRechnungsnummer
+== kosit/instances/standard/01.11a-INVOICE_uncefact.xml
+kind: transfer 279.38 EUR
+iban: DE79000000001234567890
+other accounts: 2
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR279.38\n\n\nRechnungsnummer
+== kosit/instances/standard/01.12a-INVOICE_ubl.xml
+kind: transfer 305.37 EUR
+iban: DE79000000001234567890
+other accounts: 2
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR305.37\n\n\nRechnungsnummer
+== kosit/instances/standard/01.12a-INVOICE_uncefact.xml
+kind: transfer 305.37 EUR
+iban: DE79000000001234567890
+other accounts: 2
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR305.37\n\n\nRechnungsnummer
+== kosit/instances/standard/01.13a-INVOICE_ubl.xml
+kind: transfer 6342.7 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR6342.70\n\n\nRechnungsnummer
+== kosit/instances/standard/01.13a-INVOICE_uncefact.xml
+kind: transfer 6342.7 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR6342.70\n\n\nRechnungsnummer
+== kosit/instances/standard/01.14a-INVOICE_ubl.xml
+kind: transfer 12829.69 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Payee name]\nDE79000000001234567890\nEUR12829.69\n\n\nDeb. 12345 / Fact. 9876543
+== kosit/instances/standard/01.14a-INVOICE_uncefact.xml
+kind: transfer 12829.69 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Payee name]\nDE79000000001234567890\nEUR12829.69\n\n\nDeb. 12345 / Fact. 9876543
+== kosit/instances/standard/01.15a-INVOICE_ubl.xml
+kind: transfer 10686.2 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n[BIC]\n[Payment account name]\nDE79000000001234567890\nEUR10686.20\n\n\n0000123456
+== kosit/instances/standard/01.15a-INVOICE_uncefact.xml
+kind: transfer 10686.2 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n[BIC]\n[Payment account name]\nDE79000000001234567890\nEUR10686.20\n\n\n0000123456
+== kosit/instances/standard/01.17a-INVOICE_ubl.xml
+kind: transfer 336.91 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR336.91\n\n\n123456XX
+== kosit/instances/standard/01.17a-INVOICE_uncefact.xml
+kind: transfer 336.91 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR336.91\n\n\n123456XX
+== kosit/instances/standard/01.18a-INVOICE_ubl.xml
+kind: transfer 10555.3 EUR
+iban: DE79000000001234567890
+other accounts: 1
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR10555.30\n\n\nPRG1502112
+== kosit/instances/standard/01.18a-INVOICE_uncefact.xml
+kind: transfer 10555.3 EUR
+iban: DE79000000001234567890
+other accounts: 1
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR10555.30\n\n\nPRG1502112
+== kosit/instances/standard/01.19a-INVOICE_ubl.xml
+kind: other 10555.3 EUR
+== kosit/instances/standard/01.19a-INVOICE_uncefact.xml
+kind: other 10555.3 EUR
+== kosit/instances/standard/01.20a-INVOICE_ubl.xml
+kind: transfer 357.00 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\nPBNKDEFF\nPostbank Düsseldorf\nDE79000000001234567890\nEUR357.00\n\n\n1234567890
+== kosit/instances/standard/01.20a-INVOICE_uncefact.xml
+kind: transfer 357.00 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\nPBNKDEFF\nPostbank Düsseldorf\nDE79000000001234567890\nEUR357.00\n\n\n1234567890
+== kosit/instances/standard/01.21a-INVOICE_ubl.xml
+kind: transfer 233.00 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\nDRESDEFFXXX\nMustermann GmbH\nDE79000000001234567890\nEUR233.00\n\n\n18383
+== kosit/instances/standard/01.21a-INVOICE_uncefact.xml
+kind: transfer 233.00 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\nDRESDEFFXXX\nMustermann GmbH\nDE79000000001234567890\nEUR233.00\n\n\n18383
+== kosit/instances/standard/02.01a-INVOICE_ubl.xml
+kind: transfer 12829.69 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n[BIC]\n[Payment account name]\nDE79000000001234567890\nEUR12829.69\n\n\nDeb. 12345 / Fact. 9876543
+== kosit/instances/standard/02.01a-INVOICE_uncefact.xml
+kind: transfer 12829.69 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n[BIC]\n[Payment account name]\nDE79000000001234567890\nEUR12829.69\n\n\nDeb. 12345 / Fact. 9876543
+== kosit/instances/standard/02.02a-INVOICE_ubl.xml
+kind: transfer 10781.25 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n[BIC]\n[Payment account name]\nDE79000000001234567890\nEUR10781.25\n\n\nDeb. 12345 / Fact. 9876543
+== kosit/instances/standard/02.02a-INVOICE_uncefact.xml
+kind: transfer 10781.25 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n[BIC]\n[Payment account name]\nDE79000000001234567890\nEUR10781.25\n\n\nDeb. 12345 / Fact. 9876543
+== kosit/instances/standard/02.03a-INVOICE_ubl.xml
+kind: nothing-to-pay 0 EUR
+== kosit/instances/standard/02.03a-INVOICE_uncefact.xml
+kind: nothing-to-pay 0 EUR
+== kosit/instances/standard/02.04a-INVOICE_ubl.xml
+kind: nothing-to-pay 0 EUR
+== kosit/instances/standard/02.04a-INVOICE_uncefact.xml
+kind: nothing-to-pay 0 EUR
+== kosit/instances/standard/02.05a-INVOICE_ubl.xml
+kind: transfer 2576.41 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n[BIC]\n[Payment account name]\nDE79000000001234567890\nEUR2576.41\n\n\nDeb. 12345 / Fact. 9876543
+== kosit/instances/standard/02.05a-INVOICE_uncefact.xml
+kind: transfer 2576.41 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n[BIC]\n[Payment account name]\nDE79000000001234567890\nEUR2576.41\n\n\nDeb. 12345 / Fact. 9876543
+== kosit/instances/standard/02.06a-INVOICE_ubl.xml
+kind: transfer 13.03 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n[BIC]\n[Payment account name]\nDE79000000001234567890\nEUR13.03\n\n\nDeb. 12345 / Fact. 9876543
+== kosit/instances/standard/02.06a-INVOICE_uncefact.xml
+kind: transfer 13.03 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n[BIC]\n[Payment account name]\nDE79000000001234567890\nEUR13.03\n\n\nDeb. 12345 / Fact. 9876543
+== kosit/instances/standard/03.01a-INVOICE_ubl.xml
+kind: credit 225.14 EUR
+== kosit/instances/standard/03.01a-INVOICE_uncefact.xml
+kind: credit 225.14 EUR
+== kosit/instances/standard/03.02a-INVOICE_ubl.xml
+kind: other 10686.2 EUR
+== kosit/instances/standard/03.02a-INVOICE_uncefact.xml
+kind: other 10686.2 EUR
+== kosit/instances/standard/03.03a-INVOICE_ubl.xml
+kind: other 10686.2 EUR
+== kosit/instances/standard/03.03a-INVOICE_uncefact.xml
+kind: other 10686.2 EUR
+== kosit/instances/standard/03.04a-INVOICE_ubl.xml
+kind: direct-debit 1997.62 EUR
+== kosit/instances/standard/03.04a-INVOICE_uncefact.xml
+kind: direct-debit 1997.62 EUR
+== kosit/instances/standard/03.05a-INVOICE_ubl.xml
+kind: direct-debit 53171.59 EUR
+== kosit/instances/standard/03.05a-INVOICE_uncefact.xml
+kind: direct-debit 53171.59 EUR
+== kosit/instances/standard/03.06a-INVOICE_ubl.xml
+kind: transfer 1804.00 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\nTestkäufer\nDE79000000001234567890\nEUR1804.00\n\n\n112233
+== kosit/instances/standard/03.06a-INVOICE_uncefact.xml
+kind: transfer 1804.00 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\nTestkäufer\nDE79000000001234567890\nEUR1804.00\n\n\n112233
+== kosit/instances/standard/03.07a-INVOICE_ubl.xml
+kind: transfer 12829687.50 EUR
+iban: DE79000000001234567890
+other accounts: 1
+code: BCD\n002\n1\nSCT\n[BIC]\n[Payment account name]\nDE79000000001234567890\nEUR12829687.50\n\n\nDeb. 12345 / Fact. 9876543
+== kosit/instances/standard/03.07a-INVOICE_uncefact.xml
+kind: transfer 12829687.50 EUR
+iban: DE79000000001234567890
+other accounts: 1
+code: BCD\n002\n1\nSCT\n[BIC]\n[Payment account name]\nDE79000000001234567890\nEUR12829687.50\n\n\nDeb. 12345 / Fact. 9876543
+== kosit/instances/technical-cases/cius/01.01_comprehensive_test_ubl.xml
+kind: transfer 12829.69 EUR
+iban: DE79000000001234567890
+other accounts: 1
+code: BCD\n002\n1\nSCT\n[BIC]\n[Payment account name]\nDE79000000001234567890\nEUR12829.69\n\n\nDeb. 12345 / Fact. 9876543
+== kosit/instances/technical-cases/cius/01.01_comprehensive_test_uncefact.xml
+kind: transfer 12829.69 EUR
+iban: DE79000000001234567890
+other accounts: 1
+code: BCD\n002\n1\nSCT\n[BIC]\n[Payment account name]\nDE79000000001234567890\nEUR12829.69\n\n\nDeb. 12345 / Fact. 9876543
+== kosit/instances/technical-cases/cius/01.02_comprehensive_test_ubl.xml
+kind: transfer 12829.69 EUR
+iban: DE79000000001234567890
+other accounts: 1
+code: BCD\n002\n1\nSCT\n[BIC]\n[Payment account name]\nDE79000000001234567890\nEUR12829.69\n\n\nDeb. 12345 / Fact. 9876543
+== kosit/instances/technical-cases/cius/01.02_comprehensive_test_uncefact.xml
+kind: transfer 12829.69 EUR
+iban: DE79000000001234567890
+other accounts: 1
+code: BCD\n002\n1\nSCT\n[BIC]\n[Payment account name]\nDE79000000001234567890\nEUR12829.69\n\n\nDeb. 12345 / Fact. 9876543
+== kosit/instances/technical-cases/cius/01.03_comprehensive_test_ubl.xml
+kind: other 12829.69 EUR
+== kosit/instances/technical-cases/cius/01.03_comprehensive_test_uncefact.xml
+kind: other 12829.69 EUR
+== kosit/instances/technical-cases/cius/01.04_comprehensive_test_ubl.xml
+kind: direct-debit 12829.69 EUR
+== kosit/instances/technical-cases/cius/01.04_comprehensive_test_uncefact.xml
+kind: direct-debit 12829.69 EUR
+== kosit/instances/technical-cases/cius/01.05_minimal_test_ubl.xml
+kind: transfer 4743.75 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR4743.75\n\n\n1234567
+== kosit/instances/technical-cases/cius/01.05_minimal_test_uncefact.xml
+kind: transfer 4743.75 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR4743.75\n\n\n1234567
+== kosit/instances/technical-cases/cius/01.06_minimal_test_ubl.xml
+kind: transfer 4743.75 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR4743.75\n\n\n1234567
+== kosit/instances/technical-cases/cius/01.06_minimal_test_uncefact.xml
+kind: transfer 4743.75 EUR
+iban: DE79000000001234567890
+code: BCD\n002\n1\nSCT\n\n[Seller name]\nDE79000000001234567890\nEUR4743.75\n\n\n1234567
+== kosit/instances/technical-cases/cvd/02.01a-cvd_INVOICE_ubl.xml
+kind: transfer 12829687.50 EUR
+iban: DE79000000001234567890
+other accounts: 1
+code: BCD\n002\n1\nSCT\n[BIC]\n[Payment account name]\nDE79000000001234567890\nEUR12829687.50\n\n\nDeb. 12345 / Fact. 9876543
+== kosit/instances/technical-cases/cvd/02.01a-cvd_INVOICE_uncefact.xml
+kind: transfer 12829687.50 EUR
+iban: DE79000000001234567890
+other accounts: 1
+code: BCD\n002\n1\nSCT\n[BIC]\n[Payment account name]\nDE79000000001234567890\nEUR12829687.50\n\n\nDeb. 12345 / Fact. 9876543
